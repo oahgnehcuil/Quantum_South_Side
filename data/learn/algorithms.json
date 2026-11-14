@@ -1,0 +1,103 @@
+{
+  "id": "algorithms",
+  "title": "Basic Quantum Algorithms",
+  "icon": "🧩",
+  "tagline": "Recipes that help a quantum computer find answers",
+  "lastVerified": "2026-11-14",
+  "readingTimeMinutes": 3,
+  "plainSummary": [
+    "An algorithm is a step-by-step recipe for solving a problem. A quantum algorithm runs on qubits (the quantum version of bits). A qubit can be in a blend of 0 and 1 until you measure it (look at the result). Measuring always gives a plain 0 or 1. Quantum algorithms use interference (waves that add up or cancel out) to make wrong answers less likely. They do not just try every answer at once.",
+    "Deutsch-Jozsa is an early puzzle. A hidden function (a rule that turns inputs into outputs) either always gives the same answer, or gives 0 for half the inputs and 1 for the other half. A quantum computer can tell which with one question. A regular computer that must be 100% sure may need many more. Clever guessing narrows that gap, so this is mostly a teaching example.",
+    "Grover's search finds one item in an unsorted list in about the square root of the usual number of steps. For 10,000 items, that is roughly 100 steps instead of thousands. It helps with specific problems, not everything.",
+    "Shor's algorithm splits big numbers into prime factors (smaller numbers that multiply to make them). Some public-key encryption (scrambling messages so only the right person can read them) relies on factoring being hard for regular computers. Breaking it would take a large, error-corrected (able to fix its own mistakes) quantum computer. None exists today. That is why people are moving to post-quantum cryptography (new encryption built to resist quantum attacks). In 2024, a US agency called NIST published its first finished standards for it."
+  ],
+  "everydayAnalogy": "Picture a stadium crowd moving in step. A conductor tells each person exactly when to move and when to stay still. The wrong movements cancel each other out, and the right one gets bigger. A quantum algorithm choreographs its qubits in a similar way.",
+  "analogyLimits": "Qubits are not people, and they are not each trying a different guess on their own. The cancelling is math about probability amplitudes (numbers that decide how likely each result is), designed for one specific problem.",
+  "keyTerms": [
+    {
+      "term": "Algorithm",
+      "definition": "A step-by-step recipe for solving a problem, whether it runs on a regular computer or a quantum one."
+    },
+    {
+      "term": "Interference",
+      "definition": "When waves meet, they can add up to get bigger or cancel out; quantum algorithms use this to favor right answers."
+    },
+    {
+      "term": "Grover's search",
+      "definition": "A quantum recipe that finds one item in an unsorted list using about the square root of the usual number of steps."
+    },
+    {
+      "term": "Shor's algorithm",
+      "definition": "A quantum recipe that factors large numbers quickly in theory, which is why it matters for some kinds of encryption."
+    },
+    {
+      "term": "Public-key encryption",
+      "definition": "A way to keep messages secret online using a public lock that anyone can use and a private key that only you hold."
+    },
+    {
+      "term": "Post-quantum cryptography",
+      "definition": "New encryption methods built on math problems that experts expect both regular and quantum computers to find hard."
+    }
+  ],
+  "whyItMattersForJobs": "Moving to post-quantum cryptography is a huge job, and most of it does not need a PhD. Cybersecurity analysts find where a company uses encryption that may need replacing. Software developers update and test code. Network technicians install the changes, and project managers keep the work on schedule. NIST (the US agency that sets the standards) urges organizations to start now because the switch can take years.",
+  "chicagoConnection": "In 2022, the Chicago Quantum Exchange announced a quantum network. It has six nodes (connection points) and 124 miles of fiber (glass cable that carries light). It links Argonne National Laboratory in Lemont with two South Side buildings. One is on the UChicago campus. One is at CQE headquarters in Hyde Park. The announcement said it would become one of the nation's first publicly available testbeds for quantum security technology.",
+  "quiz": [
+    {
+      "question": "What do quantum algorithms mainly rely on to make the right answer more likely?",
+      "options": [
+        "Trying every possible answer at the same time",
+        "Interference that cancels out wrong answers",
+        "Running the same steps on a much faster laptop chip"
+      ],
+      "answerIndex": 1,
+      "explanation": "Algorithms steer qubits so wrong answers cancel and the right one gets stronger before you measure. The popular idea of trying every answer at once is a myth."
+    },
+    {
+      "question": "A list has 10,000 items in no order. About how many steps does Grover's search need to find one item?",
+      "options": [
+        "About 1 step, because quantum is instant",
+        "About 5,000 steps, the same as a regular search",
+        "About 100 steps, the square root of 10,000"
+      ],
+      "answerIndex": 2,
+      "explanation": "Grover's search takes about the square root of the list size. That is a real speedup, but it is far from instant."
+    },
+    {
+      "question": "Why do governments and companies care about Shor's algorithm?",
+      "options": [
+        "It could threaten some public-key encryption someday",
+        "It already breaks all encryption on today's quantum computers",
+        "It makes every computer program run faster"
+      ],
+      "answerIndex": 0,
+      "explanation": "Shor's algorithm could factor big numbers, which some public-key encryption depends on, but only on large, error-corrected machines that do not exist yet. It does not speed up everything."
+    }
+  ],
+  "sources": [
+    {
+      "title": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards"
+    },
+    {
+      "title": "What Is Post-Quantum Cryptography?",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "url": "https://www.nist.gov/cybersecurity-and-privacy/what-post-quantum-cryptography"
+    },
+    {
+      "title": "Grover's algorithm",
+      "publisher": "IBM Quantum Learning",
+      "url": "https://quantum.cloud.ibm.com/learning/en/modules/computer-science/grovers"
+    },
+    {
+      "title": "The Deutsch-Jozsa algorithm",
+      "publisher": "IBM Quantum Learning",
+      "url": "https://quantum.cloud.ibm.com/learning/en/courses/fundamentals-of-quantum-algorithms/quantum-query-algorithms/deutsch-jozsa-algorithm"
+    },
+    {
+      "title": "Chicago expands and activates quantum network, taking steps toward a secure quantum internet",
+      "publisher": "Chicago Quantum Exchange",
+      "url": "https://chicagoquantum.org/news/chicago-expands-and-activates-quantum-network-taking-steps-toward-secure-quantum-internet"
+    }
+  ]
+}

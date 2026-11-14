@@ -1,0 +1,103 @@
+{
+  "id": "error-correction",
+  "title": "Quantum Error Correction",
+  "icon": "🛡️",
+  "tagline": "How to protect fragile qubits from mistakes",
+  "lastVerified": "2026-11-14",
+  "readingTimeMinutes": 4,
+  "plainSummary": [
+    "A qubit (the quantum version of a bit) is a tiny object, like an atom or a tiny electric circuit. Unlike a bit, a qubit can be in a blend of 0 and 1 until someone measures it. A measurement always gives a plain 0 or 1, and the blend is gone. Qubits are fragile. Heat, vibration, and stray signals can ruin their quantum state (the exact blend they hold). That loss is called decoherence. Quantum computers today are small and make many errors.",
+    "Regular computers can protect data by keeping copies. If one copy flips by mistake, the other copies can outvote it. Qubits can't do this. A rule called no-cloning says you can't make an exact copy of an unknown quantum state. Checking a qubit is also a problem, because measuring it destroys the blend.",
+    "Quantum error correction is the clever workaround. It spreads the information of one qubit across many physical qubits (the real qubits inside the machine). Together they act as one steadier logical qubit (a protected qubit built from many physical ones). Helper qubits check for signs of errors without measuring the qubits that hold the information. A regular computer then picks the fix.",
+    "This costs a lot. Google researchers wrote that at today's error rates, reaching a very low error rate (about one mistake in a million steps) might take more than a thousand physical qubits per logical qubit. In late 2024, Google reported a test with bigger grids of physical qubits: 3-by-3, then 5-by-5, then 7-by-7. More qubits can mean more mistakes. Yet each step up cut the logical qubit's errors by about half. Companies say they aim to build fault-tolerant machines (machines that keep working despite errors). Those are goals, not facts yet."
+  ],
+  "everydayAnalogy": "Picture yourself shouting a message across a loud cafeteria. One shout might get garbled. So you shout it three times. The listener hears two clear copies and one mumble, and goes with the version that shows up most. Repeating the message and taking a majority vote protects it from noise.",
+  "analogyLimits": "You can't simply copy a qubit, so the real method is cleverer. It spreads one qubit's information across many qubits and uses helper qubits to check for errors without looking at the data.",
+  "keyTerms": [
+    {
+      "term": "Decoherence",
+      "definition": "The loss of a qubit's quantum state when heat, vibration, or stray signals from its surroundings disturb it."
+    },
+    {
+      "term": "No-cloning rule",
+      "definition": "A rule of quantum physics that says you can't make an exact copy of a qubit when you don't already know its state."
+    },
+    {
+      "term": "Physical qubit",
+      "definition": "One real qubit in the machine, such as a tiny electric circuit, which is fragile and makes errors."
+    },
+    {
+      "term": "Logical qubit",
+      "definition": "A steadier, protected qubit made by spreading its information across many physical qubits."
+    },
+    {
+      "term": "Helper qubit",
+      "definition": "An extra qubit that checks its neighbors for signs of errors so the qubits holding the information don't have to be measured."
+    },
+    {
+      "term": "Fault-tolerant",
+      "definition": "Built to keep working correctly even when some parts make errors along the way."
+    }
+  ],
+  "whyItMattersForJobs": "Error correction needs many kinds of workers, and many of these roles do not need a PhD. Lab technicians and skilled-trades workers can build, cool, and maintain the machines that keep qubits steady. Software developers can write the programs that read the helper-qubit checks and pick fixes. Operations and project managers coordinate the teams that test the helper-qubit checks.",
+  "chicagoConnection": "Two U.S. Department of Energy quantum research centers are in the Chicago area. Fermilab hosts one called SQMS. It works on keeping a qubit steady for longer. Argonne leads the other, called Q-NEXT. It reported a record 5-second lifetime for a qubit in silicon carbide (a hard crystal) in a lab test. PsiQuantum is the anchor tenant (the first big company to commit) at the Illinois Quantum and Microelectronics Park. It says its goal is to ultimately deploy a fault-tolerant computer there at million-qubit scale.",
+  "quiz": [
+    {
+      "question": "Why can't engineers protect a qubit by simply making a few copies and taking a majority vote?",
+      "options": [
+        "Qubits are too small to be seen or copied",
+        "An unknown quantum state can't be copied exactly",
+        "Majority votes only work for large groups of numbers"
+      ],
+      "answerIndex": 1,
+      "explanation": "The no-cloning rule says you can't make an exact copy of an unknown quantum state. Size isn't the problem. Regular computers can use majority votes, because bits are easy to copy."
+    },
+    {
+      "question": "What is a logical qubit?",
+      "options": [
+        "A qubit that is guaranteed to never make any errors",
+        "A single qubit that has been cooled to a very low temperature",
+        "A steadier qubit built by spreading data over many qubits"
+      ],
+      "answerIndex": 2,
+      "explanation": "A logical qubit spreads one qubit's information across many physical qubits, with helper qubits checking for errors. It is much steadier but not perfect. Cooling a single qubit helps, but that is still just one physical qubit."
+    },
+    {
+      "question": "What is the main trade-off of quantum error correction?",
+      "options": [
+        "It needs many physical qubits for each logical qubit",
+        "It makes quantum computers slower than laptops at every task",
+        "It only works if you measure every data qubit directly"
+      ],
+      "answerIndex": 0,
+      "explanation": "Protection costs extra qubits. Google researchers said that reaching a very low error rate might take more than a thousand physical qubits per logical qubit at today's error rates. Measuring the qubits holding the information directly would destroy the state, so helper qubits do the checking instead."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Making quantum error correction work",
+      "publisher": "Google Research",
+      "url": "https://research.google/blog/making-quantum-error-correction-work/"
+    },
+    {
+      "title": "What is fault-tolerant quantum computing?",
+      "publisher": "IBM Quantum",
+      "url": "https://www.ibm.com/quantum/blog/what-is-ftqc"
+    },
+    {
+      "title": "Error correction I",
+      "publisher": "IBM Quantum Learning",
+      "url": "https://quantum.cloud.ibm.com/learning/en/courses/tools-for-quantum-advantage/error-correction-i"
+    },
+    {
+      "title": "Quantum research centers led by Argonne and Fermilab renewed for five years",
+      "publisher": "University of Chicago News",
+      "url": "https://news.uchicago.edu/story/quantum-research-centers-led-argonne-and-fermilab-renewed-five-years"
+    },
+    {
+      "title": "PsiQuantum Breaks Ground on America's Largest Quantum Computing Project in Chicago",
+      "publisher": "PsiQuantum",
+      "url": "https://www.psiquantum.com/news-import/psiquantum-breaks-ground-chicago"
+    }
+  ]
+}

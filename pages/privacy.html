@@ -1,0 +1,48 @@
+<!doctype html>
+<!--
+  Privacy page: what stays on your device, what an optional account stores, and who handles your data.
+  This file is only the page frame. The text lives in data/privacy.json and is drawn by
+  js/pages/privacy.js, so edit the JSON to change the wording (and update "lastUpdated").
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy</title>
+  <meta name="description" content="Plain-language privacy: guest mode keeps everything on your device, and an optional account stores only your email, a nickname and your progress.">
+  <meta name="theme-color" content="#0b1626">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/privacy.css">
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/pages/privacy.js"></script>
+</head>
+<body data-page="privacy" data-page-title="Privacy">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-header surface-dark">
+      <div class="container">
+        <p class="eyebrow">Privacy</p>
+        <h1>Your privacy, in plain words</h1>
+        <p class="lead">You can use every part of this site without an account. If you choose to make one, here is exactly what we keep, what we never ask for, and who helps us run it.</p>
+      </div>
+    </section>
+
+    <div id="privacy-root" aria-busy="true">
+      <section class="section section--alt" aria-label="Loading the privacy page">
+        <div class="container container--narrow">
+          <p class="visually-hidden" role="status">Loading…</p>
+          <div class="skeleton privacy-skeleton" aria-hidden="true"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <noscript><div class="container section"><p class="notice notice--error">This site needs JavaScript to work. Please turn it on in your browser settings.</p></div></noscript>
+</body>
+</html>

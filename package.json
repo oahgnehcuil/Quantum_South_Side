@@ -1,0 +1,19 @@
+{
+  "name": "quantum-south-side",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Quantum South Side: a free website that helps Chicago high school students understand quantum technology and the careers around it.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node scripts/dev-server.js",
+    "test": "node --test",
+    "test:rls": "node tests/rls.pglite.mjs"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.16"
+  }
+}

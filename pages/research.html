@@ -1,0 +1,51 @@
+<!doctype html>
+<!--
+  Research page: new quantum papers from arXiv, each explained in plain language, with a link to
+  the Learn lesson that covers the basics. This file is only the page frame. The cards are drawn
+  by js/pages/research.js from data/research.json, so edit the JSON to change the papers.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research</title>
+  <meta name="description" content="Fresh research, explained like you're 15.">
+  <meta name="theme-color" content="#0b1626">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/research.css">
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/pages/research.js"></script>
+</head>
+<body data-page="research" data-page-title="Research">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-header surface-dark">
+      <div class="container">
+        <p class="eyebrow">Research</p>
+        <h1>New quantum technology and papers</h1>
+        <p class="lead">Fresh research, explained like you're 15. These papers come from arXiv (say "archive"), a free website where scientists share their work, often before other experts have checked it. Treat them as early findings.</p>
+      </div>
+    </section>
+
+    <div id="research-root" aria-busy="true">
+      <section class="section section--alt" aria-label="Loading papers">
+        <div class="container">
+          <p class="visually-hidden" role="status">Loading papers…</p>
+          <div class="grid grid--2" aria-hidden="true">
+            <div class="skeleton research-skeleton"></div>
+            <div class="skeleton research-skeleton"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <noscript><div class="container section"><p class="notice notice--error">This site needs JavaScript to work. Please turn it on in your browser settings.</p></div></noscript>
+</body>
+</html>

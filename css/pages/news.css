@@ -1,0 +1,106 @@
+/* ==========================================================================
+   news.css — styles that only the News page uses (pages/news.html).
+   Every class starts with "news-" so it can never clash with another page.
+   Sections, top to bottom: loading skeletons, toolbar, story cards, empty messages.
+   Colors, spacing and sizes come from variables.css.
+   ========================================================================== */
+
+/* ---------- Loading skeletons ---------- */
+.news-skeleton {
+  height: 14rem;
+}
+
+/* ---------- Toolbar: "Last updated" + the filter bar ---------- */
+.news-toolbar {
+  padding-block: var(--space-6);
+}
+
+.news-toolbar__inner {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.news-updated {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.news-updated time {
+  font-weight: var(--weight-bold);
+  color: var(--color-heading);
+}
+
+/* ---------- Story cards ---------- */
+.news-card {
+  padding: var(--space-5);
+}
+
+.news-card .card__title {
+  font-size: var(--text-lg);
+}
+
+/* "Top story" badge on the most important stories */
+.badge--top {
+  background: var(--ink-800);
+  border: 1px solid var(--ink-800);
+  color: var(--color-on-dark-quantum);
+}
+
+.badge--top::before {
+  content: "★";
+  content: "★" / "";
+}
+
+/* The "Why it matters for Chicago" note gets a forge-orange edge so it stands out from the summary */
+.news-why {
+  padding: var(--space-3) var(--space-4);
+  border: 0;
+  border-left: 4px solid var(--orange-500);
+  border-radius: var(--radius-sm);
+  background: var(--orange-50);
+}
+
+.news-why .card__section-label {
+  color: var(--orange-900);
+}
+
+/* Stories with no Chicago line of their own: a plain, muted note so it reads as the generic fallback */
+.news-why--fallback {
+  border-left-color: var(--color-border-strong);
+  background: var(--steel-50);
+}
+
+.news-why--fallback .card__section-label,
+.news-why--fallback p:not(.card__section-label) {
+  color: var(--color-text-muted);
+}
+
+.news-why--fallback p:not(.card__section-label) {
+  font-style: italic;
+}
+
+/* Stories are text-heavy: let the link button sit at the bottom of the card */
+.news-card .card__actions {
+  padding-top: var(--space-3);
+}
+
+/* ---------- Empty messages ---------- */
+.news-empty {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border: 2px dashed var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.news-empty__text {
+  font-weight: var(--weight-semibold);
+  color: var(--color-heading);
+}
+
+/* A little extra air above the AI label so it reads as a footnote to the text */
+.news-card .ai-label {
+  margin-top: var(--space-4);
+}

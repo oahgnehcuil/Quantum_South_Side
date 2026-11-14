@@ -1,0 +1,193 @@
+/* ==========================================================================
+   variables.css — THE single source of truth for the site's look.
+   Change a color, font or spacing value here and every page updates.
+
+   How it's organised:
+     1. Raw palette   (named swatches — don't use these directly in components)
+     2. Semantic tokens (what the colors MEAN: text, border, primary, ... — use these)
+     3. Type, spacing, shape, layout, motion
+
+   Accessibility note: every text/background pairing below was chosen to pass
+   WCAG AA (4.5:1 for normal text, 3:1 for large text and UI outlines).
+   If you change a color, re-check it with any "contrast checker" website.
+
+   Breakpoints (CSS variables can't be used inside @media, so memorise these):
+     small  ≥ 600px   |   medium ≥ 900px   |   large ≥ 1200px
+   ========================================================================== */
+
+:root {
+  /* ---------- 1. Raw palette ---------- */
+  /* Inks: deep navy "steel at night" — used for dark sections and headings */
+  --ink-950: #08111f;
+  --ink-900: #0b1626;
+  --ink-800: #11233c;
+  --ink-700: #1a3354;
+
+  /* Steels: cool grays for backgrounds, borders and muted text */
+  --steel-25: #fafbfc;
+  --steel-50: #f4f7fa;
+  --steel-100: #e9eef4;
+  --steel-200: #d3dce6;
+  --steel-300: #aebbcb;
+  --steel-500: #5b687a;
+  --steel-600: #465264;
+  --steel-700: #333e4f;
+  --steel-800: #202a38;
+
+  /* Lake blue: the main brand/action color */
+  --blue-50: #eef4ff;
+  --blue-100: #dce8ff;
+  --blue-200: #b9d0ff;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+
+  /* Quantum cyan: the "future" glow */
+  --cyan-50: #ecfeff;
+  --cyan-100: #cffafe;
+  --cyan-300: #67e8f9;
+  --cyan-400: #22d3ee;
+  --cyan-700: #0e7490;
+  --cyan-900: #164e63;
+
+  /* Forge orange: the "steel" heritage glow */
+  --orange-50: #fff7ed;
+  --orange-100: #ffedd5;
+  --orange-400: #fb923c;
+  --orange-500: #f97316;
+  --orange-700: #c2410c;
+  --orange-900: #7c2d12;
+
+  /* Violet: secondary quantum accent */
+  --violet-50: #f5f3ff;
+  --violet-100: #ede9fe;
+  --violet-300: #c4b5fd;
+  --violet-700: #6d28d9;
+  --violet-900: #4c1d95;
+
+  /* Status colors */
+  --green-50: #f0fdf4;
+  --green-100: #dcfce7;
+  --green-700: #15803d;
+  --green-900: #14532d;
+  --red-100: #fee2e2;
+  --red-700: #b91c1c;
+  --red-900: #7f1d1d;
+  --amber-100: #fef3c7;
+  --amber-300: #fcd34d;
+  --amber-900: #78350f;
+
+  /* ---------- 2. Semantic tokens (use these in CSS) ---------- */
+  --color-bg: #ffffff;
+  --color-bg-alt: var(--steel-50);          /* alternating page sections */
+  --color-surface: #ffffff;                 /* cards, panels */
+  --color-text: var(--steel-800);           /* body text (≈14:1 on white) */
+  --color-text-muted: var(--steel-600);     /* secondary text (≈8:1 on white) */
+  --color-heading: var(--ink-900);
+  --color-border: var(--steel-200);
+  --color-border-strong: var(--steel-300);
+
+  --color-primary: var(--blue-700);         /* buttons, links (6.7:1 with white) */
+  --color-primary-hover: var(--blue-800);
+  --color-on-primary: #ffffff;
+  --color-link: var(--blue-700);
+  --color-link-hover: var(--blue-900);
+
+  --color-quantum: var(--cyan-700);         /* quantum accent, safe as text on light */
+  --color-forge: var(--orange-700);         /* steel/forge accent, safe as text on light */
+  --color-violet: var(--violet-700);
+
+  --color-success: var(--green-700);
+  --color-success-bg: var(--green-100);
+  --color-success-text: var(--green-900);
+  --color-error: var(--red-700);
+  --color-error-bg: var(--red-100);
+  --color-error-text: var(--red-900);
+  --color-info-bg: var(--blue-50);
+  --color-sample-bg: var(--amber-100);      /* "SAMPLE DATA" badges */
+  --color-sample-text: var(--amber-900);
+  --color-sample-border: var(--amber-300);
+
+  /* Dark sections (hero, footer): text colors that stay readable on --ink-900 */
+  --color-on-dark: #ffffff;
+  --color-on-dark-muted: #c9d5e3;           /* ≈12:1 on ink-900 */
+  --color-on-dark-quantum: var(--cyan-300);
+  --color-on-dark-forge: var(--orange-400);
+  --color-surface-dark: var(--ink-800);
+  --color-border-dark: rgba(255, 255, 255, 0.16);
+
+  /* Focus ring: blue on light backgrounds, yellow on dark ones (both ≥ 3:1) */
+  --color-focus: var(--blue-700);
+  --color-focus-on-dark: #ffd166;
+  --focus-ring-color: var(--color-focus);   /* dark sections re-point this variable */
+
+  /* Brand gradient (forge → quantum). Decorative only. */
+  --gradient-brand: linear-gradient(90deg, var(--orange-500), var(--cyan-400));
+  --gradient-hero: radial-gradient(60rem 30rem at 85% -10%, rgba(34, 211, 238, 0.22), transparent 60%),
+    radial-gradient(45rem 28rem at 0% 110%, rgba(249, 115, 22, 0.20), transparent 60%),
+    linear-gradient(160deg, var(--ink-900) 0%, var(--ink-800) 55%, #14275a 100%);
+
+  /* ---------- 3a. Typography ---------- */
+  /* System fonts = zero downloads, works offline at a conference, no tracking. */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  /* Fonts that draw quantum "ket" symbols like |0⟩ nicely */
+  --font-math: "Cambria Math", "STIX Two Math", "Latin Modern Math", "Noto Sans Math", "Segoe UI Symbol", "Apple Symbols", serif;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;                   /* 17px: comfortable for reading */
+  --text-lg: 1.25rem;
+  --text-xl: clamp(1.4rem, 1.15rem + 1vw, 1.75rem);
+  --text-2xl: clamp(1.75rem, 1.3rem + 2vw, 2.5rem);
+  --text-3xl: clamp(2rem, 1.4rem + 3vw, 3.25rem);
+  --text-hero: clamp(2.25rem, 1.35rem + 4.4vw, 4.25rem);
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-body: 1.6;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-black: 800;
+
+  /* ---------- 3b. Spacing scale ---------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6.5rem;
+
+  /* ---------- 3c. Shape ---------- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgba(11, 22, 38, 0.08), 0 1px 1px rgba(11, 22, 38, 0.04);
+  --shadow-md: 0 8px 24px rgba(11, 22, 38, 0.10);
+  --shadow-lg: 0 18px 44px rgba(11, 22, 38, 0.18);
+
+  /* ---------- 3d. Layout ---------- */
+  --container: 72rem;
+  --container-narrow: 48rem;
+  --gutter: clamp(1rem, 4vw, 2rem);         /* page side padding */
+  --header-height: 4.25rem;
+
+  /* ---------- 3e. Layering ---------- */
+  --z-header: 100;
+  --z-menu: 110;
+  --z-chatbot: 1000;
+  --z-toast: 1100;
+
+  /* ---------- 3f. Motion ---------- */
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 120ms;
+  --dur: 220ms;
+  --dur-slow: 420ms;
+}

@@ -1,0 +1,987 @@
+/* ==========================================================================
+   home.css — styles that only the Home page uses (index.html).
+   Every class starts with "home-" so it can never clash with another page.
+   Sections, top to bottom: loading skeletons, hero, timeline,
+   30-second explainer, "why now" facts, call-to-action cards, progress, sources.
+   Colors, spacing and sizes come from variables.css.
+   ========================================================================== */
+
+/* ---------- Loading skeletons ---------- */
+.home-skeleton {
+  height: 1.25rem;
+  margin-block: var(--space-3);
+}
+
+.home-skeleton--title {
+  height: 4rem;
+}
+
+.home-skeleton--short {
+  width: 60%;
+}
+
+.home-skeleton--block {
+  height: 18rem;
+}
+
+/* On dark bands the skeleton must not glare */
+.surface-dark .skeleton {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 25%, rgba(255, 255, 255, 0.16) 37%, rgba(255, 255, 255, 0.08) 63%);
+  background-size: 400% 100%;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--space-7) var(--space-6);
+  background: var(--gradient-hero);
+}
+
+/* A thin forge-to-quantum line closes the hero */
+.home-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 4px;
+  background: var(--gradient-brand);
+}
+
+.home-hero__inner {
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.home-hero__text > * + * {
+  margin-top: var(--space-4);
+}
+
+.home-hero__title {
+  font-size: var(--text-hero);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.home-hero__past,
+.home-hero__future {
+  display: block;
+}
+
+.home-hero__past {
+  color: var(--color-on-dark);
+}
+
+/* Plain cyan first; the forge-to-quantum gradient where the browser can paint it on text */
+.home-hero__future {
+  color: var(--color-on-dark-quantum);
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .home-hero__future {
+    background: linear-gradient(90deg, var(--orange-400), var(--cyan-300));
+    background: linear-gradient(in oklch 90deg, var(--orange-400), var(--cyan-300));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.home-hero__subhead {
+  max-width: 34rem;
+}
+
+.home-hero__actions {
+  margin-top: var(--space-5);
+}
+
+.home-hero__actions .btn {
+  flex: 1 1 11rem;
+}
+
+.home-hero__trust {
+  font-size: var(--text-sm);
+  color: var(--color-on-dark-muted);
+}
+
+.home-hero__art {
+  width: 100%;
+  max-width: 32rem;
+  height: auto;
+  margin-inline: auto;
+}
+
+@media (min-width: 900px) {
+  .home-hero {
+    padding-block: var(--space-8) var(--space-7);
+  }
+
+  .home-hero__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: var(--space-6);
+  }
+
+  .home-hero__actions .btn {
+    flex: 0 0 auto;
+  }
+
+  .home-hero__art {
+    max-width: none;
+  }
+}
+
+/* ==========================================================================
+   Timeline: vertical on phones, five columns from 900px
+   ========================================================================== */
+.home-timeline {
+  position: relative;
+  display: grid;
+  gap: var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* The line that connects the stops (forge orange to quantum cyan) */
+.home-timeline::before {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  left: calc(1.45rem - 2px);
+  width: 4px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(var(--orange-500), var(--cyan-400));
+}
+
+.home-stop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-left: 4.25rem;
+}
+
+.home-stop + .home-stop {
+  margin-top: 0;
+}
+
+.home-stop__marker {
+  position: absolute;
+  top: 0.25rem;
+  left: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  border: 3px solid var(--stop-color, var(--orange-400));
+  border-radius: 50%;
+  background: var(--ink-900);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.home-stop:nth-child(1) {
+  --stop-color: var(--orange-500);
+}
+
+.home-stop:nth-child(2) {
+  --stop-color: var(--orange-400);
+}
+
+.home-stop:nth-child(3) {
+  --stop-color: var(--amber-300);
+}
+
+.home-stop:nth-child(4) {
+  --stop-color: var(--blue-200);
+}
+
+.home-stop:nth-child(5) {
+  --stop-color: var(--cyan-400);
+}
+
+.home-stop__card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.home-stop__era {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-black);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-forge);
+}
+
+.home-stop__name {
+  font-size: var(--text-lg);
+}
+
+.home-stop__plain {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* "Who gained" and "Who was left out": solid vs dashed edge, plus a symbol and a label */
+.home-note {
+  padding: var(--space-3);
+  border-left: 4px solid var(--color-success);
+  border-radius: var(--radius-sm);
+  background: var(--green-50);
+}
+
+.home-note--left {
+  border-left-style: dashed;
+  border-left-color: var(--color-forge);
+  background: var(--orange-50);
+}
+
+.home-note__label {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-black);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--green-900);
+}
+
+.home-note--left .home-note__label {
+  color: var(--orange-900);
+}
+
+.home-note__icon {
+  font-weight: var(--weight-black);
+}
+
+.home-note__text {
+  margin-top: 0.25rem;
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+}
+
+/* The last stop: dark, glowing, "Now / Your turn" */
+.home-stop--now .home-stop__marker {
+  background: var(--ink-950);
+  box-shadow: 0 0 0 5px rgba(34, 211, 238, 0.25), 0 0 24px rgba(34, 211, 238, 0.55);
+}
+
+.home-stop--now .home-stop__card {
+  border: 2px solid var(--cyan-400);
+  background: var(--gradient-hero);
+  color: var(--color-on-dark);
+  box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.18), var(--shadow-lg);
+}
+
+.home-stop__now {
+  align-self: flex-start;
+  padding: 0.25rem 0.8rem;
+  border-radius: var(--radius-pill);
+  background: var(--gradient-brand);
+  color: var(--ink-950);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-black);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-stop--now .home-stop__era {
+  color: var(--color-on-dark-forge);
+}
+
+.home-stop--now .home-stop__plain {
+  color: var(--color-on-dark-muted);
+}
+
+.home-note--now {
+  border-left-color: var(--cyan-300);
+  background: rgba(34, 211, 238, 0.12);
+}
+
+.home-note--now .home-note__label {
+  color: var(--cyan-300);
+}
+
+.home-note--change {
+  border-left-style: dashed;
+  border-left-color: var(--orange-400);
+  background: rgba(249, 115, 22, 0.16);
+}
+
+.home-note--change .home-note__label {
+  color: var(--orange-400);
+}
+
+@media (min-width: 900px) {
+  .home-timeline {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0 var(--space-3);
+  }
+
+  /* Horizontal line through the centers of the first and last markers */
+  .home-timeline::before {
+    top: calc(1.45rem - 2px);
+    bottom: auto;
+    left: 1.45rem;
+    right: calc((100% - 4 * var(--space-3)) / 5 - 1.45rem);
+    width: auto;
+    height: 4px;
+    background: linear-gradient(90deg, var(--orange-500), var(--cyan-400));
+  }
+
+  /* Cards share rows (subgrid), so "Who gained" and "Who was left out" line up across all five */
+  .home-stop {
+    display: grid;
+    grid-row: span 5;
+    grid-template-rows: subgrid;
+    padding-left: 0;
+    padding-top: 3.9rem;
+  }
+
+  .home-stop__marker {
+    top: 0;
+  }
+
+  .home-stop__card {
+    display: grid;
+    grid-row: 1 / span 5;
+    grid-template-rows: subgrid;
+    gap: 0;
+    padding: var(--space-3);
+  }
+
+  .home-stop__card > * + * {
+    margin-top: var(--space-3);
+  }
+
+  .home-stop__card > .home-stop__now + .home-stop__era {
+    margin-top: 0;
+  }
+
+  .home-stop__now {
+    position: absolute;
+    top: 3.9rem;
+    left: var(--space-3);
+    margin: 0;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    transform: translateY(-50%);
+  }
+
+  .home-stop--now .home-stop__card {
+    padding-top: var(--space-5);
+  }
+
+  .home-stop__name {
+    font-size: var(--text-base);
+  }
+
+  .home-stop__plain,
+  .home-note__text {
+    font-size: var(--text-xs);
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-timeline {
+    column-gap: var(--space-4);
+  }
+
+  .home-timeline::before {
+    right: calc((100% - 4 * var(--space-4)) / 5 - 1.45rem);
+  }
+
+  .home-stop__card {
+    padding: var(--space-4);
+  }
+
+  .home-stop__now {
+    padding: 0.25rem 0.8rem;
+    font-size: var(--text-xs);
+    letter-spacing: 0.08em;
+  }
+
+  .home-stop__name {
+    font-size: var(--text-lg);
+  }
+
+  .home-stop__plain,
+  .home-note__text {
+    font-size: var(--text-sm);
+  }
+}
+
+/* ==========================================================================
+   30-second explainer
+   ========================================================================== */
+.home-explainer {
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.home-explainer .section-heading {
+  margin-bottom: var(--space-5);
+}
+
+.home-steps {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: home-step;
+}
+
+.home-steps__item {
+  position: relative;
+  margin: 0;
+  padding-left: 3.25rem;
+  counter-increment: home-step;
+}
+
+.home-steps__item::before {
+  content: counter(home-step);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-weight: var(--weight-black);
+}
+
+.home-steps__title {
+  margin-bottom: 0.15rem;
+  font-size: var(--text-lg);
+}
+
+/* "What it is NOT" uses the forge-orange callout colors */
+.home-not {
+  --callout-bg: var(--orange-50);
+  --callout-border: var(--orange-100);
+  --callout-accent: var(--orange-700);
+  --callout-title: var(--orange-900);
+  margin-top: var(--space-5);
+}
+
+/* Bit vs qubit panel */
+.home-visual {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--gradient-hero);
+  color: var(--color-on-dark);
+  box-shadow: var(--shadow-lg);
+  --focus-ring-color: var(--color-focus-on-dark);
+}
+
+.home-visual__panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.home-visual__panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.home-visual__title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-black);
+}
+
+.home-visual__caption {
+  font-size: var(--text-sm);
+  color: var(--color-on-dark-muted);
+}
+
+.home-switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 8rem;
+  height: 3.25rem;
+  padding-inline: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-radius: var(--radius-pill);
+  background: var(--ink-950);
+  color: var(--color-on-dark-muted);
+  font-family: var(--font-math);
+  font-size: 1.2rem;
+  font-weight: var(--weight-black);
+}
+
+.home-switch--qubit {
+  border-color: var(--cyan-300);
+  background: linear-gradient(90deg, rgba(249, 115, 22, 0.55), rgba(34, 211, 238, 0.6)), var(--ink-950);
+  color: var(--color-on-dark);
+}
+
+.home-switch__knob {
+  position: absolute;
+  top: 50%;
+  left: 0.35rem;
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: var(--color-on-dark);
+  color: var(--ink-900);
+  font-weight: var(--weight-black);
+  transform: translateY(-50%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: left var(--dur-slow) var(--ease);
+}
+
+/* The qubit knob: a glowing blend until it is measured, then a plain 0 or 1 */
+.home-switch__knob[data-state="blend"] {
+  left: calc(50% - 1.2rem);
+  background: var(--gradient-brand);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25), 0 0 18px rgba(103, 232, 249, 0.8);
+}
+
+.home-switch__knob[data-state="0"] {
+  left: 0.35rem;
+}
+
+.home-switch__knob[data-state="1"] {
+  left: calc(100% - 2.75rem);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-switch__knob--bit {
+    animation: home-bit-flip 4s var(--ease) infinite;
+  }
+
+  .home-switch__knob[data-state="blend"] {
+    animation: home-blend-drift 3.2s ease-in-out infinite;
+  }
+}
+
+@keyframes home-bit-flip {
+  0%,
+  42% {
+    left: 0.35rem;
+  }
+  50%,
+  92% {
+    left: calc(100% - 2.75rem);
+  }
+  100% {
+    left: 0.35rem;
+  }
+}
+
+@keyframes home-blend-drift {
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(-0.45rem);
+  }
+  50% {
+    transform: translateY(-50%) translateX(0.45rem);
+  }
+}
+
+.home-visual__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-dark);
+  text-align: center;
+}
+
+.home-visual__result {
+  min-height: 3.2em;
+  max-width: 24rem;
+  font-size: var(--text-sm);
+  color: var(--color-on-dark-muted);
+}
+
+@media (min-width: 900px) {
+  .home-explainer {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: var(--space-7);
+  }
+
+  .home-visual {
+    padding: var(--space-6);
+  }
+}
+
+/* ==========================================================================
+   "Why Chicago, why now" facts (dark band)
+   ========================================================================== */
+.home-why {
+  background: var(--gradient-hero);
+}
+
+.home-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-fact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.home-fact + .home-fact {
+  margin-top: 0;
+}
+
+.home-fact__value {
+  font-size: 1.35rem;
+  font-weight: var(--weight-black);
+  line-height: 1.1;
+  color: var(--color-on-dark-quantum);
+  overflow-wrap: anywhere;
+}
+
+.home-fact__text {
+  font-size: var(--text-sm);
+  color: var(--color-on-dark-muted);
+}
+
+.home-why__note {
+  max-width: 46rem;
+  margin-top: var(--space-6);
+  color: var(--color-on-dark-muted);
+}
+
+@media (min-width: 600px) {
+  .home-fact__value {
+    font-size: var(--text-xl);
+  }
+}
+
+@media (min-width: 900px) {
+  .home-facts {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+
+  .home-fact {
+    padding: var(--space-5);
+  }
+}
+
+/* ==========================================================================
+   Call-to-action cards
+   ========================================================================== */
+.home-cta {
+  padding: var(--space-5);
+}
+
+.home-cta .card__icon {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--radius-md);
+  background: var(--blue-50);
+  font-size: 1.8rem;
+}
+
+.home-cta:nth-child(2) .card__icon {
+  background: var(--orange-50);
+}
+
+.home-cta:nth-child(3) .card__icon {
+  background: var(--cyan-50);
+}
+
+.home-cta .card__title {
+  font-size: var(--text-xl);
+}
+
+.home-cta__go {
+  font-weight: var(--weight-black);
+  color: var(--color-primary);
+}
+
+.home-cta:hover .home-cta__go {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* ==========================================================================
+   Your progress
+   ========================================================================== */
+.home-progress {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+}
+
+.home-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-stat {
+  position: relative;
+  margin: 0;
+  padding: var(--space-3);
+  border-style: dashed;
+  border-color: var(--color-border-strong);
+  background: var(--color-bg-alt);
+}
+
+.home-stat + .home-stat {
+  margin-top: 0;
+}
+
+.home-stat--wide {
+  grid-column: 1 / -1;
+  padding: var(--space-4);
+}
+
+/* A number you have earned: solid cyan edge and a check mark */
+.home-stat--earned {
+  border-style: solid;
+  border-color: var(--cyan-700);
+  background: var(--cyan-50);
+}
+
+.home-stat__check {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-3);
+  font-weight: var(--weight-black);
+  color: var(--cyan-700);
+}
+
+.home-stat__of {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-muted);
+}
+
+.home-stat__bar {
+  margin-top: var(--space-3);
+}
+
+.home-stat__praise {
+  margin-top: var(--space-2);
+  font-weight: var(--weight-black);
+  color: var(--green-900);
+}
+
+.home-stat__hint {
+  margin-top: 0.25rem;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.home-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-6) var(--space-4);
+  border: 2px dashed var(--color-border-strong);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.home-empty__icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.home-empty__title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-black);
+  color: var(--color-heading);
+}
+
+.home-progress__footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.home-progress__saved {
+  max-width: 40rem;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.home-reset {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.home-reset__confirm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-sample-border);
+  border-radius: var(--radius-md);
+  background: var(--color-sample-bg);
+  color: var(--color-sample-text);
+}
+
+.home-reset__erase {
+  background: var(--color-error);
+  color: var(--color-on-primary);
+}
+
+.home-reset__erase:hover {
+  background: var(--red-900);
+  color: var(--color-on-primary);
+}
+
+.home-reset__done {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--color-success-bg);
+  color: var(--color-success-text);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+}
+
+@media (min-width: 600px) {
+  .home-progress {
+    padding: var(--space-5);
+  }
+
+  .home-stat {
+    padding: var(--space-4);
+  }
+
+  .home-progress__footer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-5);
+  }
+
+  .home-reset {
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: 900px) {
+  .home-progress {
+    padding: var(--space-6);
+  }
+}
+
+/* ==========================================================================
+   Sources
+   ========================================================================== */
+.home-sources-section {
+  padding-block: var(--space-6);
+}
+
+.home-sources {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.home-sources summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: 2.75rem;
+  padding: var(--space-3) var(--space-4);
+  font-weight: var(--weight-black);
+  color: var(--color-heading);
+  cursor: pointer;
+  list-style: none;
+}
+
+.home-sources summary::-webkit-details-marker {
+  display: none;
+}
+
+/* A chevron that turns when the box is open */
+.home-sources summary::after {
+  content: "";
+  flex: none;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-bottom: 0.2rem;
+  border: solid currentColor;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.home-sources[open] > summary::after {
+  margin-bottom: -0.2rem;
+  transform: rotate(-135deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-sources summary::after {
+    transition: transform var(--dur) var(--ease);
+  }
+}
+
+.home-sources__body {
+  display: grid;
+  gap: var(--space-4);
+  padding: 0 var(--space-4) var(--space-5);
+  font-size: var(--text-sm);
+}
+
+.home-sources__topic {
+  margin-bottom: var(--space-1);
+  font-weight: var(--weight-bold);
+  color: var(--color-heading);
+}
+
+.home-sources__body li {
+  overflow-wrap: anywhere;
+}

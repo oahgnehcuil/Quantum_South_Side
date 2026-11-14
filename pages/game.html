@@ -1,0 +1,80 @@
+<!doctype html>
+<!--
+  Collapse Challenge: a new one-qubit puzzle every day. This file is only the page frame and the
+  "How to play" text. The puzzle itself is drawn by js/pages/game.js using the rules in
+  js/games/collapseChallenge.js and the puzzles in data/game-puzzles.json.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Collapse Challenge</title>
+  <meta name="description" content="A new quantum puzzle every day. Build the target state with the fewest gates, and match it before measuring collapses it.">
+  <meta name="theme-color" content="#0b1626">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/game.css">
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/pages/game.js"></script>
+</head>
+<body data-page="game" data-page-title="Collapse Challenge">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-header surface-dark">
+      <div class="container">
+        <p class="eyebrow">Daily puzzle</p>
+        <h1>Collapse Challenge</h1>
+        <p class="lead">A new quantum puzzle every day. Measuring a qubit makes it collapse: the blend turns into a plain 0 or 1. Build the target state with as few gates as you can, and match it before you measure.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt game" aria-label="Today's puzzle and your progress">
+      <div class="container">
+        <ul id="game-status" class="game-status" aria-label="Your game stats"></ul>
+
+        <details id="game-help" class="game-help">
+          <summary class="game-help__summary">How to play</summary>
+          <div class="game-help__body">
+            <div class="game-help__steps">
+              <h2 class="game-help__title">Four steps</h2>
+              <ol>
+                <li><strong>Look</strong> at the Start and the Target. They show a qubit <em>before</em> anyone measures it.</li>
+                <li><strong>Press gates</strong> to build a list. Your state card changes after every gate.</li>
+                <li><strong>Press Check</strong> when you think your state matches the Target. The bars and the dial both have to match.</li>
+                <li><strong>Use fewer gates</strong> for more stars. Par is the fewest gates that can do the job.</li>
+              </ol>
+              <p class="game-help__more">New to qubits? The <a href="learn.html#gates">Quantum Gates lesson</a> covers X, H and Z. The Y gate is explained in the puzzle where it first appears.</p>
+            </div>
+            <div class="game-help__looking">
+              <h2 class="game-help__title">What am I looking at?</h2>
+              <ul>
+                <li><strong>The dial.</strong> The arrow shows which way the qubit points. Top is <span class="ket">|0⟩</span>, bottom is <span class="ket">|1⟩</span>, right is <span class="ket">|+⟩</span> and left is <span class="ket">|−⟩</span>. The right and left sides give the same bars but are different states. That difference is a hidden sign.</li>
+                <li><strong>The bars.</strong> They show your chance of getting 0 or 1 if you measured right now.</li>
+                <li><strong>The amplitudes.</strong> These numbers are the state itself, before measuring. Squaring them gives the bars, but a minus sign hides in the squaring.</li>
+              </ul>
+              <p class="game-help__note"><strong>Remember:</strong> 0 and 1 are what you get <em>after</em> you measure. The amplitudes show the state <em>before</em> measuring. <strong>Peek</strong> measures once and collapses your qubit into a plain 0 or 1. In real life you cannot undo a measurement, so here Undo cannot take a peek back: Reset starts a new attempt. Match the Target before you measure. A peek costs one star.</p>
+            </div>
+          </div>
+        </details>
+
+        <div id="game-root" class="game-root" aria-busy="true">
+          <p class="text-muted">Loading today's puzzle…</p>
+        </div>
+
+        <section id="game-practice" class="game-practice" aria-labelledby="game-practice-title" hidden>
+          <h2 id="game-practice-title" class="game-practice__title" tabindex="-1">Practice mode</h2>
+          <p class="game-practice__intro">Play any puzzle, any time. Practice never changes your daily streak, and your best stars are saved on this device, or in your account if you are signed in.</p>
+          <ul id="game-practice-grid" class="game-practice__grid"></ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <noscript><div class="container section"><p class="notice notice--error">This site needs JavaScript to work. Please turn it on in your browser settings.</p></div></noscript>
+</body>
+</html>

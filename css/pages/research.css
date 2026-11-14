@@ -1,0 +1,118 @@
+/* ==========================================================================
+   research.css — styles that only the Research page uses (pages/research.html).
+   Every class starts with "research-" so it can never clash with another page.
+   Sections, top to bottom: loading skeletons, toolbar, paper cards, empty messages.
+   Colors, spacing and sizes come from variables.css.
+   ========================================================================== */
+
+/* ---------- Loading skeletons ---------- */
+.research-skeleton {
+  height: 16rem;
+}
+
+/* ---------- Toolbar: "Last updated", the filter bar and the difficulty guide ---------- */
+.research-toolbar {
+  padding-block: var(--space-6);
+}
+
+.research-toolbar__inner {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.research-updated,
+.research-guide {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.research-updated time {
+  font-weight: var(--weight-bold);
+  color: var(--color-heading);
+}
+
+.research-results {
+  padding-top: var(--space-6);
+}
+
+/* ---------- Paper cards ---------- */
+.research-card .card__title {
+  font-size: var(--text-lg);
+  overflow-wrap: anywhere;
+}
+
+/* Difficulty badges: the word says it, the color only helps */
+.badge--beginner {
+  background: var(--green-100);
+  border: 1px solid var(--green-700);
+  color: var(--green-900);
+}
+
+.badge--intermediate {
+  background: var(--blue-100);
+  border: 1px solid var(--blue-600);
+  color: var(--blue-900);
+}
+
+.badge--advanced {
+  background: var(--violet-100);
+  border: 1px solid var(--violet-700);
+  color: var(--violet-900);
+}
+
+.badge--chicago {
+  background: var(--orange-100);
+  border: 1px solid var(--orange-700);
+  color: var(--orange-900);
+}
+
+.badge--chicago::before {
+  content: "📍";
+  content: "📍" / "";
+  font-size: 0.85em;
+}
+
+/* The one-sentence "Key idea" gets a quantum-cyan edge so it is easy to spot */
+.research-key {
+  padding: var(--space-3) var(--space-4);
+  border: 0;
+  border-left: 4px solid var(--cyan-400);
+  border-radius: var(--radius-sm);
+  background: var(--cyan-50);
+}
+
+.research-key .card__section-label {
+  color: var(--cyan-900);
+}
+
+/* The lesson link takes the full row, so the two arXiv buttons sit together below it */
+.research-card .card__actions {
+  padding-top: var(--space-3);
+}
+
+.research-learn {
+  flex: 1 1 100%;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* ---------- Empty messages ---------- */
+.research-empty {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border: 2px dashed var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.research-empty__text {
+  font-weight: var(--weight-semibold);
+  color: var(--color-heading);
+}
+
+/* A little extra air above the AI label so it reads as a footnote to the text */
+.research-card .ai-label {
+  margin-top: var(--space-4);
+}

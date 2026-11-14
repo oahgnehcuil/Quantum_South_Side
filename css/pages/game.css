@@ -1,0 +1,948 @@
+/* ==========================================================================
+   game.css — styles that only the Collapse Challenge page needs.
+   Layout: a stat strip, a "How to play" box, then one dark "lab" panel with the
+   Start / Target / Your state cards, the gate buttons and the feedback, and
+   finally the Practice grid. Mobile-first: base rules are for phones and the
+   @media blocks add the wider layouts. Colors and spacing come from variables.css.
+   The amplitude line under each ket (showAmplitudes) is styled here too.
+   ========================================================================== */
+
+.game {
+  padding-block: var(--space-5) var(--space-8);
+}
+
+.game > .container > * + * {
+  margin-top: var(--space-5);
+}
+
+/* ---------- Status strip: streak, stars, played today ---------- */
+.game-status {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.game-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  min-width: 0;
+  margin: 0;
+  padding: var(--space-3) var(--space-2);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.game-stat__top {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.game-stat__icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.game-stat__value {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-black);
+  line-height: 1.1;
+  color: var(--color-heading);
+}
+
+.game-stat__label {
+  font-size: var(--text-xs);
+  line-height: var(--leading-snug);
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 600px) {
+  .game-status {
+    gap: var(--space-4);
+  }
+
+  .game-stat {
+    flex-direction: row;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    text-align: left;
+  }
+
+  .game-stat__label {
+    font-size: var(--text-sm);
+  }
+}
+
+/* ---------- How to play ---------- */
+.game-help {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.game-help__summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 3.25rem;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--color-heading);
+  cursor: pointer;
+  list-style: none;
+}
+
+.game-help__summary::-webkit-details-marker {
+  display: none;
+}
+
+.game-help__summary::after {
+  content: "";
+  flex: none;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: 0 var(--space-2) 0.2rem auto;
+  border: solid currentColor;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  transition: transform var(--dur) var(--ease);
+}
+
+.game-help[open] .game-help__summary::after {
+  margin-bottom: -0.2rem;
+  transform: rotate(-135deg);
+}
+
+.game-help__body {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.game-help__title {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-lg);
+}
+
+.game-help ol,
+.game-help ul {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.game-help li + li {
+  margin-top: 0;
+}
+
+.game-help__more,
+.game-help__note {
+  margin-top: var(--space-3);
+}
+
+.game-help__note {
+  padding: var(--space-3) var(--space-4);
+  background: var(--blue-50);
+  border-left: 6px solid var(--blue-700);
+  border-radius: var(--radius-md);
+  color: var(--blue-900);
+}
+
+@media (min-width: 900px) {
+  .game-help__body {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+    gap: var(--space-7);
+    padding: var(--space-5);
+  }
+}
+
+/* ---------- The lab panel ---------- */
+.game-lab {
+  padding: var(--space-4);
+  background: linear-gradient(160deg, var(--ink-900) 0%, var(--ink-800) 100%);
+  color: var(--color-on-dark);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Buttons inside the lab always have a 44px tap target. */
+.game-lab .btn {
+  min-height: 2.75rem;
+}
+
+.game-label {
+  margin: 0;
+  color: var(--color-on-dark-quantum);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.game-puzzle__head {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.game-puzzle__titles > * + * {
+  margin-top: var(--space-1);
+}
+
+.game-puzzle__eyebrow {
+  margin: 0;
+  color: var(--color-on-dark-quantum);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.game-puzzle__title {
+  font-size: var(--text-2xl);
+}
+
+.game-puzzle__task {
+  color: var(--color-on-dark-muted);
+}
+
+.game-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: fit-content;
+  margin: 0;
+  padding: 0.35rem 0.95rem;
+  background: var(--ink-950);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-pill);
+  font-weight: var(--weight-semibold);
+  white-space: nowrap;
+}
+
+.game-counter strong {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-black);
+  color: var(--cyan-300);
+}
+
+.game-puzzle__back {
+  width: fit-content;
+}
+
+@media (min-width: 600px) {
+  .game-lab {
+    padding: var(--space-5);
+  }
+}
+
+@media (min-width: 900px) {
+  .game-lab {
+    padding: var(--space-6);
+  }
+
+  .game-puzzle__head {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    column-gap: var(--space-5);
+  }
+}
+
+/* ---------- Start / Target / Your state cards ---------- */
+.game-views {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.game-view--yours {
+  grid-column: 1 / -1;
+}
+
+.game-views .qubit-view {
+  --qubit-dial-size: 8.5rem;
+  align-content: start;
+  gap: var(--space-3);
+  padding: var(--space-3);
+}
+
+/* The Start and Target cards stack the dial above the numbers so two fit side by side on a phone. */
+.game-views .qubit-view__main {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.game-views .qubit-dial {
+  flex: none;
+  width: min(var(--qubit-dial-size), 100%);
+}
+
+.game-views .qubit-view__readout {
+  flex: none;
+  width: 100%;
+}
+
+.game-views .qubit-view__ket {
+  font-size: 2.4rem;
+}
+
+.game-views .qubit-view__name {
+  font-size: var(--text-sm);
+}
+
+.game-views .qubit-view__odds {
+  text-wrap: balance;
+}
+
+.game-views .game-view--target {
+  border: 2px dashed var(--orange-400);
+}
+
+.game-views .game-view--yours {
+  border: 2px solid var(--cyan-400);
+}
+
+/* On a phone, Your state is full width, so the dial can sit beside the numbers. */
+.game-view--yours .qubit-view__main {
+  flex-direction: row;
+  justify-content: center;
+  gap: var(--space-4);
+  text-align: left;
+}
+
+.game-view--yours .qubit-view__readout {
+  flex: 1 1 8rem;
+  width: auto;
+}
+
+.game-view.is-collapsed {
+  animation: game-collapse var(--dur-slow) var(--ease);
+}
+
+@keyframes game-collapse {
+  0% {
+    box-shadow: 0 0 0 0 var(--violet-300);
+    transform: scale(0.97);
+  }
+  60% {
+    box-shadow: 0 0 0 12px transparent;
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .game-views {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+
+  .game-views--two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .game-view--yours {
+    grid-column: auto;
+  }
+
+  .game-views .qubit-view {
+    --qubit-dial-size: 9.5rem;
+    padding: var(--space-4);
+  }
+
+  .game-view--yours .qubit-view__main {
+    flex-direction: column;
+    gap: var(--space-2);
+    text-align: center;
+  }
+
+  .game-view--yours .qubit-view__readout {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* ---------- The amplitude line (createStateView showAmplitudes) ---------- */
+.qubit-view__amps {
+  display: grid;
+  gap: 0.1rem;
+  margin: var(--space-1) 0 0;
+}
+
+.qubit-view__amps-label {
+  color: var(--color-on-dark-muted);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.qubit-view__amps-text.ket {
+  display: block;
+  color: #ffffff;
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  line-height: 1.4;
+  white-space: normal;
+  text-wrap: balance;
+}
+
+/* ---------- Builder: gates, your list, actions ---------- */
+.game-build {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-dark);
+}
+
+.game-build__gates {
+  min-width: 0;
+}
+
+.game-gates {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(4.75rem, 6.5rem));
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.game-build__sequence {
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+  min-width: 0;
+  padding: var(--space-3);
+  background: var(--ink-950);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-md);
+}
+
+.game-build__sequence-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.game-build__small {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.game-sequence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.game-sequence > li + li {
+  margin-top: 0;
+}
+
+.game-sequence__empty {
+  margin: 0;
+  color: var(--color-on-dark-muted);
+  font-size: var(--text-sm);
+}
+
+.game-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.8rem 0.2rem 0.25rem;
+  background: var(--ink-700);
+  color: #ffffff;
+  border: 1px solid var(--steel-500);
+  border-radius: var(--radius-pill);
+  font-weight: var(--weight-bold);
+}
+
+.game-step__num {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.6rem;
+  height: 1.6rem;
+  background: var(--ink-950);
+  border-radius: 50%;
+  font-size: var(--text-xs);
+}
+
+.game-step--peek {
+  border: 1px dashed var(--violet-300);
+  font-weight: var(--weight-semibold);
+}
+
+.game-step.is-latest {
+  background: var(--cyan-300);
+  color: var(--ink-950);
+  border-color: var(--cyan-300);
+  animation: game-step-in var(--dur) var(--ease);
+}
+
+.game-step.is-latest .game-step__num {
+  background: var(--ink-900);
+  color: #ffffff;
+}
+
+@keyframes game-step-in {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.game-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.game-actions .btn {
+  padding-inline: var(--space-2);
+}
+
+.game-peek {
+  flex-direction: column;
+  gap: 0;
+  border-radius: var(--radius-md);
+}
+
+.game-btn__note {
+  color: var(--color-on-dark-muted);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-snug);
+}
+
+.game-check {
+  grid-column: 1 / -1;
+  min-height: 3.25rem;
+  background: var(--cyan-300);
+  color: var(--ink-950);
+  border-color: var(--cyan-300);
+  font-size: 1.1rem;
+}
+
+.game-check:hover {
+  background: var(--cyan-100);
+  border-color: var(--cyan-100);
+  color: var(--ink-950);
+}
+
+.game-hint {
+  padding: var(--space-3) var(--space-4);
+  background: var(--ink-950);
+  border: 1px dashed var(--cyan-300);
+  border-radius: var(--radius-sm);
+}
+
+.game-hint:empty {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .game-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .game-check {
+    flex: 1 1 10rem;
+    max-width: 20rem;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .game-build {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+    column-gap: var(--space-6);
+    align-items: start;
+  }
+
+  .game-actions,
+  .game-hint {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Feedback after Check and Peek ---------- */
+.game-feedback-live {
+  margin-top: var(--space-4);
+}
+
+.game-feedback-live:empty {
+  display: none;
+}
+
+.game-feedback {
+  --feedback-color: var(--amber-300);
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--ink-950);
+  border-left: 6px solid var(--feedback-color);
+  border-radius: var(--radius-sm);
+  animation: game-step-in var(--dur) var(--ease);
+}
+
+.game-feedback--peek {
+  --feedback-color: var(--violet-300);
+}
+
+.game-feedback > div > * + * {
+  margin-top: var(--space-1);
+}
+
+.game-feedback__icon {
+  flex: none;
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+
+.game-feedback__title {
+  font-weight: var(--weight-black);
+}
+
+/* ---------- Result card, with a small CSS-only celebration ---------- */
+.game-result-holder:empty {
+  display: none;
+}
+
+.game-result {
+  position: relative;
+  display: grid;
+  justify-items: start;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+  padding: var(--space-5) var(--space-4);
+  overflow: hidden;
+  background: var(--ink-950);
+  border: 2px solid var(--cyan-300);
+  border-radius: var(--radius-lg);
+}
+
+.game-result > * {
+  position: relative;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+}
+
+.game-result__title {
+  font-size: var(--text-2xl);
+}
+
+.game-stars {
+  color: var(--amber-300);
+  letter-spacing: 0.08em;
+}
+
+.game-stars--big {
+  display: inline-block;
+  font-size: 3rem;
+  line-height: 1;
+  transform-origin: left center;
+  animation: game-star-pop 600ms var(--ease) 150ms both;
+}
+
+.game-stars--small {
+  color: var(--color-forge);
+  font-size: var(--text-sm);
+  letter-spacing: 0.05em;
+}
+
+@keyframes game-star-pop {
+  0% {
+    transform: scale(0.3) rotate(-14deg);
+    opacity: 0;
+  }
+  65% {
+    transform: scale(1.15) rotate(3deg);
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.game-result__message {
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+}
+
+.game-result__sequence {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+.game-result__chips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.game-result__why {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background: var(--ink-900);
+  border-left: 4px solid var(--cyan-400);
+  border-radius: var(--radius-sm);
+}
+
+.game-result__why > * + * {
+  margin-top: var(--space-1);
+}
+
+.game-result__tomorrow {
+  color: var(--color-on-dark-muted);
+}
+
+.game-result__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.game-share {
+  display: grid;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px dashed var(--steel-500);
+  border-radius: var(--radius-sm);
+}
+
+.game-share__text {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+}
+
+.game-share__box {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  background: var(--ink-900);
+  color: #ffffff;
+  border: 2px solid var(--cyan-300);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  resize: none;
+}
+
+.game-share__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.game-share__note {
+  min-height: 1.4em;
+  margin: 0;
+  color: var(--color-on-dark-muted);
+  font-size: var(--text-sm);
+}
+
+.game-share__note:empty {
+  display: none;
+}
+
+/* Confetti: sixteen small pieces that fall once and fade. */
+.game-confetti {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.game-confetti__piece {
+  position: absolute;
+  top: -0.75rem;
+  left: var(--x);
+  width: 0.55rem;
+  height: 0.9rem;
+  background: var(--color);
+  border-radius: 2px;
+  opacity: 0;
+  animation: game-confetti-fall 1.7s var(--ease) var(--delay) 1 both;
+}
+
+.game-confetti__piece.is-round {
+  height: 0.6rem;
+  border-radius: 50%;
+}
+
+@keyframes game-confetti-fall {
+  0% {
+    opacity: 0;
+    transform: translate(0, -0.5rem) rotate(0deg);
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--drift), 16rem) rotate(540deg);
+  }
+}
+
+@media (min-width: 600px) {
+  .game-result {
+    padding: var(--space-6);
+  }
+}
+
+/* ---------- Practice mode ---------- */
+.game > .container > .game-practice {
+  margin-top: var(--space-7);
+}
+
+.game-practice__title {
+  margin-bottom: var(--space-2);
+}
+
+.game-practice__intro {
+  color: var(--color-text-muted);
+}
+
+.game-practice__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  gap: var(--space-3);
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.game-practice__grid > li + li {
+  margin-top: 0;
+}
+
+.game-tile {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    "num body"
+    "num stars";
+  align-items: center;
+  column-gap: var(--space-3);
+  row-gap: 0.1rem;
+  width: 100%;
+  min-height: 4rem;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 2px solid var(--steel-300);
+  border-radius: var(--radius-md);
+  text-align: left;
+  transition: border-color var(--dur-fast), background-color var(--dur-fast), transform var(--dur-fast) var(--ease);
+}
+
+.game-tile:hover {
+  background: var(--blue-50);
+  border-color: var(--color-primary);
+}
+
+.game-tile:active {
+  transform: translateY(1px);
+}
+
+.game-tile[aria-current="true"] {
+  background: var(--blue-50);
+  border-color: var(--color-primary);
+  box-shadow: inset 0 0 0 1px var(--color-primary);
+}
+
+.game-tile__num {
+  display: grid;
+  grid-area: num;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  background: var(--ink-900);
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+}
+
+.game-tile__body {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: body;
+  align-items: center;
+  gap: var(--space-1) var(--space-2);
+}
+
+.game-tile__title {
+  color: var(--color-heading);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+}
+
+.game-tile__badge {
+  padding: 0.05rem 0.55rem;
+  background: var(--orange-100);
+  color: var(--orange-900);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+}
+
+.game-tile__stars,
+.game-tile__new {
+  grid-area: stars;
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-confetti {
+    display: none;
+  }
+
+  .game-stars--big,
+  .game-step.is-latest,
+  .game-feedback,
+  .game-view.is-collapsed {
+    animation: none;
+  }
+
+  .game-tile {
+    transition: none;
+  }
+}

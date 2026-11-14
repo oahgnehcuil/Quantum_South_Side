@@ -1,0 +1,51 @@
+<!doctype html>
+<!--
+  News page: plain-language quantum news, split into big stories from around the world and
+  stories from Chicago-area schools and labs. This file is only the page frame. The cards are
+  drawn by js/pages/news.js from data/news.json, so edit the JSON to change the stories.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News</title>
+  <meta name="description" content="Plain-language news about quantum technology and what it means for Chicago.">
+  <meta name="theme-color" content="#0b1626">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/news.css">
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/pages/news.js"></script>
+</head>
+<body data-page="news" data-page-title="News">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-header surface-dark">
+      <div class="container">
+        <p class="eyebrow">News</p>
+        <h1>Quantum news, explained for Chicago</h1>
+        <p class="lead">Plain-language news about quantum technology and what it means for Chicago. Every story links to the original, so you can read more.</p>
+      </div>
+    </section>
+
+    <div id="news-root" aria-busy="true">
+      <section class="section section--alt" aria-label="Loading stories">
+        <div class="container">
+          <p class="visually-hidden" role="status">Loading stories…</p>
+          <div class="grid grid--2" aria-hidden="true">
+            <div class="skeleton news-skeleton"></div>
+            <div class="skeleton news-skeleton"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <noscript><div class="container section"><p class="notice notice--error">This site needs JavaScript to work. Please turn it on in your browser settings.</p></div></noscript>
+</body>
+</html>

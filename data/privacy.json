@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "description": "Plain-language privacy for Quantum South Side: what stays on your device as a guest, what an optional account stores, and who handles your data."
+  },
+  "header": {
+    "eyebrow": "Privacy",
+    "title": "Your privacy, in plain words",
+    "lead": "You can use every part of this site without an account. If you choose to make one, here is exactly what we keep, what we never ask for, and who helps us run it."
+  },
+  "lastUpdatedLabel": "Last updated",
+  "lastUpdated": "2026-11-14",
+  "tocLabel": "On this page",
+  "sections": [
+    {
+      "id": "short-version",
+      "title": "The short version",
+      "highlight": true,
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "You never need an account. As a guest, what you learn, answer and play stays in your browser on your own device.",
+            "An account is optional. If you make one, we keep your email (for logging in), a nickname you choose, and your progress and settings. We never ask for anything sensitive.",
+            "We never see or save your password. There are no ads, no analytics and no tracking cookies."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guest-mode",
+      "title": "Guest mode: nothing leaves your device",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "When you use the site as a guest, your progress and quiz answers are never sent anywhere. They are saved in your own browser, on your own device."
+        },
+        { "type": "h3", "text": "What your browser saves" },
+        {
+          "type": "list",
+          "items": [
+            "The lessons you finished.",
+            "Your quiz scores.",
+            "Your confidence rating, if you choose to give one.",
+            "Your puzzle results, such as your daily streak and your best stars."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The chatbot saves nothing. In FAQ mode it answers from files on the site, and your questions stay on your device."
+        },
+        { "type": "h3", "text": "How to erase it" },
+        {
+          "type": "p",
+          "text": "Open the Home page, find Your progress, and press Reset my progress. You can also clear this site's data in your browser settings. On a shared computer, do this when you are done."
+        },
+        {
+          "type": "links",
+          "items": [{ "label": "Go to the Home page", "href": "index.html" }]
+        }
+      ]
+    },
+    {
+      "id": "accounts",
+      "title": "Optional accounts",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "An account lets your progress follow you to another phone or computer. It is a choice, never a requirement. Accounts only work when the people running the site have set up the sign-in service. If you do not see Log in or Sign up buttons, this copy of the site is guest-only."
+        },
+        { "type": "h3", "text": "What an account stores, and why" },
+        {
+          "type": "terms",
+          "items": [
+            { "term": "Your email", "text": "So you can log in, and so we can send the emails that confirm your account and reset a forgotten password. We do not use it for anything else." },
+            { "term": "A nickname you choose", "text": "So the site can greet you without your real name. It must be 2 to 30 characters, and it cannot look like an email address." },
+            { "term": "Your progress", "text": "Lessons finished, quiz scores, puzzle results and other items you choose to save with your account, so they follow you from device to device." },
+            { "term": "Your settings", "text": "The choices you make in Account settings, such as whether to save your chat history." },
+            { "term": "Chat history, only if you turn it on", "text": "It is off unless you switch it on. When it is on, your chat messages are saved to your account so you can read them later." }
+          ]
+        },
+        { "type": "h3", "text": "What we do not collect" },
+        {
+          "type": "p",
+          "text": "We do not ask for your real name, your birthdate, your school, your address, your phone number, your race or your location. Please do not use your real full name as your nickname."
+        },
+        {
+          "type": "p",
+          "text": "We do not store your age either. When you sign up, you tick a box to say you are 13 or older. We do not save that answer."
+        }
+      ]
+    },
+    {
+      "id": "passwords",
+      "title": "Passwords",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Your password goes from your browser straight to Supabase's sign-in service. We never see it and we never save it.",
+            "Supabase does not keep your password itself. It keeps a scrambled version called a hash, made with a method named bcrypt. A hash is made to be one-way, so it cannot just be un-scrambled.",
+            "Because nobody here has your password, nobody here can tell it to you. If you forget it, you ask for a reset link by email."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Good habits: pick a password you do not use anywhere else, keep it to yourself, and sign out on shared computers. This site asks for at least 10 characters, with at least one letter and one number."
+        },
+        {
+          "type": "links",
+          "items": [{ "label": "Supabase: how passwords are stored", "href": "https://supabase.com/docs/guides/auth/password-security" }]
+        }
+      ]
+    },
+    {
+      "id": "who-handles-data",
+      "title": "Who handles your data",
+      "blocks": [
+        {
+          "type": "terms",
+          "items": [
+            { "term": "Supabase", "text": "Runs the sign-in service and the database that holds account data. Like most sign-in services, it may also keep technical details about sign-ins, such as the time and the IP address (the number your internet connection uses)." },
+            { "term": "esm.sh", "text": "A content delivery network (a service that hands out code files). The sign-in code library is loaded from it, but only when you open the log-in or sign-up form, or when you are signed in. Like any site you load something from, it can see your IP address and browser type." },
+            { "term": "Email", "text": "The emails that confirm your account and reset your password are sent through Supabase's email service, or through an email provider the project team sets up." },
+            { "term": "Vercel", "text": "Hosts this website. As with any web host, its servers handle your IP address when they send you a page." }
+          ]
+        },
+        {
+          "type": "p",
+          "text": "If you only browse as a guest, your browser never contacts Supabase or esm.sh. We show no ads, we use no analytics, and we set no tracking cookies. When you are signed in, your browser keeps a sign-in session in its local storage so you stay signed in. Signing out removes it."
+        },
+        {
+          "type": "p",
+          "text": "Some pages link to other websites, like news sites and arXiv. Once you open one of those links, that site's own rules apply."
+        },
+        {
+          "type": "links",
+          "items": [
+            { "label": "Supabase privacy policy", "href": "https://supabase.com/privacy" },
+            { "label": "Vercel privacy notice", "href": "https://vercel.com/legal/privacy-notice" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "protection",
+      "title": "How your data is protected",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The database uses a safety rule called row-level security. It means each person can only read and change their own rows, and nobody else's. Nobody can look up another person's email or nickname through the site."
+        },
+        {
+          "type": "p",
+          "text": "The only thing outside visitors can ask the database for is totals, such as how many accounts exist. Never names, emails or anyone's rows."
+        },
+        {
+          "type": "p",
+          "text": "No system is perfect. If you think something is wrong, tell your teacher or the project team."
+        }
+      ]
+    },
+    {
+      "id": "your-choices",
+      "title": "Your choices and rights",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "You can use every feature as a guest, for as long as you like.",
+            "In Account settings you can download your data and delete your account. Deleting your account removes everything stored in it.",
+            "We keep your account data until you delete your account."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teens",
+      "title": "Kids and teens",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Accounts are for people who are 13 or older. If you are younger, keep using guest mode. Everything still works.",
+            "Not sure if an account is right for you? Ask a trusted adult or your teacher first.",
+            "Do not share personal information in the chatbot, such as your full name, address, school or phone number. It is a learning helper, and it does not need that."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "changes",
+      "title": "Changes to this page",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "If we change how we handle data, we will update this page and the date at the top. If you have a question about it, ask your teacher or the project team."
+        }
+      ]
+    }
+  ]
+}

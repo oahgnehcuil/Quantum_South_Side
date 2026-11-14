@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Quantum South Side logo: a glowing ring with an orange tail, like a letter Q, circled by an orbit">
+  <title>Quantum South Side logo</title>
+  <defs>
+    <linearGradient id="qss-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#11233c"/>
+      <stop offset="1" stop-color="#08111f"/>
+    </linearGradient>
+    <linearGradient id="qss-ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#qss-bg)"/>
+  <!-- orbit: the "quantum" -->
+  <ellipse cx="32" cy="32" rx="26" ry="10" transform="rotate(-30 32 32)" fill="none" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1.6"/>
+  <!-- ring of the Q -->
+  <circle cx="31" cy="30" r="15" fill="none" stroke="url(#qss-ring)" stroke-width="5.5"/>
+  <!-- tail of the Q: a steel beam in forge orange: the "South Side steel" -->
+  <path d="M34.5 34 L52 52" stroke="#f97316" stroke-width="6.5" stroke-linecap="round"/>
+  <!-- the qubit -->
+  <circle cx="31" cy="15" r="3" fill="#ffffff"/>
+</svg>

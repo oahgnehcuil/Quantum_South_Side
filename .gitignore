@@ -16,3 +16,23 @@ bin-release/
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
+
+
+# ---- Quantum South Side project ----
+# Secrets: NEVER commit API keys. Put them in .env (local) or your host's environment-variable settings.
+.env
+.env.*
+!.env.example
+
+# Dependencies / tooling
+node_modules/
+
+# Hosting-tool folders
+.vercel/
+.netlify/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

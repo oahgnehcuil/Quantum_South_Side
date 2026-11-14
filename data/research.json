@@ -1,0 +1,212 @@
+{
+  "lastUpdated": "2026-11-14T17:34:00Z",
+  "items": [
+    {
+      "id": "2611.17262",
+      "title": "Scalable Pauli propagation through F2-linear partitioning",
+      "authors": [
+        "Alev Orfi",
+        "Andrew Kille",
+        "J. Clayton Peacock",
+        "Jack Dunham",
+        "Lukas Devos"
+      ],
+      "published": "2026-11-12",
+      "absUrl": "https://arxiv.org/abs/2611.17262",
+      "pdfUrl": "https://arxiv.org/pdf/2611.17262",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Before building a huge quantum computer, scientists test ideas by imitating one on a regular computer. That gets hard fast, because the bookkeeping takes enormous amounts of memory. This paper shows a clever way to split the work evenly across many processors, so much bigger imitations fit and run faster. The team shared their code for free.",
+      "keyIdea": "Splitting the bookkeeping evenly across many processors makes much bigger quantum simulations possible.",
+      "difficulty": "advanced",
+      "relatedTopic": "simulators",
+      "aiSummary": true,
+      "chicagoAffiliation": false
+    },
+    {
+      "id": "2611.17246",
+      "title": "Programming Quantum Circuit Parameters with Large Language Models",
+      "authors": [
+        "Tiago de Souza Farias",
+        "Caio Moraes Porto",
+        "Matheus da Silva Fonseca",
+        "Nicolas Armando Cabrera Carpi",
+        "Anderson de Araujo Oliveira",
+        "Celso Jorge Villas-Boas"
+      ],
+      "published": "2026-11-12",
+      "absUrl": "https://arxiv.org/abs/2611.17246",
+      "pdfUrl": "https://arxiv.org/pdf/2611.17246",
+      "categories": [
+        "quant-ph",
+        "cs.LG"
+      ],
+      "summary": "Quantum programs have settings, like dials, that must be tuned before they give good answers. Here, researchers asked a general-purpose AI language model to pick the dials instead of using the usual step-by-step tuning. It did worse on random problems but found promising settings when the problem had a clear pattern. The authors say AI answers still need to be checked independently.",
+      "keyIdea": "An AI language model can guess good quantum-program settings, but only when the problem has a clear pattern.",
+      "difficulty": "intermediate",
+      "relatedTopic": "algorithms",
+      "aiSummary": true,
+      "chicagoAffiliation": false
+    },
+    {
+      "id": "2611.17265",
+      "title": "A deployed four-city entanglement-based QKD network with real-time key delivery, benchmarked against finite-key security bounds",
+      "authors": [
+        "Gilberto Borges",
+        "Saeid Salari",
+        "Ekta Panwar",
+        "Samgeeth Puliyil",
+        "Kartik Kakade",
+        "Peter Rapčan",
+        "Mario Ziman",
+        "Djeylan Aktas"
+      ],
+      "published": "2026-11-12",
+      "absUrl": "https://arxiv.org/abs/2611.17265",
+      "pdfUrl": "https://arxiv.org/pdf/2611.17265",
+      "categories": [
+        "quant-ph",
+        "physics.optics"
+      ],
+      "summary": "Quantum key distribution is a way to share a secret code using the laws of physics, so no one can copy it without being noticed. This team built a network of this kind linking four cities in Slovakia over regular telecom fiber. The secret codes arrive in real time, but they are slow: about 13 bits per second over the 109 km link they report.",
+      "keyIdea": "A real four-city network shares secret codes protected by physics, though today's speeds are still very slow.",
+      "difficulty": "intermediate",
+      "relatedTopic": "intro",
+      "aiSummary": true,
+      "chicagoAffiliation": false
+    },
+    {
+      "id": "2611.17268",
+      "title": "Observation of Genuine Multi-Time Quantum Memory",
+      "authors": [
+        "Konstantin Beyer",
+        "Valentin Link",
+        "Surihan Sean Borjigin",
+        "Qian Cao",
+        "Orion Lee",
+        "Kater Murch",
+        "Igor Pikovski",
+        "Philip Taranto"
+      ],
+      "published": "2026-11-12",
+      "absUrl": "https://arxiv.org/abs/2611.17268",
+      "pdfUrl": "https://arxiv.org/pdf/2611.17268",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Some systems seem to remember their past, but that memory can sometimes be faked by a simple, non-quantum trick. The authors show that real quantum memory can hide if you only compare two moments in time and show up only when you look at three or more. They tested the idea on a superconducting qubit, the kind of qubit used in many quantum computers.",
+      "keyIdea": "Spotting true quantum memory can require looking at three or more moments in time, not just two.",
+      "difficulty": "advanced",
+      "relatedTopic": "intro",
+      "aiSummary": true,
+      "chicagoAffiliation": false
+    },
+    {
+      "id": "2611.14641",
+      "title": "A Grover-Accelerated Search for Dark Matter",
+      "authors": [
+        "Zachary Bogorad",
+        "Roni Harnik"
+      ],
+      "published": "2026-11-10",
+      "absUrl": "https://arxiv.org/abs/2611.14641",
+      "pdfUrl": "https://arxiv.org/pdf/2611.14641",
+      "categories": [
+        "hep-ph",
+        "hep-ex",
+        "quant-ph"
+      ],
+      "summary": "Grover's algorithm is a quantum method for searching through many options faster than a regular computer can. The authors suggest using it to speed up the hunt for dark matter, the invisible stuff that makes up much of the universe. They say building such a detector would still be very hard, but nothing in physics rules it out.",
+      "keyIdea": "A quantum search method could, in theory, speed up the hunt for dark matter.",
+      "difficulty": "advanced",
+      "relatedTopic": "algorithms",
+      "aiSummary": true,
+      "chicagoAffiliation": true
+    },
+    {
+      "id": "2611.08161",
+      "title": "Primitive Quantum Gates for an SU(3) Discrete Subgroup: Σ(216×3)",
+      "authors": [
+        "Erik J. Gustafson",
+        "Henry Lamm",
+        "Edison Murairi",
+        "Sebastian Osorio Perez"
+      ],
+      "published": "2026-11-05",
+      "absUrl": "https://arxiv.org/abs/2611.08161",
+      "pdfUrl": "https://arxiv.org/pdf/2611.08161",
+      "categories": [
+        "hep-lat",
+        "quant-ph"
+      ],
+      "summary": "Quantum gates are the basic steps a quantum computer follows, like the instructions in a recipe. This paper designs a set of gates for simulating the forces that hold the insides of atoms together. The authors estimate that even one example calculation would need tens of billions of gates, far more than today's machines can run.",
+      "keyIdea": "Designing the basic gates shows how large a computer would be needed to simulate forces inside atoms.",
+      "difficulty": "advanced",
+      "relatedTopic": "gates",
+      "aiSummary": true,
+      "chicagoAffiliation": true
+    },
+    {
+      "id": "2610.03609",
+      "title": "The QICK Box: A Modular RF Front-End System for Quantum Control and Readout",
+      "authors": [
+        "L. Arnaldi",
+        "D. Martin",
+        "S. Sussman",
+        "S. Uemura",
+        "K. Treptow",
+        "N. Wilcer",
+        "A. Colón Cesaní",
+        "O. Seidel",
+        "K. Anyang",
+        "G. Bratrud",
+        "F. Abouzahr",
+        "J. Christiansen-Salameh",
+        "D. Baxter",
+        "G. Cancelo"
+      ],
+      "published": "2026-10-02",
+      "absUrl": "https://arxiv.org/abs/2610.03609",
+      "pdfUrl": "https://arxiv.org/pdf/2610.03609",
+      "categories": [
+        "quant-ph",
+        "physics.ins-det"
+      ],
+      "summary": "To run an experiment on a qubit, you need electronics that send it signals and read its answer. The QICK Box is a compact, open-source control system for doing that, built with a testbed at Fermilab. In a test on a six-qubit chip, it read out each qubit's state correctly about 92 percent of the time.",
+      "keyIdea": "An open-source box that controls and reads out qubits, tested at Fermilab.",
+      "difficulty": "intermediate",
+      "relatedTopic": "computing",
+      "aiSummary": true,
+      "chicagoAffiliation": true
+    },
+    {
+      "id": "2607.14293",
+      "title": "Real-Time Detection of Charge Jumps in Superconducting Qubits with a Convolutional Neural Network",
+      "authors": [
+        "Daniel Gaytan-Villarreal",
+        "Peter Meiring",
+        "Daniel Baxter",
+        "Daniel Bowring",
+        "Grace Bratrud",
+        "Matteo Cremonesi",
+        "Giuseppe Di Guglielmo",
+        "Grace Wagner",
+        "Bowen Xiao"
+      ],
+      "published": "2026-07-15",
+      "absUrl": "https://arxiv.org/abs/2607.14293",
+      "pdfUrl": "https://arxiv.org/pdf/2607.14293",
+      "categories": [
+        "quant-ph",
+        "cs.LG"
+      ],
+      "summary": "Cosmic rays and other radiation can zap a qubit and cause errors, which makes error correction harder. This team trained a small AI program to spot those zaps as they happen, running on the same kind of control electronics that runs the qubits. It was trained on practice scans built from qubit measurements made at Fermilab's NEXUS site. It caught nearly as many zaps as the slower method used today.",
+      "keyIdea": "A small AI program spots radiation hits on qubits as they happen, so errors can be handled right away.",
+      "difficulty": "intermediate",
+      "relatedTopic": "error-correction",
+      "aiSummary": true,
+      "chicagoAffiliation": true
+    }
+  ]
+}

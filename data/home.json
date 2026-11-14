@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "description": "A free, friendly guide to quantum technology for Chicago students: how steel powered the South Side, and how the new quantum park at the old South Works site can open new careers."
+  },
+  "hero": {
+    "eyebrow": "Black CS Success Summit Hackathon 2026",
+    "headlinePast": "Steel powered the South Side.",
+    "headlineFuture": "Quantum can power its next chapter.",
+    "subhead": "The old South Works steel site is becoming a quantum technology park. Learn what that means, see the jobs it could bring, and find your place in it.",
+    "primaryCta": {
+      "label": "Start learning",
+      "href": "pages/learn.html"
+    },
+    "secondaryCta": {
+      "label": "Explore careers",
+      "href": "pages/careers.html"
+    },
+    "trustNote": "Free to use. No account needed, and we never ask for your real name."
+  },
+  "timeline": {
+    "eyebrow": "Chicago's tech revolutions",
+    "title": "Every revolution changed Chicago. Not everyone shared the gains.",
+    "intro": "Here are five turning points. For each one, ask two questions: who gained, and who got left out?",
+    "labels": {
+      "gained": "Who gained",
+      "leftOut": "Who was left out",
+      "now": "Now · Your turn"
+    },
+    "stops": [
+      {
+        "id": "railroads",
+        "era": "1848 and after",
+        "name": "Railroads",
+        "plain": "Trains tied Chicago to the rest of the country.",
+        "icon": "🚂",
+        "gained": "Chicago became a huge railroad center with many jobs, and in 1937 the Pullman porters' union won the first major contract for a Black union.",
+        "leftOut": "Potawatomi and other Native nations were removed after an 1833 treaty, and Black Pullman porters (sleeping-car attendants) were kept in service jobs."
+      },
+      {
+        "id": "steel",
+        "era": "1880s to 1992",
+        "name": "Steel and heavy industry",
+        "plain": "Giant mills turned iron ore into steel.",
+        "icon": "🏭",
+        "gained": "Mills in South Chicago and nearby neighborhoods gave thousands of families steady work for about a century.",
+        "leftOut": "Many Black workers were passed over for promotions, yet steel paid for homes and college, and when the mills closed, whole neighborhoods lost those paychecks."
+      },
+      {
+        "id": "internet",
+        "era": "1990s and after",
+        "name": "The internet",
+        "plain": "Computers and phones got connected to each other.",
+        "icon": "🌐",
+        "gained": "Easy web browsers like Mosaic spread, and Chicago Connected later gave many CPS families free internet at home for learning.",
+        "leftOut": "Not everyone got online. In 2020, an estimated 100,000 Chicago students still lacked high-speed internet at home."
+      },
+      {
+        "id": "ai",
+        "era": "2020s",
+        "name": "Artificial intelligence (AI)",
+        "plain": "Software that learns patterns from examples.",
+        "icon": "🤖",
+        "gained": "Workers and companies that use AI tools gain new options, and a degree or more job training can help lower the risk of automation.",
+        "leftOut": "A Chicago Fed study of U.S. jobs found Black workers make up more than their share of 17 of the 30 jobs most likely to be automated (done by machines)."
+      },
+      {
+        "id": "quantum",
+        "era": "Next",
+        "name": "Quantum technology",
+        "plain": "Computers built on the rules of very tiny things.",
+        "icon": "⚛️",
+        "current": true,
+        "gainedLabel": "What is happening",
+        "gained": "Illinois broke ground in September 2025 on a quantum technology park at the old South Works steel site, where steelmaking ended in 1992.",
+        "leftOutLabel": "What must be different",
+        "leftOut": "This time, jobs, training and a voice in the plan must reach neighbors in South Chicago. Planners say they are talking with City Colleges of Chicago about training and funding a neighborhood plan for South Chicago."
+      }
+    ]
+  },
+  "explainer": {
+    "eyebrow": "No physics needed",
+    "title": "What is quantum, in 30 seconds?",
+    "steps": [
+      {
+        "title": "Bits",
+        "text": "Your phone and laptop store everything as bits. A bit is like a tiny switch that is either 0 or 1."
+      },
+      {
+        "title": "Qubits",
+        "text": "A qubit is the quantum version of a bit. Until you measure it, it can be in a blend of 0 and 1. When you measure it, you always get a plain 0 or 1."
+      },
+      {
+        "title": "Why it matters",
+        "text": "Special programs can use that blend to help with a few hard problems, like studying how molecules behave."
+      }
+    ],
+    "notLabel": "What it is NOT",
+    "notText": "A quantum computer does not try every answer at once, and it will not replace your laptop. Today's machines are still small and make errors.",
+    "visual": {
+      "bitTitle": "A bit",
+      "bitCaption": "A switch: always 0 or 1.",
+      "qubitTitle": "A qubit",
+      "qubitCaption": "A blend of 0 and 1, until you measure it.",
+      "measureLabel": "Measure the qubit",
+      "againLabel": "Make a new blend",
+      "resultText": "You measured {n}. A measurement always gives a plain 0 or 1.",
+      "resultHint": "Try again: the answer can change.",
+      "blendText": "The qubit is in a blend. Press the button to measure it."
+    }
+  },
+  "whyNow": {
+    "eyebrow": "Why Chicago, why now",
+    "title": "A big project is rising on land with a long story.",
+    "facts": [
+      {
+        "value": "1992",
+        "text": "U.S. Steel stopped making steel at South Works."
+      },
+      {
+        "value": "440 acres",
+        "text": "of the old mill site are being redeveloped as Quantum Shore. The quantum park comes first, on 128 of those acres."
+      },
+      {
+        "value": "Sept. 2025",
+        "text": "Illinois held the groundbreaking for the park."
+      },
+      {
+        "value": "$500 million",
+        "text": "is the amount the state of Illinois says it is investing in the park."
+      }
+    ],
+    "jobsNote": "Park planners list jobs like system operators, cryogenic plant technicians (people who run equipment kept at extreme cold), logistics workers and security staff. They say they are talking with colleges about training for all skill levels. Many of these jobs do not need a PhD."
+  },
+  "cta": {
+    "eyebrow": "Pick your next step",
+    "title": "Where do you want to start?",
+    "cards": [
+      {
+        "icon": "🧠",
+        "eyebrow": "Start here",
+        "title": "Learn the basics",
+        "text": "Short lessons with hands-on playgrounds and quick quizzes. No physics background needed.",
+        "href": "pages/learn.html",
+        "goLabel": "Start learning"
+      },
+      {
+        "icon": "💼",
+        "eyebrow": "See the jobs",
+        "title": "Explore careers",
+        "text": "Meet real quantum jobs, from technicians to software developers. Many do not need a PhD.",
+        "href": "pages/careers.html",
+        "goLabel": "Explore careers"
+      },
+      {
+        "icon": "🧩",
+        "eyebrow": "Quick daily game",
+        "title": "Play today's puzzle",
+        "text": "A new puzzle every day that uses the same moves real quantum programmers use. Build a streak.",
+        "href": "pages/game.html",
+        "goLabel": "Play now"
+      }
+    ]
+  },
+  "progress": {
+    "eyebrow": "Just for you",
+    "title": "Your progress",
+    "intro": "Watch your learning add up. Nothing here is made up: these numbers come from what you actually did.",
+    "emptyTitle": "Nothing here yet, and that is fine.",
+    "emptyText": "Finish a lesson and your progress shows up here.",
+    "emptyCta": {
+      "label": "Start your first lesson",
+      "href": "pages/learn.html"
+    },
+    "topicsLabel": "Lessons completed",
+    "topicsOf": "of",
+    "topicsAllDone": "All lessons done. Great work!",
+    "quizzesLabel": "Quizzes passed",
+    "gamesLabel": "Puzzles played",
+    "streakLabel": "Day streak",
+    "notYet": "Not yet",
+    "confidenceLabel": "How confident you feel",
+    "confidenceScale": "on a 1 to 5 scale",
+    "confidenceMore": "You feel more confident than when you started.",
+    "confidenceSame": "Your confidence is steady.",
+    "confidenceLess": "Learning shows you what you do not know yet. That is a normal part of it.",
+    "savedNote": "Saved only on this device, in this browser. We never see it or send it anywhere.",
+    "savedNoteAccount": "Saved to your account, so it follows you to other devices.",
+    "notSavedNote": "Your browser is blocking saving, so your progress will disappear when you close this tab.",
+    "resetLabel": "Reset my progress",
+    "resetWarning": "This erases your lessons, quiz scores and puzzle streak on this device. It cannot be undone.",
+    "resetWarningAccount": "This erases your lessons, quiz scores and puzzle streak on this device and from your account. It cannot be undone.",
+    "resetConfirm": "Yes, erase it",
+    "resetCancel": "Keep my progress",
+    "resetDone": "Your progress was erased."
+  },
+  "sources": {
+    "summary": "Where this comes from",
+    "intro": "Every history and Chicago fact on this page comes from the sources below. Facts last checked on",
+    "lastVerified": "2026-11-14",
+    "groups": [
+      {
+        "topic": "Railroads",
+        "items": [
+          {
+            "title": "The Pioneer: The Little Locomotive That Could",
+            "publisher": "Chicago History Museum",
+            "url": "https://www.chicagohistory.org/the-pioneer-the-little-locomotive-that-could/"
+          },
+          {
+            "title": "Treaty of Chicago, 1833",
+            "publisher": "Newberry Library, Indians of the Midwest",
+            "url": "https://digcoll.newberry.org/indians-midwest/media/treaty-of-chicago-1833"
+          },
+          {
+            "title": "Pullman Porters",
+            "publisher": "National Park Service, Pullman National Historical Park",
+            "url": "https://www.nps.gov/pull/learn/historyculture/pullman-porters.htm"
+          }
+        ]
+      },
+      {
+        "topic": "Steel and heavy industry",
+        "items": [
+          {
+            "title": "How Chicago's Black Steelworkers Struggled, Thrived And Survived The Industry's Rise And Fall",
+            "publisher": "Block Club Chicago",
+            "url": "https://blockclubchicago.org/2024/02/22/how-chicagos-black-steelworkers-struggled-thrived-and-survived-the-industrys-rise-and-fall/"
+          },
+          {
+            "title": "The Closing of the Mills",
+            "publisher": "Southeast Chicago Historical Society",
+            "url": "https://www.sechicagohistory.org/stories/cotm.html"
+          },
+          {
+            "title": "Illinois Quantum and Microelectronics Park (IQMP)",
+            "publisher": "Illinois Environmental Protection Agency",
+            "url": "https://epa.illinois.gov/topics/community-relations/sites/iqmp.html"
+          }
+        ]
+      },
+      {
+        "topic": "The internet",
+        "items": [
+          {
+            "title": "NCSA Mosaic",
+            "publisher": "National Center for Supercomputing Applications, University of Illinois",
+            "url": "https://www.ncsa.illinois.edu/research/project-highlights/ncsa-mosaic/"
+          },
+          {
+            "title": "Chicago Connected",
+            "publisher": "Chicago Public Schools",
+            "url": "https://www.cps.edu/strategic-initiatives/chicago-connected/"
+          }
+        ]
+      },
+      {
+        "topic": "Artificial intelligence",
+        "items": [
+          {
+            "title": "Automation Affects Workers of Color the Most. How Can We Lessen the Impact?",
+            "publisher": "Federal Reserve Bank of Chicago",
+            "url": "https://www.chicagofed.org/research/content-areas/mobility/policy-brief-automation"
+          }
+        ]
+      },
+      {
+        "topic": "Quantum in Chicago",
+        "items": [
+          {
+            "title": "IQMP FAQs",
+            "publisher": "Illinois Quantum and Microelectronics Park",
+            "url": "https://iqmp.org/faqs/"
+          },
+          {
+            "title": "Gov. Pritzker Breaks Ground on Illinois Quantum and Microelectronics Park (IQMP)",
+            "publisher": "Office of the Governor of Illinois",
+            "url": "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-breaks-ground-on-illinois-quantum-and-microelectronics-park-iqmp"
+          }
+        ]
+      }
+    ]
+  }
+}

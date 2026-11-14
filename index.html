@@ -1,0 +1,75 @@
+<!doctype html>
+<!--
+  Home page. The text on this page lives in data/home.json and js/pages/home.js draws it
+  into the empty "slots" below (every slot starts as a grey loading skeleton).
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quantum South Side</title>
+  <meta name="description" content="A free, friendly guide to quantum technology for Chicago students: how steel powered the South Side, and how the new quantum park at the old South Works site can open new careers.">
+  <meta name="theme-color" content="#0b1626">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/pages/home.js"></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main" tabindex="-1">
+    <section class="home-hero surface-dark" aria-labelledby="hero-title">
+      <div class="container home-hero__inner">
+        <div class="home-hero__text" data-slot="hero" aria-busy="true">
+          <div class="skeleton home-skeleton home-skeleton--title"></div>
+          <div class="skeleton home-skeleton"></div>
+          <div class="skeleton home-skeleton home-skeleton--short"></div>
+        </div>
+        <img class="home-hero__art" src="assets/images/hero-steel-to-quantum.svg" alt="" width="640" height="340">
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="timeline-title">
+      <div class="container" data-slot="timeline" aria-busy="true">
+        <div class="skeleton home-skeleton home-skeleton--block"></div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="explainer-title">
+      <div class="container" data-slot="explainer" aria-busy="true">
+        <div class="skeleton home-skeleton home-skeleton--block"></div>
+      </div>
+    </section>
+
+    <section class="section home-why surface-dark" aria-labelledby="why-title">
+      <div class="container" data-slot="why" aria-busy="true">
+        <div class="skeleton home-skeleton home-skeleton--block"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container" data-slot="cta" aria-busy="true">
+        <div class="skeleton home-skeleton home-skeleton--block"></div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="progress-title">
+      <div class="container" data-slot="progress" aria-busy="true">
+        <div class="skeleton home-skeleton home-skeleton--block"></div>
+      </div>
+    </section>
+
+    <section class="section home-sources-section" aria-labelledby="sources-summary">
+      <div class="container container--narrow" data-slot="sources"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <noscript><div class="container section"><p class="notice notice--error">This site needs JavaScript to work. Please turn it on in your browser settings.</p></div></noscript>
+</body>
+</html>

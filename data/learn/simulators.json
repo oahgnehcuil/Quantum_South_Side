@@ -1,0 +1,103 @@
+{
+  "id": "simulators",
+  "title": "Quantum Simulators",
+  "icon": "🧪",
+  "tagline": "Practice quantum programming on a regular laptop",
+  "lastVerified": "2026-11-14",
+  "readingTimeMinutes": 3,
+  "plainSummary": [
+    "Real quantum computers are rare and costly. They are also small, and their chips make many mistakes. So how do people learn to program them? Most start with a quantum simulator.",
+    "A quantum simulator is a program that runs on an ordinary computer and pretends to be a quantum computer. You build a quantum circuit (a list of steps for qubits). A qubit is the quantum version of a bit, and a bit is a tiny switch that is 0 or 1. Then you run the circuit and see the results. You can learn, test ideas, and fix bugs (mistakes in code) without any quantum hardware. Many simulators can also add pretend noise (random errors) to copy the mistakes of a real chip. Open-source tools include Qiskit Aer and Cirq. Quirk is a drag-and-drop circuit simulator.",
+    "Simulators have a hard limit. A standard simulator must store 2 to the power n values that describe n qubits. Each extra qubit doubles that list, so it roughly doubles the memory and time needed. IBM's documentation says most laptops cannot simulate beyond about 32 qubits when noise is included. A 2020 report says the practical limit on a big supercomputer (one of the biggest, fastest regular computers) is about 48 qubits. Clever compression tricks stretched that to 61 for one test. A general 100-qubit simulation is far out of reach.",
+    "Do not mix up two similar names. A quantum simulator is software on a regular computer. Quantum simulation means using a real quantum computer to imitate nature, such as molecules or materials. Researchers hope this could become one of the most useful uses for future quantum computers."
+  ],
+  "everydayAnalogy": "Pilots practice in a flight simulator before they fly a real plane. They can try emergencies and repeat a hard landing all day, and nobody gets hurt. A quantum simulator works the same way for programmers. You test and fix your program on your own laptop first. Then you spend scarce time on a real quantum computer only when you are ready.",
+  "analogyLimits": "A flight simulator does not get much harder when the flight is longer or the plane is bigger. A quantum simulator does: each extra qubit doubles the work.",
+  "keyTerms": [
+    {
+      "term": "Qubit",
+      "definition": "The quantum version of a bit; it can be in a blend of 0 and 1 until measured, and a measurement always gives a plain 0 or 1."
+    },
+    {
+      "term": "Quantum circuit",
+      "definition": "A list of steps called gates (simple moves that change a qubit), followed by a measurement (a check that gives a plain 0 or 1)."
+    },
+    {
+      "term": "Quantum simulator",
+      "definition": "Software on a regular computer that pretends to be a quantum computer so you can learn, test, and debug programs."
+    },
+    {
+      "term": "Noise",
+      "definition": "Random errors that disturb qubits; some simulators add pretend noise to copy how a real chip makes mistakes."
+    },
+    {
+      "term": "Quantum simulation",
+      "definition": "Using a quantum computer to imitate molecules or materials; this is different from a quantum simulator."
+    },
+    {
+      "term": "Doubling",
+      "definition": "Each extra qubit roughly doubles the memory and time a simulator needs, so large programs quickly become impossible."
+    }
+  ],
+  "whyItMattersForJobs": "Software developers and test engineers write and run simulator tests long before any hardware runs a program. IT and cloud technicians set up and maintain the computers that run simulators. Project managers help teams save time on costly machines when programs are tested first. Many roles on quantum teams do not require a PhD. Strong coding, careful testing, and curiosity matter most.",
+  "chicagoConnection": "The Chicago Quantum Exchange lists Quantum Quickstart. It is a one-week summer program run by the University of Chicago. It is for Illinois students in grades 9 to 11, age 14 or older. Selected students pay nothing, and Chicago students get preference. Sessions include virtual labs that simulate real-world quantum problems. Check the program page for current dates.",
+  "quiz": [
+    {
+      "question": "Why do programmers use quantum simulators?",
+      "options": [
+        "Simulators are faster than real quantum computers at every problem.",
+        "To learn and test programs without real hardware",
+        "Simulators make real quantum computers unnecessary."
+      ],
+      "answerIndex": 1,
+      "explanation": "A simulator lets you practice and debug on an ordinary computer. It is not faster at everything. It runs out of steam as programs grow, so real hardware is still needed."
+    },
+    {
+      "question": "Why can't a laptop simulate 100 qubits?",
+      "options": [
+        "Laptop screens are too small to show 100 qubits.",
+        "Quantum programs cannot run on regular computers at all.",
+        "Each extra qubit doubles the memory needed."
+      ],
+      "answerIndex": 2,
+      "explanation": "Doubling again and again gets huge. Even a big supercomputer manages only around 50 qubits for a general simulation. Laptops can run simulators, so the wrong answers are myths."
+    },
+    {
+      "question": "Which sentence describes quantum simulation, not a quantum simulator?",
+      "options": [
+        "Using a quantum computer to imitate a molecule or material.",
+        "Running a program on a laptop that pretends to be a quantum computer.",
+        "Adding pretend noise to a practice circuit."
+      ],
+      "answerIndex": 0,
+      "explanation": "Quantum simulation means a quantum computer imitating nature. A quantum simulator is laptop software that imitates a quantum computer. That is the tempting mix-up."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Test locally (local testing mode)",
+      "publisher": "IBM Quantum Documentation",
+      "url": "https://quantum.cloud.ibm.com/docs/en/ibm-quantum-compute/local-testing-mode"
+    },
+    {
+      "title": "Quirk: a drag-and-drop quantum circuit simulator",
+      "publisher": "Craig Gidney (algassert.com)",
+      "url": "https://algassert.com/quirk"
+    },
+    {
+      "title": "Cirq",
+      "publisher": "Google Quantum AI",
+      "url": "https://quantumai.google/cirq"
+    },
+    {
+      "title": "Researchers simulate quantum computer with up to 61 quantum bits using a supercomputer with data compression",
+      "publisher": "Phys.org",
+      "url": "https://phys.org/news/2020-01-simulate-quantum-bits-supercomputer-compression.html"
+    },
+    {
+      "title": "Quantum Quickstart Program",
+      "publisher": "Chicago Quantum Exchange",
+      "url": "https://chicagoquantum.org/education-and-training/quantum-quickstart"
+    }
+  ]
+}

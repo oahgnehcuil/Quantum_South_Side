@@ -1,0 +1,103 @@
+{
+  "id": "intro",
+  "title": "Introduction to Quantum",
+  "icon": "⚛️",
+  "tagline": "Bits, qubits, and why Chicago cares about quantum",
+  "lastVerified": "2026-11-14",
+  "readingTimeMinutes": 3,
+  "plainSummary": [
+    "Your phone stores information as bits. A bit is a tiny switch that is either 0 or 1. A quantum computer uses qubits instead. A qubit is a tiny object, like an atom, a particle of light, or an electrical circuit chilled to near absolute zero. It follows the strange rules of quantum physics. Those rules describe how very small things behave.",
+    "A qubit can be in a blend of 0 and 1. Scientists call this a superposition. But you never see the blend. When you measure a qubit (check its value), you always get a plain 0 or a plain 1. The blend only sets the odds. Two qubits can also be entangled, which means their results are linked, even though each single result looks random.",
+    "Why do people care? Quantum computers may help simulate (model how they behave on a computer) molecules and new materials. IBM also lists energy and finance as areas to explore. Some experts worry about public-key encryption, the online lock-and-key security that protects messages. Machines big enough to break it do not exist yet, so experts are already building new, safer methods.",
+    "Quantum computers are not magic. A common myth says they try every answer at once. They do not. They use the blend to steer toward good answers on certain problems. They will not replace your laptop or phone. Those are classical computers, the kind we use today, and they will stay better for most jobs. Quantum machines today are small and make many errors. Researchers are working to fix that."
+  ],
+  "everydayAnalogy": "Picture a coin spinning in the air. While it spins, it is hard to say yet whether it will be heads or tails. When it lands and you look, you see one side. A qubit is a bit like that. Before you measure it, it is in a blend of 0 and 1. When you measure it, you get one plain answer.",
+  "analogyLimits": "A real spinning coin always has a definite side that we just cannot see yet. A qubit's blend is different. It is a real physical state, and its odds do not have to be 50/50.",
+  "keyTerms": [
+    {
+      "term": "Bit",
+      "definition": "The smallest piece of information in a regular computer, a tiny switch that is either 0 or 1."
+    },
+    {
+      "term": "Qubit",
+      "definition": "The quantum version of a bit, a tiny object that can be in a blend of 0 and 1 until it is measured."
+    },
+    {
+      "term": "Superposition",
+      "definition": "A blend of 0 and 1 that a qubit can be in before you measure it."
+    },
+    {
+      "term": "Measurement",
+      "definition": "Checking a qubit's value, which always gives a plain 0 or 1, with odds set by the blend."
+    },
+    {
+      "term": "Entanglement",
+      "definition": "A link between two qubits, so that their measurement results are connected even though each result looks random."
+    },
+    {
+      "term": "Classical computer",
+      "definition": "An ordinary computer, like a laptop or phone, that uses regular bits."
+    }
+  ],
+  "whyItMattersForJobs": "Quantum computers need people to build, run, and protect them. Technicians keep the machines, cooling systems, and electronics working. Software developers write programs for qubits. Cybersecurity analysts help groups move to new, safer encryption. Operations and project managers keep labs on track. Many of these jobs do not usually need a PhD.",
+  "chicagoConnection": "Illinois broke ground in September 2025 on the Illinois Quantum and Microelectronics Park. It sits on the old U.S. Steel South Works site. Steel making there stopped in 1992. The Chicago Quantum Exchange links universities, the Argonne and Fermilab labs, and nearly 70 partners. Park planners say they need system operators, security staff, and cryogenic plant technicians, who run the extreme-cold equipment.",
+  "quiz": [
+    {
+      "question": "What is a qubit?",
+      "options": [
+        "A regular bit stored on a much faster chip",
+        "A quantum object that can hold a blend of 0 and 1",
+        "A bit that shows both 0 and 1 together when you look"
+      ],
+      "answerIndex": 1,
+      "explanation": "A qubit is a quantum object that can be in a blend of 0 and 1 before it is measured. It is not just a faster bit, and you never see both values at once."
+    },
+    {
+      "question": "You measure a qubit that is in a blend of 0 and 1. What do you see?",
+      "options": [
+        "Always a 0, because 0 comes first",
+        "A blend of 0 and 1 shown together",
+        "A plain 0 or a plain 1"
+      ],
+      "answerIndex": 2,
+      "explanation": "Measuring always gives one plain answer, either 0 or 1. The blend only decides the odds. You never see the blend itself."
+    },
+    {
+      "question": "Which statement about quantum computers is true?",
+      "options": [
+        "They are small and error-prone today",
+        "They try every possible answer at once, then pick the best one",
+        "They are faster than laptops at every kind of task"
+      ],
+      "answerIndex": 0,
+      "explanation": "Today's quantum computers are small and make many errors. They are not faster at everything, and they do not simply try every answer at once. Classical computers stay better for most jobs."
+    }
+  ],
+  "sources": [
+    {
+      "title": "What is quantum computing?",
+      "publisher": "IBM",
+      "url": "https://www.ibm.com/think/topics/quantum-computing"
+    },
+    {
+      "title": "About the Chicago Quantum Exchange",
+      "publisher": "Chicago Quantum Exchange",
+      "url": "https://chicagoquantum.org/about"
+    },
+    {
+      "title": "IQMP FAQs",
+      "publisher": "Illinois Quantum and Microelectronics Park",
+      "url": "https://iqmp.org/faqs/"
+    },
+    {
+      "title": "Illinois Quantum and Microelectronics Park (IQMP)",
+      "publisher": "Illinois Environmental Protection Agency",
+      "url": "https://epa.illinois.gov/topics/community-relations/sites/iqmp.html"
+    },
+    {
+      "title": "Gov. Pritzker Breaks Ground on Illinois Quantum and Microelectronics Park (IQMP)",
+      "publisher": "Illinois Quantum and Microelectronics Park",
+      "url": "https://iqmp.org/news/gov-pritzker-breaks-ground-on-illinois-quantum-and-microelectronics-park-iqmp/"
+    }
+  ]
+}

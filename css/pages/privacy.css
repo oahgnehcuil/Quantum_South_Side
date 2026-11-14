@@ -1,0 +1,151 @@
+/* ==========================================================================
+   privacy.css — styles that only the Privacy page uses (pages/privacy.html).
+   Every class starts with "privacy-" so it can never clash with another page.
+   Sections, top to bottom: loading, last-updated line, table of contents,
+   text sections, lists and definitions.
+   Colors, spacing and sizes come from variables.css.
+   ========================================================================== */
+
+/* ---------- Loading skeleton ---------- */
+.privacy-skeleton {
+  height: 18rem;
+}
+
+/* ---------- "Last updated" line ---------- */
+.privacy-updated {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.privacy-updated time {
+  font-weight: var(--weight-bold);
+  color: var(--color-heading);
+}
+
+/* ---------- Table of contents ---------- */
+.privacy-toc {
+  margin-top: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.privacy-toc__title {
+  font-weight: var(--weight-black);
+  color: var(--color-heading);
+}
+
+.privacy-toc__list {
+  margin-top: var(--space-2);
+  padding-left: var(--space-5);
+}
+
+.privacy-toc__list a {
+  display: block;
+  padding-block: var(--space-1);
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 700px) {
+  .privacy-toc__list {
+    columns: 2;
+    column-gap: var(--space-6);
+  }
+
+  .privacy-toc__list li {
+    break-inside: avoid;
+  }
+}
+
+/* ---------- Text sections ---------- */
+.privacy-section {
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.privacy-section:first-of-type {
+  border-top: 0;
+}
+
+.privacy-section__title {
+  font-size: var(--text-xl);
+}
+
+.privacy-section__body {
+  margin-top: var(--space-4);
+}
+
+.privacy-section__body > * + * {
+  margin-top: var(--space-4);
+}
+
+.privacy-section__body > .privacy-subhead {
+  margin-top: var(--space-5);
+}
+
+.privacy-section__body > .privacy-subhead + * {
+  margin-top: var(--space-2);
+}
+
+.privacy-section__body p,
+.privacy-section__body li,
+.privacy-section__body dd {
+  overflow-wrap: anywhere;
+}
+
+/* The short version stands out as a card */
+.privacy-section--highlight {
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.privacy-subhead {
+  font-size: var(--text-lg);
+}
+
+/* ---------- Lists ---------- */
+.privacy-list {
+  padding-left: var(--space-5);
+}
+
+.privacy-list li + li {
+  margin-top: var(--space-2);
+}
+
+.privacy-terms__row {
+  padding-block: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.privacy-terms__row:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.privacy-terms dt {
+  font-weight: var(--weight-black);
+  color: var(--color-heading);
+}
+
+.privacy-terms dd {
+  margin-top: var(--space-1);
+}
+
+.privacy-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  padding: 0;
+  list-style: none;
+}
+
+.privacy-links a {
+  display: inline-block;
+  padding-block: var(--space-1);
+  font-weight: var(--weight-bold);
+}

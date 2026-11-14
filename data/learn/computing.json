@@ -1,0 +1,107 @@
+{
+  "id": "computing",
+  "title": "Quantum Computing",
+  "icon": "🖥️",
+  "tagline": "What a quantum computer is and how it runs a program",
+  "lastVerified": "2026-11-14",
+  "readingTimeMinutes": 3,
+  "plainSummary": [
+    "Your phone stores information as bits. A bit is a tiny switch that is either 0 or 1. A quantum computer stores information in qubits (the quantum version of a bit). It changes them with gates (small steps that act on qubits). Before it is measured, a qubit can be in a blend of 0 and 1. Measuring always gives a plain 0 or 1.",
+    "A quantum program has three steps. First, you prepare the qubits. Next, you apply gates. Last, you measure. The result is partly random. So the computer runs the same program many times. Each run is called a shot. Then you tally the results, like counting votes.",
+    "Qubits can be built in different ways. Some are superconducting circuits (tiny electric circuits cooled until they carry current with no resistance). Others are trapped ions (charged atoms held in place), neutral atoms (atoms with no charge, held by lasers), or photons (particles of light). Each way has trade-offs. Qubits are fragile. Heat, vibration and stray signals can disturb them and cause errors.",
+    "Today's quantum computers are small and error-prone. IBM and partners say they have shown early quantum advantage (doing a job better than any regular computer) on narrow problems. Other scientists are testing those claims. No one has shown broad advantage. Quantum computers will not replace laptops or phones. Regular computers will control them and work alongside them."
+  ],
+  "everydayAnalogy": "Think of a quantum computer as a specialized power tool in a big workshop, like a tile saw. It is great for certain jobs and useless for most others. It also cannot work alone. It needs power, a steady table, safety gear and a skilled person running it. A quantum computer needs a whole workshop of regular computers and equipment around it.",
+  "analogyLimits": "A tile saw gives the same cut every time, but a quantum program gives random-looking results, so it runs many shots. A qubit is also far more fragile than a saw.",
+  "keyTerms": [
+    {
+      "term": "Qubit",
+      "definition": "The basic unit of information in a quantum computer; it can be in a blend of 0 and 1 until it is measured."
+    },
+    {
+      "term": "Gate",
+      "definition": "A small step that changes the state of one or more qubits, like a single move in a game."
+    },
+    {
+      "term": "Shot",
+      "definition": "One run of a quantum program from preparing the qubits to measuring them; programs are run many times and the results are tallied."
+    },
+    {
+      "term": "Superconducting qubit",
+      "definition": "A qubit made from a tiny electric circuit that is cooled to near absolute zero so it carries current with no resistance and stray heat does not disturb it."
+    },
+    {
+      "term": "Trapped ion",
+      "definition": "An atom with an electric charge that is held in place by electric fields and used as a qubit."
+    },
+    {
+      "term": "Quantum advantage",
+      "definition": "Using a quantum computer to do a useful job faster or better than any regular computer; today's claims are narrow and still being tested."
+    },
+    {
+      "term": "Classical computer",
+      "definition": "A regular computer, like a laptop or phone, that stores information as bits."
+    }
+  ],
+  "whyItMattersForJobs": "A quantum computer is a whole workshop, so it needs many kinds of workers. Technicians and skilled-trades workers help keep the machines cold, wired and running. Software developers write the programs and control tools that set up and run shots. Operations and project managers schedule machine time and keep the facility running. Many people in these roles do not need a PhD.",
+  "chicagoConnection": "PsiQuantum broke ground at the Illinois Quantum and Microelectronics Park on September 30, 2025. It says it uses light-based (photonic) qubits. It plans a huge, error-corrected computer, which it calls million-qubit scale. IBM says it plans to house a Quantum System Two (an IBM quantum computer) there. The Chicago Quantum Exchange is a group of universities, national labs, and companies. It is based at UChicago. Argonne National Laboratory and Fermilab are two of its anchor members.",
+  "quiz": [
+    {
+      "question": "In quantum computing, what is a shot?",
+      "options": [
+        "A single gate that changes one qubit inside the circuit",
+        "One run of the program, from start to measurement",
+        "A burst of cooling that protects the qubits from heat"
+      ],
+      "answerIndex": 1,
+      "explanation": "A shot is one full run of a program. Results are random-ish, so the program runs many times and the results are tallied. A gate is only one step inside a run."
+    },
+    {
+      "question": "Why do builders work so hard to protect superconducting qubits from heat, vibration and stray signals?",
+      "options": [
+        "Qubits give off dangerous heat that must be carried away to keep workers safe",
+        "Cold makes a qubit pick 0 or 1 ahead of time, which speeds up the answer",
+        "Those disturbances can upset the qubits and cause errors in the results"
+      ],
+      "answerIndex": 2,
+      "explanation": "Qubits are fragile, so outside disturbances can cause errors. The cooling is there to protect the qubits, not the workers."
+    },
+    {
+      "question": "Which statement about quantum computers today is accurate?",
+      "options": [
+        "Small and error-prone, with narrow advantage claims still tested",
+        "They already beat regular computers at every task, so laptops will soon be replaced",
+        "They are steady enough that a program needs to run only one time"
+      ],
+      "answerIndex": 0,
+      "explanation": "Today's machines are small and error-prone, and the advantage claims so far are narrow and still being checked. Quantum computers will work alongside regular computers, not replace them."
+    }
+  ],
+  "sources": [
+    {
+      "title": "What Is Quantum Computing?",
+      "publisher": "IBM",
+      "url": "https://www.ibm.com/think/topics/quantum-computing"
+    },
+    {
+      "title": "IBM and Algorithmiq Demonstrate Quantum Advantage, Establishing a Framework for Trusted Quantum Computation Beyond Classical Verification",
+      "publisher": "IBM Newsroom",
+      "url": "https://newsroom.ibm.com/2026-07-30-ibm-and-algorithmiq-demonstrate-quantum-advantage,-establishing-a-framework-for-trusted-quantum-computation-beyond-classical-verification"
+    },
+    {
+      "title": "PsiQuantum Breaks Ground on America's Largest Quantum Computing Project in Chicago",
+      "publisher": "PsiQuantum",
+      "url": "https://www.psiquantum.com/news-import/psiquantum-breaks-ground-chicago"
+    },
+    {
+      "title": "Gov. Pritzker Breaks Ground on Illinois Quantum and Microelectronics Park (IQMP)",
+      "publisher": "Office of the Governor of Illinois",
+      "url": "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-breaks-ground-on-illinois-quantum-and-microelectronics-park-iqmp"
+    },
+    {
+      "title": "About the Chicago Quantum Exchange",
+      "publisher": "Chicago Quantum Exchange",
+      "url": "https://chicagoquantum.org/about"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<!--
+  Learn page: seven short quantum lessons with quizzes, a progress bar and an optional
+  confidence check. This file is only the page frame. The lessons themselves are drawn by
+  js/pages/learn.js from the JSON files in data/learn/, so edit the JSON to change the words.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn</title>
+  <meta name="description" content="Seven short, plain-language quantum lessons with quick quizzes. No physics background needed.">
+  <meta name="theme-color" content="#0b1626">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/learn.css">
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/pages/learn.js"></script>
+</head>
+<body data-page="learn" data-page-title="Learn">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-header surface-dark">
+      <div class="container">
+        <p class="eyebrow">Learn</p>
+        <h1>Quantum, explained like you're hearing it from a friend</h1>
+        <p class="lead">Seven short lessons, about three minutes each, with a quick quiz after every one. No physics background needed, and you can start anywhere.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt learn" aria-label="Lessons and your progress">
+      <div class="container">
+        <div id="learn-progress" class="learn-progress"></div>
+        <div class="learn-layout">
+          <nav id="learn-nav" class="learn-nav" aria-label="Learn topics"></nav>
+          <div id="learn-main" class="learn-main" aria-busy="true">
+            <p class="text-muted">Loading lessons…</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <noscript><div class="container section"><p class="notice notice--error">This site needs JavaScript to work. Please turn it on in your browser settings.</p></div></noscript>
+</body>
+</html>

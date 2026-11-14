@@ -1,0 +1,566 @@
+{
+  "meta": {
+    "lastReviewed": "2026-11-14",
+    "isSample": true,
+    "cardBadge": "Sample · verify details",
+    "disclaimer": "These careers are examples of the kinds of work quantum labs and facilities need. They are not job postings, and we are not saying anyone is hiring. Details change, so check each linked page before you make plans.",
+    "resourceNote": "Programs change from year to year. Open the link to check the current details.",
+    "pageDescription": "Find career paths in the quantum industry, from technicians to software developers, plus a short interest quiz."
+  },
+  "intro": {
+    "eyebrow": "The big idea",
+    "title": "Quantum jobs are not only for people with a PhD",
+    "text": "A PhD is a degree you earn after college. Scientists with PhDs do important work, but a quantum facility also needs people who run equipment, write software, protect data, keep buildings working, ship parts and manage projects. Here is what the evidence says.",
+    "stats": [
+      {
+        "value": "55%",
+        "label": "of the quantum job postings the Chicago Quantum Exchange studied for 2023 asked for a bachelor's degree or less. Companies and nonprofits were higher, at about two in three postings.",
+        "sourceId": "cqe-study"
+      },
+      {
+        "value": "70%",
+        "label": "of the jobs analysts expect in Illinois, Wisconsin and Indiana by 2035 (as many as 191,000) are predicted to be open to people with a bachelor's degree, an associate degree or technical training.",
+        "sourceId": "cqe-study"
+      }
+    ],
+    "parkTitle": "What the Illinois Quantum and Microelectronics Park says it will need",
+    "parkText": "The park is being built on the old South Works steel site. Its FAQ page lists these kinds of jobs:",
+    "parkRoles": [
+      "System operators",
+      "Cryogenic plant technicians",
+      "Site managers",
+      "Logistics workers",
+      "Supply chain shipping and receiving",
+      "Human resources",
+      "Security personnel",
+      "Project and program managers"
+    ],
+    "parkSourceId": "iqmp-faq",
+    "honestTitle": "A fair warning",
+    "honestText": "A job that does not require a PhD is not always an entry-level job. The Chicago Quantum Exchange found that many postings asked for experience in a related field, such as computer science or engineering. That is why every career below lists jobs you can do today that build toward it."
+  },
+  "quiz": {
+    "eyebrow": "Quick quiz",
+    "title": "Which part of quantum might fit you?",
+    "intro": "Five questions, about one minute. There are no wrong answers, and we do not ask who you are. Your answers are never saved or sent anywhere.",
+    "questions": [
+      {
+        "id": "saturday",
+        "question": "Which sounds like the best way to spend a Saturday?",
+        "options": [
+          { "text": "Taking something apart to see how it works, then putting it back together", "weights": { "hardware": 2, "trades": 1 } },
+          { "text": "Building a game, app or website on a computer", "weights": { "software": 2, "cybersecurity": 1 } },
+          { "text": "Cracking a secret code or solving a mystery", "weights": { "cybersecurity": 2, "software": 1 } },
+          { "text": "Fixing or wiring something in the garage or around the house", "weights": { "trades": 2, "hardware": 1 } },
+          { "text": "Planning an event or a project with friends", "weights": { "business": 2 } }
+        ]
+      },
+      {
+        "id": "team-job",
+        "question": "On a big group project, which job would you grab first?",
+        "options": [
+          { "text": "The builder, who makes the model with their hands", "weights": { "hardware": 2 } },
+          { "text": "The coder, who writes the program that makes it run", "weights": { "software": 2 } },
+          { "text": "The defender, who finds weak spots before anyone else does", "weights": { "cybersecurity": 2, "software": 1 } },
+          { "text": "The fixer, who keeps everything working when something breaks", "weights": { "trades": 2, "hardware": 1 } },
+          { "text": "The organizer, who keeps everyone on schedule and supplies coming", "weights": { "business": 2, "trades": 1 } }
+        ]
+      },
+      {
+        "id": "problem",
+        "question": "Which problem would you most like to help solve?",
+        "options": [
+          { "text": "Making machines colder, faster or more precise", "weights": { "hardware": 2 } },
+          { "text": "Teaching computers to do something brand new", "weights": { "software": 2 } },
+          { "text": "Keeping people's private information safe online", "weights": { "cybersecurity": 2 } },
+          { "text": "Keeping a big building's power, cooling and water running", "weights": { "trades": 2 } },
+          { "text": "Helping a neighborhood get fair access to new jobs and training", "weights": { "business": 2 } }
+        ]
+      },
+      {
+        "id": "work-style",
+        "question": "How do you like to work?",
+        "options": [
+          { "text": "Careful, hands-on work with small parts, in a lab or workshop", "weights": { "hardware": 2 } },
+          { "text": "Moving around a big site, solving problems on the spot", "weights": { "trades": 2 } },
+          { "text": "At a computer, with quiet time to focus on a hard problem", "weights": { "software": 2, "cybersecurity": 1 } },
+          { "text": "Spotting small details that other people miss", "weights": { "cybersecurity": 2, "hardware": 1 } },
+          { "text": "Talking with a team about plans and deadlines", "weights": { "business": 2 } }
+        ]
+      },
+      {
+        "id": "proud",
+        "question": "Which of these would you be proudest to say you did?",
+        "options": [
+          { "text": "Helped build a machine that does something nobody has done before", "weights": { "hardware": 2, "software": 1 } },
+          { "text": "Wrote a program that thousands of people use", "weights": { "software": 2 } },
+          { "text": "Stopped an attack that would have exposed people's private information", "weights": { "cybersecurity": 2 } },
+          { "text": "Kept an important building running every day without a hiccup", "weights": { "trades": 2 } },
+          { "text": "Helped bring new jobs and training to my neighborhood", "weights": { "business": 2 } }
+        ]
+      }
+    ]
+  },
+  "results": {
+    "titleOne": "Your top match",
+    "titleMany": "Your top matches",
+    "intro": "This is a starting point, not a test. You can change your mind any time, and many people work in more than one of these areas over a career.",
+    "tieNote": "These came out even, so we are showing both.",
+    "chartTitle": "How your answers lined up",
+    "rolesTitle": "Careers to look at",
+    "emptyStatus": "Please answer every question first.",
+    "incompleteHint": "Pick one answer for this question.",
+    "retakeLabel": "Retake the quiz",
+    "showAllLabel": "Show all careers"
+  },
+  "explore": {
+    "eyebrow": "Explore",
+    "title": "Every career, in one place",
+    "intro": "Filter by the kind of work you like or by the school path you are considering. Open a card to see a day on the job, ways to get there, and places to learn in Chicago."
+  },
+  "interestAreas": [
+    {
+      "id": "hardware",
+      "label": "Hardware",
+      "icon": "🔬",
+      "tone": "cyan",
+      "blurb": "Building, testing and running the machines themselves.",
+      "matchText": "You like understanding how things work and building them with care. Quantum machines are made of lasers, tiny electronics and very sensitive parts, and people who can assemble, test and run them are in demand. Several of these jobs start with a technician role, not a PhD."
+    },
+    {
+      "id": "software",
+      "label": "Software",
+      "icon": "💻",
+      "tone": "blue",
+      "blurb": "Writing the code that controls and uses quantum computers.",
+      "matchText": "You like turning ideas into working programs. Every quantum computer needs software to control it, plus tools that let other people use it. If you already enjoy coding, this is a direct path, and the Learn pages on this site are a good place to start."
+    },
+    {
+      "id": "cybersecurity",
+      "label": "Cybersecurity",
+      "icon": "🛡️",
+      "tone": "violet",
+      "blurb": "Protecting data and systems from attacks.",
+      "matchText": "You like puzzles and noticing what others miss. Future quantum computers could break some of the locks that protect data today, so security teams are already planning upgrades. Defending information is a skill that works in almost every industry."
+    },
+    {
+      "id": "trades",
+      "label": "Trades & facilities",
+      "icon": "🔧",
+      "tone": "orange",
+      "blurb": "Building, wiring and running the spaces that quantum machines live in.",
+      "matchText": "You like practical work and seeing the result of what you do. A quantum park needs people to wire buildings, run cooling equipment and keep everything working every day. Many of these jobs can be reached through apprenticeships, where you learn on the job."
+    },
+    {
+      "id": "business",
+      "label": "Business & policy",
+      "icon": "🤝",
+      "tone": "green",
+      "blurb": "Planning, supplying, organizing and speaking up for the people involved.",
+      "matchText": "You like making plans happen and bringing people together. Labs and parks need people to manage projects, move parts, and talk with city and state leaders. These roles help make sure a big project actually serves the neighborhood around it."
+    }
+  ],
+  "educationLevels": [
+    { "id": "high-school", "label": "High school diploma", "blurb": "A high school diploma or GED. Some jobs and apprenticeships start here." },
+    { "id": "certificate", "label": "Certificate", "blurb": "A focused training program that teaches one set of job skills." },
+    { "id": "associate", "label": "Associate degree", "blurb": "A two-year college degree, such as one from a community college." },
+    { "id": "bachelor", "label": "Bachelor's degree", "blurb": "A four-year college degree." },
+    { "id": "graduate", "label": "Graduate degree", "blurb": "A master's degree or PhD, earned after a bachelor's degree." }
+  ],
+  "cardLabels": {
+    "educationPaths": "Education paths",
+    "skills": "Skills you would use",
+    "dayToDay": "A day on the job",
+    "waysIn": "Ways to get there",
+    "relatedJobs": "Jobs that build toward it today",
+    "relatedJobsIntro": "These jobs are not in quantum, but they build the same skills:",
+    "learnLocal": "Learn in Chicago",
+    "basedOn": "Based on",
+    "caution": "Good to know"
+  },
+  "careers": [
+    {
+      "id": "lab-technician",
+      "role": "Lab technician",
+      "interestArea": "hardware",
+      "summary": "Helps scientists and engineers run experiments by setting up equipment, collecting data and keeping the lab working.",
+      "dayToDay": [
+        "Set up and check the equipment for an experiment.",
+        "Collect data on a computer and write down what you see.",
+        "Notice when something is not working and help fix it.",
+        "Keep tools and supplies organized and safe."
+      ],
+      "skills": ["Hands-on practice with tools", "Collecting data on a computer", "Basic programming", "Careful note-taking", "Learning quickly"],
+      "educationPaths": [
+        { "level": "high-school", "note": "The Chicago Quantum Exchange found technician postings, such as an R&D Technician job, that did not list a degree, though many non-PhD jobs still ask for related experience." },
+        { "level": "associate", "note": "A research report that interviewed quantum employers lists lab technician as a job an associate degree can lead to." },
+        { "level": "bachelor", "note": "The same report lists a bachelor's degree too, which keeps more doors open later." }
+      ],
+      "relatedJobs": ["Electronics assembler", "Computer repair technician", "School or hospital lab assistant"],
+      "localResources": [
+        { "name": "Saturday Morning Quantum (Fermilab)", "url": "https://education.fnal.gov/program/saturday-morning-quantum-in-chicago/", "note": "A free Saturday lecture series open to all high school students, with no science prerequisite. Talks cover special topics and Fermilab career opportunities.", "verify": true },
+        { "name": "Quantum Quickstart (Chicago Quantum Exchange)", "url": "https://chicagoquantum.org/education-and-training/quantum-quickstart", "note": "A one-week quantum summer program for Illinois high school students, offered at no cost to selected participants. Preference goes to students in the city of Chicago.", "verify": true },
+        { "name": "Chicago Quantum Exchange Talent Portal", "url": "https://jobs.chicagoquantum.org/jobs", "note": "A free tool that lists job and internship openings at quantum employers, so you can see what real postings ask for.", "verify": true }
+      ],
+      "sourceIds": ["cqe-study", "rit-report-1"],
+      "verify": true
+    },
+    {
+      "id": "assembly-test-technician",
+      "role": "Assembly and test technician",
+      "interestArea": "hardware",
+      "summary": "Puts together delicate quantum equipment, then tests that every piece works the way it should.",
+      "dayToDay": [
+        "Assemble parts such as lenses, lasers and electronics.",
+        "Clean and inspect delicate optics (the glass parts that guide light).",
+        "Run tests and measurements, then record the results.",
+        "Keep the paperwork for parts and finished equipment in order."
+      ],
+      "skills": ["Steady hands and careful work", "Reading instructions and diagrams", "Basic electronics", "Using test equipment", "Teamwork"],
+      "educationPaths": [
+        { "level": "high-school", "note": "The Chicago Quantum Exchange lists an Assembly Integration Test Technician posting that did not name a degree, but many non-PhD jobs still ask for related experience." },
+        { "level": "certificate", "note": "Chicago State University lists a Semiconductor Technology and Manufacturing certificate, a field close to this hands-on work." },
+        { "level": "associate", "note": "A report that profiled this kind of job lists an associate or bachelor's degree in subjects such as math, optics or physics." },
+        { "level": "bachelor", "note": "Researchers who interviewed employers list a bachelor's degree for photonics assembly technicians (photonics means working with light)." }
+      ],
+      "relatedJobs": ["Electronics assembler", "Fiber or cable installer's helper", "Manufacturing line worker"],
+      "localResources": [
+        { "name": "Chicago State University CQuEST", "url": "https://www.csu.edu/quantum/", "note": "Chicago State's quantum education center. It lists a Semiconductor Technology and Manufacturing certificate and is open to career-changers as well as new students.", "verify": true },
+        { "name": "Chicago Quantum Exchange Talent Portal", "url": "https://jobs.chicagoquantum.org/jobs", "note": "A free tool that lists job and internship openings at quantum employers.", "verify": true }
+      ],
+      "sourceIds": ["cqe-study", "rit-report-1", "rit-report-3"],
+      "verify": true
+    },
+    {
+      "id": "quantum-computer-operator",
+      "role": "Quantum computer operator",
+      "interestArea": "hardware",
+      "summary": "Runs a quantum computer day to day, scheduling jobs on it and making sure it keeps working.",
+      "dayToDay": [
+        "Start up, watch and look after the quantum system.",
+        "Schedule the programs that people send to the machine.",
+        "Spot problems early and fix them or pass them to the right team.",
+        "Write down what happened so the team knows."
+      ],
+      "skills": ["Troubleshooting step by step", "Basic test equipment", "Clear documentation", "Teamwork", "Comfort learning new systems"],
+      "educationPaths": [
+        { "level": "bachelor", "note": "A report that profiled this job lists a bachelor's degree in engineering or physics and says operators are trained on the job." }
+      ],
+      "relatedJobs": ["Data center or IT help-desk technician", "Network support technician", "Computer lab assistant"],
+      "localResources": [
+        { "name": "Quick Quantum: For High Schoolers (Chicago Quantum Exchange)", "url": "https://chicagoquantum.org/education-and-training/quick-quantum", "note": "A YouTube series for high schoolers that introduces quantum information science and engineering.", "verify": true },
+        { "name": "IQMP careers page", "url": "https://iqmp.org/careers/", "note": "Lists careers, training programs and local resources connected to the Illinois Quantum and Microelectronics Park.", "verify": true }
+      ],
+      "sourceIds": ["rit-report-3", "rit-report-1", "iqmp-faq"],
+      "verify": true
+    },
+    {
+      "id": "quantum-research-engineer",
+      "role": "Quantum research engineer",
+      "interestArea": "hardware",
+      "summary": "Designs, builds and improves the machines that scientists use to test quantum ideas.",
+      "dayToDay": [
+        "Build and adjust lasers, lenses and electronics for an experiment.",
+        "Work out why a measurement looks wrong.",
+        "Plan the next test with your team.",
+        "Explain results clearly to teammates."
+      ],
+      "skills": ["Electronics and optics", "Troubleshooting", "Project planning", "Programming for data", "Collaboration"],
+      "educationPaths": [
+        { "level": "bachelor", "note": "The Chicago Quantum Exchange found that engineering postings mostly asked for only a bachelor's degree." },
+        { "level": "graduate", "note": "Researchers who interviewed employers list a master's degree for research engineers, and many scientist jobs ask for a PhD." }
+      ],
+      "relatedJobs": ["Electronics or manufacturing technician", "Engineering intern", "University lab assistant"],
+      "localResources": [
+        { "name": "Quantum Quickstart (Chicago Quantum Exchange)", "url": "https://chicagoquantum.org/education-and-training/quantum-quickstart", "note": "A one-week quantum summer program for Illinois high school students, offered at no cost to selected participants.", "verify": true },
+        { "name": "Chicago Quantum Exchange education and training", "url": "https://chicagoquantum.org/education-and-training", "note": "Lists programs from high school through college, including internships and undergraduate and graduate education.", "verify": true },
+        { "name": "Chicago State University CQuEST", "url": "https://www.csu.edu/quantum/", "note": "Lists a Quantum Information Science & Engineering certificate and minor for undergraduates.", "verify": true }
+      ],
+      "sourceIds": ["cqe-study", "rit-report-1"],
+      "verify": true
+    },
+    {
+      "id": "quantum-software-developer",
+      "role": "Quantum software developer",
+      "interestArea": "software",
+      "summary": "Writes programs that run on quantum computers and on the regular computers that control them.",
+      "dayToDay": [
+        "Write and test code for quantum and regular computers.",
+        "Turn a scientist's rough code into tools other people can use.",
+        "Find and fix bugs (mistakes in code).",
+        "Talk with scientists to turn their ideas into programs."
+      ],
+      "skills": ["Programming (Python is common)", "Problem solving", "Reading other people's code", "Explaining ideas simply", "Patience with bugs"],
+      "educationPaths": [
+        { "level": "certificate", "note": "Chicago State University lists a Quantum Information Science & Engineering certificate for undergraduates." },
+        { "level": "bachelor", "note": "The U.S. Bureau of Labor Statistics says software developers typically need a bachelor's degree, and a quantum software profile lists the same." },
+        { "level": "graduate", "note": "The quantum software profile also lists master's and PhD degrees, and some employers prefer a master's." }
+      ],
+      "relatedJobs": ["Web or app developer", "Software tester", "IT support specialist"],
+      "localResources": [
+        { "name": "Chicago State University CQuEST", "url": "https://www.csu.edu/quantum/", "note": "Lists a Quantum Information Science & Engineering certificate and minor for undergraduates.", "verify": true },
+        { "name": "Quick Quantum: For High Schoolers (Chicago Quantum Exchange)", "url": "https://chicagoquantum.org/education-and-training/quick-quantum", "note": "A YouTube series for high schoolers that introduces quantum information science and engineering.", "verify": true }
+      ],
+      "sourceIds": ["rit-report-3", "rit-report-1", "bls-software"],
+      "verify": true
+    },
+    {
+      "id": "systems-software-engineer",
+      "role": "Software engineer for quantum systems",
+      "interestArea": "software",
+      "summary": "Builds the regular software around a quantum computer, such as the websites and tools people use to send it work.",
+      "dayToDay": [
+        "Build tools that let people send jobs to a quantum computer over the internet.",
+        "Connect programs to each other through APIs (ways for programs to talk).",
+        "Build and run the systems that test and monitor the machines.",
+        "Fix problems and improve the code as people use it."
+      ],
+      "skills": ["Strong coding skills", "Working with online systems", "Testing code", "Teamwork", "Learning new tools"],
+      "educationPaths": [
+        { "level": "associate", "note": "City Colleges of Chicago lists Software Development among its tech programs, and its Moonshot program connects people to paid tech apprenticeships." },
+        { "level": "bachelor", "note": "A profile of this job lists a bachelor's degree, and says strong coding skills matter most and internships help." },
+        { "level": "graduate", "note": "The same profile also lists master's and PhD degrees." }
+      ],
+      "relatedJobs": ["Web developer", "Cloud or IT support technician", "Software tester"],
+      "localResources": [
+        { "name": "City Colleges of Chicago Moonshot", "url": "https://apply.ccc.edu/moonshot/", "note": "Connects people to paid tech apprenticeships and an affordable associate degree in tech. Listed programs include Software Development, Cloud Computing and Computer Science.", "verify": true },
+        { "name": "IQMP careers page", "url": "https://iqmp.org/careers/", "note": "Says IBM FutureNow Chicago is preparing to hire Chicago roles in cybersecurity, AI and quantum.", "verify": true },
+        { "name": "Chicago Quantum Exchange Talent Portal", "url": "https://jobs.chicagoquantum.org/jobs", "note": "A free tool that lists job and internship openings at quantum employers.", "verify": true }
+      ],
+      "sourceIds": ["rit-report-3", "ccc-moonshot", "bls-software"],
+      "verify": true
+    },
+    {
+      "id": "cybersecurity-analyst",
+      "role": "Cybersecurity analyst",
+      "interestArea": "cybersecurity",
+      "summary": "Protects an organization's computers and networks by watching for attacks and fixing weak spots.",
+      "dayToDay": [
+        "Watch security alerts and decide which ones are real.",
+        "Find weak spots in systems before attackers do.",
+        "Help coworkers set up safer passwords and tools.",
+        "Write short reports on what happened and what to change."
+      ],
+      "skills": ["Curiosity about how systems work", "Computer networking basics", "Careful attention to detail", "Staying calm under pressure", "Clear writing"],
+      "educationPaths": [
+        { "level": "high-school", "note": "The U.S. Bureau of Labor Statistics says some analysts enter with a high school diploma plus industry training and certifications." },
+        { "level": "certificate", "note": "The same source says many employers prefer to hire people who hold an information security certification." },
+        { "level": "associate", "note": "City Colleges of Chicago lists Cybersecurity among the tech programs in its Moonshot program." },
+        { "level": "bachelor", "note": "A bachelor's degree in a computer science field is the typical starting point, and some jobs ask for related work experience." }
+      ],
+      "relatedJobs": ["IT help-desk technician", "Network support technician", "Computer repair technician"],
+      "localResources": [
+        { "name": "City Colleges of Chicago Moonshot", "url": "https://apply.ccc.edu/moonshot/", "note": "Connects people to paid tech apprenticeships and an affordable associate degree in tech. Listed programs include Cybersecurity and Networking & Systems.", "verify": true },
+        { "name": "IQMP careers page", "url": "https://iqmp.org/careers/", "note": "Says IBM FutureNow Chicago is preparing to hire Chicago roles in cybersecurity, AI and quantum.", "verify": true },
+        { "name": "Illinois workNet", "url": "https://www.illinoisworknet.com/", "note": "The state's free portal for careers, training and apprenticeships.", "verify": true }
+      ],
+      "sourceIds": ["bls-infosec", "ccc-moonshot", "iqmp-careers"],
+      "verify": true
+    },
+    {
+      "id": "quantum-safe-security",
+      "role": "Quantum-safe security specialist",
+      "interestArea": "cybersecurity",
+      "summary": "Helps organizations switch to new kinds of encryption (a way of scrambling data) that quantum computers could not break.",
+      "dayToDay": [
+        "Find where your organization uses encryption today.",
+        "Plan and test the move to the new quantum-safe standards from NIST, the U.S. standards agency.",
+        "Update systems step by step, because the full switch takes time.",
+        "Explain to coworkers why the change matters."
+      ],
+      "skills": ["Security basics", "Careful planning", "Math comfort", "Testing and checking work", "Explaining hard ideas simply"],
+      "educationPaths": [
+        { "level": "certificate", "note": "Many employers prefer security certifications for analysts, according to the U.S. Bureau of Labor Statistics." },
+        { "level": "bachelor", "note": "Information security analysts typically hold a bachelor's degree in a computer science field." }
+      ],
+      "caution": "Job titles for this work vary, and it is often part of a wider security job. NIST finished its first quantum-safe encryption standards in August 2024 and encourages system administrators to begin switching as soon as possible.",
+      "relatedJobs": ["IT help-desk technician", "Network support technician", "Cybersecurity analyst"],
+      "localResources": [
+        { "name": "IQMP careers page", "url": "https://iqmp.org/careers/", "note": "Says IBM FutureNow Chicago is preparing to hire Chicago roles in cybersecurity, AI and quantum.", "verify": true },
+        { "name": "Chicago Quantum Exchange Talent Portal", "url": "https://jobs.chicagoquantum.org/jobs", "note": "A free tool that lists job and internship openings at quantum employers.", "verify": true }
+      ],
+      "sourceIds": ["nist-pqc", "bls-infosec"],
+      "verify": true
+    },
+    {
+      "id": "cryogenic-plant-technician",
+      "role": "Cryogenic plant technician",
+      "interestArea": "trades",
+      "summary": "Runs and looks after the equipment that keeps quantum machines extremely cold.",
+      "dayToDay": [
+        "Watch gauges, screens and alarms on the cooling equipment.",
+        "Do routine checks and keep a log of what you find.",
+        "Fix small problems and report big ones.",
+        "Follow safety rules around very cold materials."
+      ],
+      "skills": ["Mechanical know-how", "Reading gauges and screens", "Following safety rules", "Careful record keeping", "Staying calm when an alarm goes off"],
+      "educationPaths": [
+        { "level": "high-school", "note": "Similar plant jobs, such as stationary engineers, require a high school diploma and are learned through on-the-job training or apprenticeships." },
+        { "level": "certificate", "note": "For those similar jobs, vocational classes can help workers move up as the work gets more complex." },
+        { "level": "associate", "note": "College classes can help too, according to the U.S. Bureau of Labor Statistics." }
+      ],
+      "caution": "The Illinois Quantum and Microelectronics Park lists this job but we could not find published requirements for it. The education paths above come from similar plant jobs.",
+      "relatedJobs": ["Building maintenance worker", "Heating and cooling (HVAC) helper", "Factory equipment operator"],
+      "localResources": [
+        { "name": "HIRE360 and the IQMP", "url": "https://hire360partners.org/iqmp/", "note": "HIRE360 works with the IQMP and partners to recruit people into union trades apprenticeship programs. You fill out an assessment form and a representative contacts you.", "verify": true },
+        { "name": "Apprenticeship Illinois", "url": "https://www.illinoisworknet.com/ApprenticeshipIL/Pages/default.aspx", "note": "Says an apprenticeship is a career pathway where you earn paid work experience and wages while getting classroom training.", "verify": true },
+        { "name": "IQMP careers page", "url": "https://iqmp.org/careers/", "note": "Lists careers, training programs and local resources connected to the park.", "verify": true }
+      ],
+      "sourceIds": ["iqmp-faq", "bls-stationary"],
+      "verify": true
+    },
+    {
+      "id": "electrician",
+      "role": "Electrician",
+      "interestArea": "trades",
+      "summary": "Installs and repairs the wiring, lighting and power that a lab or factory runs on.",
+      "dayToDay": [
+        "Install and repair wiring, lighting and power systems.",
+        "Follow building plans and electrical safety codes.",
+        "Test equipment to find where a problem is.",
+        "Work alongside other trades on a building site."
+      ],
+      "skills": ["Hands-on skill", "Reading plans", "Math for measuring and wiring", "Safety habits", "Troubleshooting"],
+      "educationPaths": [
+        { "level": "high-school", "note": "A high school diploma or equivalent is required, and most electricians then learn through a paid apprenticeship that lasts about four to five years." },
+        { "level": "certificate", "note": "Some people start at a technical school first, and graduates usually get credit toward an apprenticeship." }
+      ],
+      "relatedJobs": ["Electrician's helper", "Construction laborer", "Maintenance worker"],
+      "localResources": [
+        { "name": "HIRE360 and the IQMP", "url": "https://hire360partners.org/iqmp/", "note": "HIRE360 works with the IQMP and partners to recruit people into union trades apprenticeship programs. You fill out an assessment form and a representative contacts you.", "verify": true },
+        { "name": "Apprenticeship Illinois", "url": "https://www.illinoisworknet.com/ApprenticeshipIL/Pages/default.aspx", "note": "Says an apprenticeship is a career pathway where you earn paid work experience and wages while getting classroom training.", "verify": true },
+        { "name": "Illinois workNet", "url": "https://www.illinoisworknet.com/", "note": "The state's free portal for careers, training and apprenticeships.", "verify": true }
+      ],
+      "sourceIds": ["bls-electricians", "iqmp-careers"],
+      "verify": true
+    },
+    {
+      "id": "lab-construction-technician",
+      "role": "Lab and cleanroom construction technician",
+      "interestArea": "trades",
+      "summary": "Helps build and maintain labs, including cleanrooms, which are super-clean spaces where dust cannot ruin delicate parts.",
+      "dayToDay": [
+        "Check that equipment is placed and installed correctly.",
+        "Keep mechanical connections in good shape.",
+        "Do electrical and plumbing work in a lab.",
+        "Help plan cleanroom construction projects."
+      ],
+      "skills": ["Hands-on building skills", "Electrical and plumbing basics", "Following plans", "Safety habits", "Working with many teams"],
+      "educationPaths": [
+        { "level": "high-school", "note": "The IQMP is working with HIRE360 to recruit people into union trades apprenticeships, where you can learn building skills while you earn." },
+        { "level": "associate", "note": "A report that profiled lab and construction technicians lists an associate degree or higher in engineering or physics, and some lab construction experience." },
+        { "level": "bachelor", "note": "Researchers who interviewed employers list a bachelor's degree for people who design and oversee cleanroom and chip-making facilities." }
+      ],
+      "relatedJobs": ["Construction laborer", "Maintenance technician", "Plumber's or electrician's helper"],
+      "localResources": [
+        { "name": "HIRE360 and the IQMP", "url": "https://hire360partners.org/iqmp/", "note": "HIRE360 works with the IQMP and partners to recruit people into union trades apprenticeship programs. You fill out an assessment form and a representative contacts you.", "verify": true },
+        { "name": "Chicago State University CQuEST", "url": "https://www.csu.edu/quantum/", "note": "Lists a Semiconductor Technology and Manufacturing certificate and is open to career-changers as well as new students.", "verify": true },
+        { "name": "Apprenticeship Illinois", "url": "https://www.illinoisworknet.com/ApprenticeshipIL/Pages/default.aspx", "note": "Says an apprenticeship is a career pathway where you earn paid work experience and wages while getting classroom training.", "verify": true }
+      ],
+      "sourceIds": ["rit-report-3", "rit-report-1", "iqmp-careers"],
+      "verify": true
+    },
+    {
+      "id": "logistics-coordinator",
+      "role": "Logistics and shipping coordinator",
+      "interestArea": "business",
+      "summary": "Makes sure the right parts and supplies arrive on time, and that finished equipment ships out with the right paperwork.",
+      "dayToDay": [
+        "Check that deliveries match what was ordered.",
+        "Track what is in stock and what is running low.",
+        "Pack and ship equipment with the right paperwork.",
+        "Work with teams who are waiting on parts."
+      ],
+      "skills": ["Organization", "Attention to detail", "Basic math", "Clear communication", "Using spreadsheets"],
+      "educationPaths": [
+        { "level": "high-school", "note": "The U.S. Bureau of Labor Statistics says less education than a degree may be enough for some logistics jobs, and employers weigh work experience heavily." },
+        { "level": "bachelor", "note": "Logisticians typically need a bachelor's degree, and a quantum company posting for a Supply Chain Manager asked for one." }
+      ],
+      "caution": "The Illinois Quantum and Microelectronics Park lists logistics workers and shipping and receiving jobs but we could not find published requirements for them.",
+      "relatedJobs": ["Warehouse associate", "Delivery or stock clerk", "Retail inventory associate"],
+      "localResources": [
+        { "name": "IQMP careers page", "url": "https://iqmp.org/careers/", "note": "Lists careers, training programs and local resources connected to the park.", "verify": true },
+        { "name": "Illinois workNet", "url": "https://www.illinoisworknet.com/", "note": "The state's free portal for careers, training and apprenticeships.", "verify": true }
+      ],
+      "sourceIds": ["iqmp-faq", "bls-logisticians", "cqe-study"],
+      "verify": true
+    },
+    {
+      "id": "project-manager",
+      "role": "Project or program manager",
+      "interestArea": "business",
+      "summary": "Keeps a big project on schedule and on budget by getting many teams to work together.",
+      "dayToDay": [
+        "Make schedules and check that teams are on track.",
+        "Keep an eye on budgets and supplies.",
+        "Spot problems between teams and help solve them.",
+        "Give clear updates to leaders and partners."
+      ],
+      "skills": ["Organization", "Clear communication", "Problem solving", "Understanding the technical work", "Staying calm with deadlines"],
+      "educationPaths": [
+        { "level": "bachelor", "note": "The U.S. Bureau of Labor Statistics says project management specialists typically need a bachelor's degree, and some employers prefer a technical degree." },
+        { "level": "graduate", "note": "A profile of quantum project overseers also lists master's and PhD degrees, and says moving over from a technical role is common." }
+      ],
+      "relatedJobs": ["Team lead or shift supervisor", "Office or operations coordinator", "Event planner"],
+      "localResources": [
+        { "name": "IQMP careers page", "url": "https://iqmp.org/careers/", "note": "Lists careers, training programs and local resources connected to the park.", "verify": true },
+        { "name": "Chicago Quantum Exchange Talent Portal", "url": "https://jobs.chicagoquantum.org/jobs", "note": "A free tool that lists job and internship openings at quantum employers.", "verify": true }
+      ],
+      "sourceIds": ["iqmp-faq", "bls-project", "rit-report-3"],
+      "verify": true
+    },
+    {
+      "id": "policy-advocate",
+      "role": "Quantum policy and partnerships advocate",
+      "interestArea": "business",
+      "summary": "Speaks for what the industry and the community need when working with government agencies and local leaders.",
+      "dayToDay": [
+        "Explain what the quantum industry needs to government agencies.",
+        "Help manage grant proposals (requests for funding).",
+        "Work with state and local leaders on quantum-related laws.",
+        "Keep up with quantum news and explain it in plain language."
+      ],
+      "skills": ["Writing and speaking", "Listening to many points of view", "Research", "Organization", "Explaining science simply"],
+      "educationPaths": [
+        { "level": "certificate", "note": "A profile of this job says a science policy certification is common." },
+        { "level": "bachelor", "note": "The same profile lists a bachelor's degree, such as applied physics, and says industry experience is expected." }
+      ],
+      "relatedJobs": ["Community organizer", "Student government or youth council leader", "Office or program assistant"],
+      "localResources": [
+        { "name": "IQMP in the community", "url": "https://iqmp.org/get-involved/community/", "note": "Says the park is working with Chicago Public Schools, Chicago State University and City Colleges of Chicago, and shares ways to give feedback.", "verify": true },
+        { "name": "Chicago Quantum Exchange education and training", "url": "https://chicagoquantum.org/education-and-training", "note": "Lists programs from high school through college.", "verify": true }
+      ],
+      "sourceIds": ["rit-report-3", "iqmp-community"],
+      "verify": true
+    }
+  ],
+  "sources": {
+    "title": "Where this information comes from",
+    "intro": "The facts on this page come from these pages. Each program link on a career card goes to that program's own page. We last reviewed them on",
+    "list": [
+      { "id": "iqmp-faq", "title": "IQMP FAQs", "publisher": "Illinois Quantum and Microelectronics Park", "url": "https://iqmp.org/faqs/" },
+      { "id": "iqmp-careers", "title": "Careers", "publisher": "Illinois Quantum and Microelectronics Park", "url": "https://iqmp.org/careers/" },
+      { "id": "iqmp-community", "title": "IQMP in the Community", "publisher": "Illinois Quantum and Microelectronics Park", "url": "https://iqmp.org/get-involved/community/" },
+      { "id": "cqe-study", "title": "Quantum Tech Job Accessibility: 2024 CQE Study", "publisher": "Chicago Quantum Exchange", "url": "https://chicagoquantum.org/degreereports" },
+      { "id": "cqe-news", "title": "Fast-growing quantum tech industry has well-paid jobs, and most don't require a graduate degree", "publisher": "Chicago Quantum Exchange", "url": "https://chicagoquantum.org/news/fast-growing-quantum-tech-industry-has-well-paid-jobs-and-most-dont-require-graduate-degree" },
+      { "id": "rit-report-1", "title": "Experimental Skills for Non-PhD Roles in the Quantum Industry", "publisher": "El-Adawy, Piña, Zwickl and Lewandowski, on arXiv", "url": "https://arxiv.org/abs/2510.12936" },
+      { "id": "rit-report-3", "title": "Profiles of Roles in the Quantum Industry", "publisher": "El-Adawy, Piña, Zwickl and Lewandowski, on arXiv", "url": "https://arxiv.org/abs/2601.04292" },
+      { "id": "nist-pqc", "title": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards", "publisher": "National Institute of Standards and Technology", "url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards" },
+      { "id": "bls-infosec", "title": "Information Security Analysts", "publisher": "U.S. Bureau of Labor Statistics, Occupational Outlook Handbook", "url": "https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm" },
+      { "id": "bls-software", "title": "Software Developers, Quality Assurance Analysts, and Testers", "publisher": "U.S. Bureau of Labor Statistics, Occupational Outlook Handbook", "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm" },
+      { "id": "bls-stationary", "title": "Stationary Engineers and Boiler Operators", "publisher": "U.S. Bureau of Labor Statistics, Occupational Outlook Handbook", "url": "https://www.bls.gov/ooh/production/stationary-engineers-and-boiler-operators.htm" },
+      { "id": "bls-electricians", "title": "Electricians", "publisher": "U.S. Bureau of Labor Statistics, Occupational Outlook Handbook", "url": "https://www.bls.gov/ooh/construction-and-extraction/electricians.htm" },
+      { "id": "bls-logisticians", "title": "Logisticians", "publisher": "U.S. Bureau of Labor Statistics, Occupational Outlook Handbook", "url": "https://www.bls.gov/ooh/business-and-financial/logisticians.htm" },
+      { "id": "bls-project", "title": "Project Management Specialists", "publisher": "U.S. Bureau of Labor Statistics, Occupational Outlook Handbook", "url": "https://www.bls.gov/ooh/business-and-financial/project-management-specialists.htm" },
+      { "id": "ccc-moonshot", "title": "Chicago's Moonshot: paid tech apprenticeships", "publisher": "City Colleges of Chicago", "url": "https://apply.ccc.edu/moonshot/" }
+    ]
+  },
+  "cta": {
+    "title": "Ready for your next step?",
+    "text": "You do not need to know everything yet. Learn the basics, then look at what Chicago already offers.",
+    "links": [
+      { "label": "Start the Learn lessons", "href": "pages/learn.html", "style": "light" },
+      { "label": "Chicago Quantum Exchange education page", "href": "https://chicagoquantum.org/education-and-training", "external": true, "style": "outline-light" }
+    ]
+  }
+}

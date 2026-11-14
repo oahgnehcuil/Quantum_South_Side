@@ -1,0 +1,98 @@
+{
+  "id": "gates",
+  "title": "Quantum Gates",
+  "icon": "🎛️",
+  "tagline": "The simple moves a qubit can make",
+  "lastVerified": "2026-11-14",
+  "readingTimeMinutes": 3,
+  "plainSummary": [
+    "A gate is one basic step that changes information. A NOT gate, for example, turns a 0 into a 1 and a 1 into a 0. Quantum computers have gates too, but theirs act on qubits (the quantum version of a bit). A qubit can be in a blend of 0 and 1 until you measure it (check it). A measurement always gives a plain 0 or 1.",
+    "Try the playground below. It starts in |0⟩. Press X and you land on |1⟩. Press X again and you are back at |0⟩. The X gate works like NOT. Press Reset, then press H once. The H gate (short for Hadamard) turns |0⟩ into an even blend called |+⟩. Measuring it gives 0 or 1, about half each. Press H again and you return to |0⟩.",
+    "Press Reset, then Z. Nothing seems to change, because |0⟩ stays |0⟩. Now press Reset, H, then Z. The state moves from |+⟩ to |−⟩, yet the bar still shows 50/50. Z flips a hidden plus or minus sign, called the phase. Measuring cannot see it right away. Now press Reset, then H, Z, H. You land on |1⟩. The second H makes the hidden change visible.",
+    "Every gate here can be undone. Doing X, H or Z twice takes you back to the start. A circuit is a list of gates followed by a measurement. Two-qubit gates, like CNOT (a gate that uses one qubit to decide whether to flip another), link qubits together. Real machines are still limited, though. Today's quantum computers are small and make errors."
+  ],
+  "everydayAnalogy": "Picture a puzzle game with a few move buttons. One button flips a piece over, a bit like X. Another mirrors it. A third turns it halfway around. Press the same button twice and the piece is back where it started. To reach a goal, you plan a short list of moves in the right order, just like choosing which gates to use.",
+  "analogyLimits": "A game piece has no hidden side. A qubit has a phase, a hidden sign that one final check cannot see, yet it changes what the next gate does.",
+  "keyTerms": [
+    {
+      "term": "Qubit",
+      "definition": "The quantum version of a bit. When you measure it, you always get a plain 0 or 1."
+    },
+    {
+      "term": "Quantum gate",
+      "definition": "A basic step that changes the state of one or more qubits. You can undo any quantum gate by running its reverse."
+    },
+    {
+      "term": "X gate",
+      "definition": "A gate that swaps |0⟩ and |1⟩, much like a NOT gate on a regular bit."
+    },
+    {
+      "term": "H (Hadamard) gate",
+      "definition": "A gate that turns a plain |0⟩ or |1⟩ into an even blend, so measuring gives 0 or 1 about half the time each."
+    },
+    {
+      "term": "Phase",
+      "definition": "A hidden plus or minus sign on part of a qubit's state. You cannot see it by measuring right away, but it changes what later gates do."
+    },
+    {
+      "term": "Z gate",
+      "definition": "A gate that flips the phase. It leaves |0⟩ alone and turns |+⟩ into |−⟩."
+    },
+    {
+      "term": "Quantum circuit",
+      "definition": "A list of gates, in order, followed by a measurement. CNOT is a two-qubit gate that uses one qubit to decide whether to flip another."
+    }
+  ],
+  "whyItMattersForJobs": "Many quantum programs are circuits of gates. Software developers write and test those circuits. Lab technicians and electronics technicians help build and maintain equipment, such as lasers and control electronics, that applies gates to real qubits. Many of these jobs call for hands-on training or a certificate or degree, not a PhD.",
+  "chicagoConnection": "In 2017, researchers in the Awschalom group at the University of Chicago's Pritzker School of Molecular Engineering ran a lab test. One short pulse of red laser light, just nanoseconds long, applied a gate to a qubit. The qubit was a tiny flaw in a diamond's crystal. This is lab research on controlling a single qubit, like the gates you tried in the playground.",
+  "quiz": [
+    {
+      "question": "You start in |0⟩ and press X once. What state do you get?",
+      "options": [
+        "It stays |0⟩, because X only changes the hidden sign",
+        "|1⟩, like a NOT gate",
+        "An even blend of 0 and 1"
+      ],
+      "answerIndex": 1,
+      "explanation": "X swaps |0⟩ and |1⟩, just as NOT does for a regular bit. The even blend comes from the H gate, not from X."
+    },
+    {
+      "question": "You start in |0⟩, press H once, and then measure. You repeat this many times. What do you see?",
+      "options": [
+        "Always 0, since the qubit started in |0⟩",
+        "Always 1, since H flips the qubit",
+        "About half 0 and half 1"
+      ],
+      "answerIndex": 2,
+      "explanation": "H turns |0⟩ into an even blend, so each measurement gives a plain 0 or 1 with about equal chance. Starting in |0⟩ does not matter once H has blended it."
+    },
+    {
+      "question": "Z leaves |0⟩ unchanged. Why can it still matter, and what do H, Z, H do starting from |0⟩?",
+      "options": [
+        "Z flips a hidden sign on a blend like |+⟩, so H, Z, H ends on |1⟩",
+        "Z does nothing to any qubit, so H, Z, H ends back at |0⟩ just like pressing H twice",
+        "Z breaks the qubit, so H, Z, H gives random results every time"
+      ],
+      "answerIndex": 0,
+      "explanation": "|0⟩ has nothing for Z to flip, so the bar does not change. H first makes a blend, where the sign flip matters, and the second H turns that hidden change into |1⟩. Z does something, but only a blend shows it."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Quantum information (Basics of quantum information course)",
+      "publisher": "IBM Quantum Learning",
+      "url": "https://quantum.cloud.ibm.com/learning/en/courses/basics-of-quantum-information/single-systems/quantum-information"
+    },
+    {
+      "title": "Construct circuits",
+      "publisher": "IBM Quantum Documentation",
+      "url": "https://quantum.cloud.ibm.com/docs/en/qiskit/construct-circuits"
+    },
+    {
+      "title": "All-optical holonomic single-qubit gates",
+      "publisher": "Pritzker School of Molecular Engineering, University of Chicago",
+      "url": "https://pme.uchicago.edu/faculty-research/lab-groups/awschalom-group/quantum-information-processing-diamond/all-optical-0"
+    }
+  ],
+  "demo": "qubit-gates"
+}

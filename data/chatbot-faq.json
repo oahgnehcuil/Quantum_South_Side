@@ -1,0 +1,478 @@
+{
+  "greeting": "Hi! I'm the learning helper. I can answer questions about quantum computing, quantum careers, what is happening in Chicago, and how to use this site. Pick a question below or type your own.",
+  "disclaimer": "I'm a learning helper and can make mistakes. Don't share personal information.",
+  "modeLabel": "FAQ mode",
+  "privacyNote": "Your questions stay on this device in FAQ mode.",
+  "starters": [
+    "What is a qubit?",
+    "Do I need a PhD to work in quantum?",
+    "What is happening at the old South Works site?"
+  ],
+  "noMatch": {
+    "text": "I don't have a good answer for that, and I don't want to guess. Try asking in a different way, or pick one of these questions. The Learn page is also a good place to start.",
+    "suggest": [
+      "What is quantum computing?",
+      "What jobs exist in quantum?",
+      "How can I learn quantum for free?"
+    ]
+  },
+  "entries": [
+    {
+      "id": "what-is-quantum",
+      "questions": ["What is quantum computing?", "Explain quantum computers to me", "What does quantum mean?"],
+      "keywords": ["quantum computing", "quantum computer", "quantum", "quantum technology", "what is quantum", "basics", "intro", "introduction", "beginner"],
+      "answer": "Your phone stores information as bits, tiny switches that are 0 or 1. A quantum computer uses qubits instead. Qubits follow the strange rules of quantum physics, which describe how very small things behave. They can help with a few hard problems, like studying molecules.",
+      "links": [{ "label": "Read the intro lesson", "href": "pages/learn.html#intro" }]
+    },
+    {
+      "id": "quantum-physics",
+      "questions": ["What is quantum physics?", "Do I need to know physics?", "What are the rules of quantum physics?"],
+      "keywords": ["quantum physics", "physics", "atom", "atoms", "tiny things", "very small things", "particle", "particles", "physicist"],
+      "answer": "Quantum physics is the set of rules that describe how very small things behave, like atoms and particles of light. You don't need a physics background to start here. The lessons use plain words and explain every new term the first time it shows up.",
+      "links": [{ "label": "Start with the intro lesson", "href": "pages/learn.html#intro" }]
+    },
+    {
+      "id": "bit",
+      "questions": ["What is a bit?", "What is a bit in a regular computer?", "How do computers store information?"],
+      "keywords": ["bit", "bits", "binary", "zero and one", "0 and 1", "switch", "store information", "ones and zeros"],
+      "answer": "A bit is the smallest piece of information in a regular computer. Think of it as a tiny switch that is either 0 or 1. Your phone and laptop store everything, from photos to games, as long lists of bits.",
+      "links": [{ "label": "Read the intro lesson", "href": "pages/learn.html#intro" }]
+    },
+    {
+      "id": "classical-computer",
+      "questions": ["What is a classical computer?", "What is the difference between classical and quantum computers?", "Are my phone and laptop classical computers?"],
+      "keywords": ["classical computer", "classical", "regular computer", "ordinary computer", "difference", "compare", "versus", "phone", "laptop computer"],
+      "answer": "A classical computer is an ordinary computer, like your laptop or phone. It stores information as regular bits that are 0 or 1. A quantum computer uses qubits, which can be in a blend of 0 and 1 until measured. Each kind is better at different jobs.",
+      "links": [{ "label": "Read the Quantum Computing lesson", "href": "pages/learn.html#computing" }]
+    },
+    {
+      "id": "qubit",
+      "questions": ["What is a qubit?", "What does qubit mean?", "How is a qubit different from a bit?"],
+      "keywords": ["qubit", "qubits", "quantum bit", "q bit", "quantum version of a bit", "what is a qubit"],
+      "answer": "A qubit is the quantum version of a bit. It can be a tiny object like an atom, a particle of light, or a very cold electric circuit. Until you measure it, it can be in a blend of 0 and 1. When you measure it, you always get a plain 0 or 1.",
+      "links": [
+        { "label": "Read the intro lesson", "href": "pages/learn.html#intro" },
+        { "label": "Try the qubit demo on the Home page", "href": "index.html" }
+      ]
+    },
+    {
+      "id": "superposition",
+      "questions": ["What is superposition?", "What does it mean for a qubit to be in a blend of 0 and 1?", "Is a qubit both 0 and 1?"],
+      "keywords": ["superposition", "blend", "both 0 and 1", "both zero and one", "at the same time", "in between", "spinning coin", "coin"],
+      "answer": "Superposition is the blend of 0 and 1 that a qubit can be in before you measure it. You never see the blend. You always get a plain 0 or 1, and the blend only sets the odds. A spinning coin is a loose comparison, but a qubit's blend is a real physical state.",
+      "links": [{ "label": "Read the intro lesson", "href": "pages/learn.html#intro" }]
+    },
+    {
+      "id": "measurement",
+      "questions": ["What happens when you measure a qubit?", "What is measurement?", "Why are quantum results random?"],
+      "keywords": ["measure", "measurement", "measuring", "observe", "look at", "random", "randomness", "odds", "probability", "collapse"],
+      "answer": "Measuring means checking a qubit's value. You always get a plain 0 or a plain 1, and the blend is gone. The blend only sets the odds, so a result can look random. That is why quantum programs run many times and tally the results.",
+      "links": [
+        { "label": "Read the Quantum Computing lesson", "href": "pages/learn.html#computing" },
+        { "label": "Try the qubit demo on the Home page", "href": "index.html" }
+      ]
+    },
+    {
+      "id": "entanglement",
+      "questions": ["What is entanglement?", "What does it mean for qubits to be entangled?", "How do two qubits get linked?"],
+      "keywords": ["entanglement", "entangled", "entangle", "linked qubits", "connected qubits", "spooky", "two qubits", "linked"],
+      "answer": "Two qubits can be entangled. That means their measurement results are linked, even though each single result looks random on its own. Entanglement is one of the strange features that some quantum programs use. It is a real effect, not science fiction.",
+      "links": [{ "label": "Read the intro lesson", "href": "pages/learn.html#intro" }]
+    },
+    {
+      "id": "gates",
+      "questions": ["What is a quantum gate?", "What do gates do?", "How do you change a qubit?"],
+      "keywords": ["gate", "gates", "quantum gate", "quantum gates", "logic gate", "operation", "step", "change a qubit", "move"],
+      "answer": "A quantum gate is a basic step that changes one or more qubits, like a single move in a game. Every gate can be undone by running its reverse. A quantum program is a list of gates followed by a measurement.",
+      "links": [{ "label": "Try the Quantum Gates lesson", "href": "pages/learn.html#gates" }]
+    },
+    {
+      "id": "x-h-gates",
+      "questions": ["What do the X and H gates do?", "What is the Hadamard gate?", "What is the NOT gate for qubits?"],
+      "keywords": ["x gate", "h gate", "hadamard", "not gate", "playground", "flip", "even blend", "plus state", "reset"],
+      "answer": "The X gate works like NOT: it swaps |0⟩ and |1⟩. The H gate (Hadamard) turns |0⟩ into an even blend, so measuring gives 0 or 1 about half the time each. Press them in the playground and see for yourself.",
+      "links": [{ "label": "Open the playground in the Gates lesson", "href": "pages/learn.html#gates" }]
+    },
+    {
+      "id": "phase",
+      "questions": ["What is phase?", "What does the Z gate do?", "What is the hidden plus or minus sign?"],
+      "keywords": ["phase", "z gate", "hidden sign", "plus or minus", "minus state", "hidden"],
+      "answer": "Phase is a hidden plus or minus sign on part of a qubit's state. Measuring can't see it right away, but it changes what later gates do. The Z gate flips it. Try Reset, H, Z, H in the playground and you land on |1⟩.",
+      "links": [{ "label": "Try it in the Gates lesson", "href": "pages/learn.html#gates" }]
+    },
+    {
+      "id": "cnot",
+      "questions": ["What is a CNOT gate?", "What are two-qubit gates?", "How do gates connect qubits?"],
+      "keywords": ["cnot", "controlled not", "two qubit gate", "two-qubit gates", "control qubit", "connect qubits", "link qubits"],
+      "answer": "CNOT is a two-qubit gate. It uses one qubit to decide whether to flip another one. Two-qubit gates like it link qubits together, and they are how circuits make qubits work as a team.",
+      "links": [{ "label": "Read the Quantum Gates lesson", "href": "pages/learn.html#gates" }]
+    },
+    {
+      "id": "circuit",
+      "questions": ["What is a quantum circuit?", "How do you write a quantum program?", "What is a circuit diagram?"],
+      "keywords": ["circuit", "circuits", "quantum circuit", "quantum program", "program", "list of gates", "write a program", "diagram"],
+      "answer": "A quantum circuit is a list of gates, in order, followed by a measurement. It is how people write a quantum program. You can build circuits on a simulator, even on your own laptop, before ever touching a real quantum computer.",
+      "links": [
+        { "label": "Read the Quantum Gates lesson", "href": "pages/learn.html#gates" },
+        { "label": "Read about simulators", "href": "pages/learn.html#simulators" }
+      ]
+    },
+    {
+      "id": "how-it-works",
+      "questions": ["How does a quantum computer work?", "How does a quantum computer run a program?", "What is a shot?"],
+      "keywords": ["how does a quantum computer work", "how it works", "work", "works", "shot", "shots", "run a program", "prepare", "tally", "run many times"],
+      "answer": "A quantum program has three steps. First, prepare the qubits. Next, apply gates. Last, measure. Results are partly random, so the computer runs the program many times. Each run is called a shot, and the results get tallied, like counting votes.",
+      "links": [{ "label": "Read the Quantum Computing lesson", "href": "pages/learn.html#computing" }]
+    },
+    {
+      "id": "hardware",
+      "questions": ["What are quantum computers made of?", "Why are quantum computers so cold?", "What kinds of qubits are there?"],
+      "keywords": ["made of", "hardware", "cold", "cooled", "freezing", "superconducting", "trapped ion", "trapped ions", "neutral atoms", "photons", "light-based", "photonic", "absolute zero", "build a qubit"],
+      "answer": "Qubits can be built in different ways. Some are tiny electric circuits chilled to near absolute zero. Others use trapped ions (charged atoms held in place), neutral atoms held by lasers, or particles of light. Each way has trade-offs, and all of them are fragile.",
+      "links": [{ "label": "Read the Quantum Computing lesson", "href": "pages/learn.html#computing" }]
+    },
+    {
+      "id": "replace-laptop",
+      "questions": ["Will quantum computers replace my laptop?", "Will quantum computers replace regular computers?", "Will I own a quantum computer someday?"],
+      "keywords": ["replace", "replace laptop", "replace my laptop", "replace phone", "take over", "own a quantum computer", "home", "future of computers", "instead of"],
+      "answer": "No. Think of a quantum computer as a specialized power tool, like a tile saw. It is great for certain jobs and useless for most others. Regular computers will stay better for most things, and they will help control quantum machines too.",
+      "links": [
+        { "label": "Read the intro lesson", "href": "pages/learn.html#intro" },
+        { "label": "Read the Quantum Computing lesson", "href": "pages/learn.html#computing" }
+      ]
+    },
+    {
+      "id": "myth-every-answer",
+      "questions": ["Do quantum computers try every answer at once?", "Is it true quantum computers are magic?", "What are common myths about quantum computers?"],
+      "keywords": ["every answer at once", "all answers at once", "try everything", "myth", "myths", "magic", "parallel", "all at once", "everything at once"],
+      "answer": "That is a common myth. Quantum computers don't try every answer at once. They use the blend of 0 and 1 to steer toward good answers on certain problems. Quantum computers are not magic, and they help with specific problems only.",
+      "links": [{ "label": "Read about quantum algorithms", "href": "pages/learn.html#algorithms" }]
+    },
+    {
+      "id": "advantage",
+      "questions": ["Are quantum computers faster than regular computers?", "What is quantum advantage?", "Has a quantum computer beaten a regular computer?"],
+      "keywords": ["quantum advantage", "advantage", "faster", "speed", "beat", "better than regular", "supremacy", "powerful", "fast"],
+      "answer": "Quantum advantage means doing a useful job faster or better than any regular computer. IBM and partners say they have shown early advantage on narrow problems, and other scientists are testing those claims. No one has shown broad advantage yet.",
+      "links": [{ "label": "Read the Quantum Computing lesson", "href": "pages/learn.html#computing" }]
+    },
+    {
+      "id": "uses",
+      "questions": ["What can quantum computers be used for?", "Why do people care about quantum computing?", "What problems can quantum computers solve?"],
+      "keywords": ["used for", "uses", "applications", "use cases", "why care", "problems", "molecules", "materials", "medicine", "energy", "finance", "good for", "solve"],
+      "answer": "Quantum computers may help simulate molecules and new materials, meaning model how they behave on a computer. IBM also lists energy and finance as areas to explore. They are specialized tools, so they will help with some problems and not others.",
+      "links": [{ "label": "Read the intro lesson", "href": "pages/learn.html#intro" }]
+    },
+    {
+      "id": "algorithms",
+      "questions": ["What is a quantum algorithm?", "What are quantum algorithms?", "What is interference?"],
+      "keywords": ["algorithm", "algorithms", "quantum algorithm", "interference", "recipe", "deutsch jozsa", "deutsch-jozsa", "steps to solve"],
+      "answer": "An algorithm is a step-by-step recipe for solving a problem. Quantum algorithms use interference, which is waves adding up or canceling out, to make wrong answers less likely and right answers more likely. They run on qubits, but they don't just try every answer.",
+      "links": [{ "label": "Read about quantum algorithms", "href": "pages/learn.html#algorithms" }]
+    },
+    {
+      "id": "grover",
+      "questions": ["What is Grover's search?", "How does a quantum computer search a list?", "Can quantum computers search faster?"],
+      "keywords": ["grover", "grovers", "search", "searching", "unsorted list", "find an item", "square root", "database"],
+      "answer": "Grover's search finds one item in an unsorted list in about the square root of the usual number of steps. For 10,000 items, that is roughly 100 steps instead of thousands. It helps with specific problems, not everything.",
+      "links": [{ "label": "Read about quantum algorithms", "href": "pages/learn.html#algorithms" }]
+    },
+    {
+      "id": "shor-encryption",
+      "questions": ["Can quantum computers break encryption?", "What is Shor's algorithm?", "What is post-quantum cryptography?"],
+      "keywords": ["shor", "shors", "encryption", "break encryption", "security", "cryptography", "post-quantum", "post quantum", "hack", "hackers", "passwords", "nist", "factoring", "prime numbers", "safe"],
+      "answer": "Shor's algorithm could split big numbers and break some public-key encryption, but only on a large, error-corrected quantum computer, and none exists today. Experts are already building new methods called post-quantum cryptography. In 2024, NIST published its first finished standards for it.",
+      "links": [
+        { "label": "Read about quantum algorithms", "href": "pages/learn.html#algorithms" },
+        { "label": "NIST: what is post-quantum cryptography?", "href": "https://www.nist.gov/cybersecurity-and-privacy/what-post-quantum-cryptography" }
+      ]
+    },
+    {
+      "id": "error-correction",
+      "questions": ["What is quantum error correction?", "How do you fix mistakes in a quantum computer?", "What is a logical qubit?"],
+      "keywords": ["error correction", "error-correction", "correct errors", "fix errors", "fix mistakes", "logical qubit", "physical qubit", "helper qubit", "fault tolerant", "fault-tolerant", "no cloning", "no-cloning", "copy a qubit"],
+      "answer": "Quantum error correction spreads the information of one qubit across many real qubits. Together they act as one steadier logical qubit. Helper qubits check for signs of errors without measuring the qubits that hold the data. It is costly, and today's machines are still working toward it.",
+      "links": [{ "label": "Read the Error Correction lesson", "href": "pages/learn.html#error-correction" }]
+    },
+    {
+      "id": "fragile-noise",
+      "questions": ["Why are qubits so fragile?", "Why do quantum computers make mistakes?", "What is decoherence?"],
+      "keywords": ["fragile", "decoherence", "noise", "noisy", "mistakes", "errors", "error", "heat", "vibration", "break easily", "unstable", "stay steady"],
+      "answer": "Qubits are very delicate. Heat, vibration and stray signals can ruin a qubit's quantum state, and that loss is called decoherence. Quantum computers today are small and make many errors. Researchers are working on ways to keep qubits steady for longer.",
+      "links": [{ "label": "Read the Error Correction lesson", "href": "pages/learn.html#error-correction" }]
+    },
+    {
+      "id": "simulators",
+      "questions": ["What is a quantum simulator?", "How can I practice quantum programming without a quantum computer?", "Can I run quantum programs on my laptop?"],
+      "keywords": ["simulator", "simulators", "quantum simulator", "pretend", "practice", "without a quantum computer", "on my laptop", "test programs", "flight simulator"],
+      "answer": "A quantum simulator is a program that runs on an ordinary computer and pretends to be a quantum computer. You build a circuit, run it, and see results. That lets you learn and fix mistakes without any quantum hardware.",
+      "links": [{ "label": "Read the Quantum Simulators lesson", "href": "pages/learn.html#simulators" }]
+    },
+    {
+      "id": "simulator-limit",
+      "questions": ["How many qubits can a simulator handle?", "Can a laptop simulate a big quantum computer?", "Why can't I simulate 100 qubits?"],
+      "keywords": ["how many qubits", "simulate 100 qubits", "limit", "limits", "doubles", "doubling", "memory", "supercomputer", "32 qubits", "48 qubits"],
+      "answer": "Each extra qubit roughly doubles the memory and time a simulator needs. IBM's documentation says most laptops can't simulate beyond about 32 qubits when noise is included. A general 100-qubit simulation is far out of reach, even for big supercomputers.",
+      "links": [{ "label": "Read the Quantum Simulators lesson", "href": "pages/learn.html#simulators" }]
+    },
+    {
+      "id": "quantum-simulation",
+      "questions": ["What is quantum simulation?", "Is a quantum simulator the same as quantum simulation?", "Can quantum computers imitate nature?"],
+      "keywords": ["quantum simulation", "simulation", "imitate nature", "same thing", "simulate molecules", "simulate nature", "chemistry"],
+      "answer": "Don't mix up two similar names. A quantum simulator is software on a regular computer. Quantum simulation means using a real quantum computer to imitate nature, such as molecules or materials. Researchers hope this could become one of the most useful uses of future quantum computers.",
+      "links": [{ "label": "Read the Quantum Simulators lesson", "href": "pages/learn.html#simulators" }]
+    },
+    {
+      "id": "compilation",
+      "questions": ["What is a quantum compiler?", "What is transpiling?", "Why can't a real chip run my circuit as written?"],
+      "keywords": ["compiler", "compilers", "compile", "compilation", "transpiler", "transpile", "transpiling", "native gate", "native gates", "mapping", "routing", "swap", "optimization", "optimize", "translate"],
+      "answer": "A real quantum chip can only do a short list of built-in steps, and only some qubit pairs can work together. A compiler (often called a transpiler) translates your circuit so the chip can run it. It also trims wasted steps, because every extra step adds a chance of error.",
+      "links": [{ "label": "Read the Quantum Compilation lesson", "href": "pages/learn.html#compilation" }]
+    },
+    {
+      "id": "phd-jobs",
+      "questions": ["Do I need a PhD to work in quantum?", "Can I get a quantum job without a degree?", "What education do quantum jobs need?"],
+      "keywords": ["phd", "doctorate", "degree", "college", "education", "need a phd", "without a phd", "certificate", "requirements", "qualifications", "school", "train", "training", "required"],
+      "answer": "Many quantum jobs do not usually need a PhD. Technicians, software developers, cybersecurity analysts and project managers all help build and run quantum computers. Some roles, like electricians, can start with a high school diploma plus an apprenticeship. Others call for a certificate or a degree. Check each posting.",
+      "links": [{ "label": "Explore quantum careers", "href": "pages/careers.html" }]
+    },
+    {
+      "id": "jobs-list",
+      "questions": ["What jobs exist in quantum?", "What careers are there in quantum computing?", "What does a cryogenic plant technician do?"],
+      "keywords": ["jobs", "job", "careers", "career", "work in quantum", "technician", "technicians", "cryogenic", "system operator", "system operators", "developer", "cybersecurity analyst", "project manager", "profession", "employment", "hire", "hiring", "engineer", "scientist", "become", "get a job"],
+      "answer": "Quantum computers need people to build, run and protect them: technicians, software developers, cybersecurity analysts, and operations and project managers. Park planners in Chicago also list system operators, security staff, and cryogenic plant technicians, who run equipment kept at extreme cold.",
+      "links": [{ "label": "Explore quantum careers", "href": "pages/careers.html" }]
+    },
+    {
+      "id": "pay-openings",
+      "questions": ["How much do quantum jobs pay?", "Are there quantum jobs open right now?", "Where can I apply for a quantum job?"],
+      "keywords": ["pay", "salary", "salaries", "wage", "wages", "money", "earn", "paid", "income", "openings", "open positions", "apply", "internship", "internships"],
+      "answer": "I don't have verified pay numbers or job openings, so I won't guess. Pay and openings change often. Check the employer's own website and the Careers page, and ask a teacher or counselor to help you look for programs near you.",
+      "links": [{ "label": "Explore quantum careers", "href": "pages/careers.html" }]
+    },
+    {
+      "id": "prerequisites",
+      "questions": ["Do I need to be good at math or coding?", "What skills do I need for quantum?", "Can I learn quantum if I am bad at math?"],
+      "keywords": ["math", "maths", "coding", "code", "programming", "skills", "skill", "prerequisite", "prerequisites", "smart", "good at", "hard", "difficult", "trigonometry", "calculus"],
+      "answer": "You can start with no physics background, and these lessons use plain words and short quizzes. For many software roles, strong coding, careful testing and curiosity matter most. Some programs, like Quantum Quickstart, suggest math such as trigonometry or pre-calculus.",
+      "links": [{ "label": "Start with the intro lesson", "href": "pages/learn.html#intro" }]
+    },
+    {
+      "id": "free-start",
+      "questions": ["How can I learn quantum for free?", "Where can I start learning quantum computing?", "What free tools can I use to learn quantum?"],
+      "keywords": ["free", "learn for free", "start learning", "how to learn", "learn quantum", "resources", "courses", "course", "tutorial", "tutorials", "online", "study", "self study"],
+      "answer": "Start with the lessons on this site, then try free tools. Quirk is a free, open-source simulator you drag and drop in your browser. IBM Quantum Learning is a library of courses that IBM says it offers free of charge. Qiskit and Cirq are open-source tools for coding.",
+      "links": [
+        { "label": "Start the lessons", "href": "pages/learn.html" },
+        { "label": "Quirk simulator", "href": "https://algassert.com/quirk" },
+        { "label": "IBM Quantum Learning", "href": "https://quantum.cloud.ibm.com/learning/en" }
+      ]
+    },
+    {
+      "id": "quirk",
+      "questions": ["What is Quirk?", "Is there a drag-and-drop quantum simulator?", "How do I build a circuit by dragging gates?"],
+      "keywords": ["quirk", "drag and drop", "drag-and-drop", "circuit simulator", "algassert", "browser simulator", "drag gates"],
+      "answer": "Quirk is a drag-and-drop quantum circuit simulator that runs in your web browser. You drop gates onto a circuit and watch what happens. It is open source and made for exploring small circuits, so it is a great way to practice what you learn here.",
+      "links": [
+        { "label": "Open Quirk", "href": "https://algassert.com/quirk" },
+        { "label": "Read the Quantum Simulators lesson", "href": "pages/learn.html#simulators" }
+      ]
+    },
+    {
+      "id": "ibm-learning",
+      "questions": ["What is IBM Quantum Learning?", "Does IBM have free quantum courses?", "Where can I find courses from IBM?"],
+      "keywords": ["ibm", "ibm quantum", "ibm quantum learning", "ibm courses", "ibm learning", "watrous", "basics of quantum information"],
+      "answer": "IBM Quantum Learning is a library of courses for learning quantum computing with Qiskit. IBM says its learning resources are free of charge. Their courses go deeper than our short lessons, so they make a good next step. Check IBM's page for the current list.",
+      "links": [{ "label": "IBM Quantum Learning", "href": "https://quantum.cloud.ibm.com/learning/en" }]
+    },
+    {
+      "id": "qiskit-cirq",
+      "questions": ["What are Qiskit and Cirq?", "What software do people use to program quantum computers?", "Is there open-source quantum software?"],
+      "keywords": ["qiskit", "cirq", "open source", "open-source", "software", "sdk", "python", "toolkit", "libraries", "library", "tools", "github"],
+      "answer": "Qiskit and Cirq are free, open-source tools for writing and testing quantum programs. Open source means anyone can read the code and practice with it. Qiskit also has a transpiler you can try yourself, and both can run circuits on a simulator.",
+      "links": [
+        { "label": "Qiskit on GitHub", "href": "https://github.com/Qiskit/qiskit" },
+        { "label": "Cirq", "href": "https://quantumai.google/cirq" }
+      ]
+    },
+    {
+      "id": "chicago-park",
+      "questions": ["What is the Illinois Quantum and Microelectronics Park?", "What is happening at the old South Works site?", "Where is the quantum park in Chicago?"],
+      "keywords": ["illinois quantum and microelectronics park", "iqmp", "quantum park", "park", "microelectronics", "chicago", "illinois", "south works", "old steel site", "south side", "groundbreaking", "broke ground", "440 acres", "site", "happening", "built"],
+      "answer": "Illinois broke ground in September 2025 on the Illinois Quantum and Microelectronics Park. It takes up about 128 acres at the south end of the old U.S. Steel South Works site on Chicago's far South Side. That is the first part of Quantum Shore, a larger 440-acre redevelopment. Steelmaking there ended in 1992. The state says it is investing $500 million in the park.",
+      "links": [
+        { "label": "Read about it on the Home page", "href": "index.html" },
+        { "label": "Official IQMP FAQs", "href": "https://iqmp.org/faqs/" }
+      ]
+    },
+    {
+      "id": "south-works",
+      "questions": ["What was South Works?", "What happened to the steel mills in Chicago?", "Why did the steel mills close?"],
+      "keywords": ["steel", "mill", "mills", "steelworkers", "u.s. steel", "us steel", "steel mill", "1992", "closed", "closing", "industry", "history", "revolution", "revolutions"],
+      "answer": "South Works was a huge U.S. Steel mill on Chicago's South Side, and steelmaking there ended in 1992. For about a century, mills in South Chicago gave thousands of families steady work. When they closed, whole neighborhoods lost their paychecks. Each mill closed for different reasons, but the Southeast Chicago Historical Society says corporate restructuring, growing global competition and changing government policies were key.",
+      "links": [
+        { "label": "See Chicago's tech revolutions on the Home page", "href": "index.html" },
+        { "label": "The Closing of the Mills (SE Chicago Historical Society)", "href": "https://www.sechicagohistory.org/stories/cotm.html" }
+      ]
+    },
+    {
+      "id": "park-companies",
+      "questions": ["Which companies are building at the quantum park?", "What is PsiQuantum?", "Is IBM coming to Chicago?"],
+      "keywords": ["psiquantum", "company", "companies", "anchor tenant", "tenant", "ibm quantum system two", "quantum system two", "hyde park", "hyde park labs", "ibm coming", "is ibm coming", "infleqtion", "super.tech", "businesses", "startups", "startup"],
+      "answer": "PsiQuantum is the anchor tenant, the first big company to commit to the park. It broke ground there on September 30, 2025, and says it uses light-based qubits. IBM's quantum computer is already running at UChicago's Hyde Park Labs on the South Side, switched on in November 2026. IBM says it will move to the park once the campus is complete.",
+      "links": [
+        { "label": "Official IQMP FAQs", "href": "https://iqmp.org/faqs/" },
+        { "label": "Read the latest on the News page", "href": "pages/news.html" }
+      ]
+    },
+    {
+      "id": "cqe",
+      "questions": ["What is the Chicago Quantum Exchange?", "Who works on quantum in Chicago?", "Which universities do quantum research in Chicago?"],
+      "keywords": ["chicago quantum exchange", "cqe", "uchicago", "university of chicago", "universities", "consortium", "partners", "northwestern", "purdue", "illinois urbana-champaign", "research groups"],
+      "answer": "The Chicago Quantum Exchange links universities, national labs and nearly 70 industry, international and nonprofit partners. It is based at the University of Chicago. Argonne National Laboratory and Fermilab are two of its anchor members. It works on research, training and economic growth in the Midwest.",
+      "links": [{ "label": "About the Chicago Quantum Exchange", "href": "https://chicagoquantum.org/about" }]
+    },
+    {
+      "id": "argonne-fermilab",
+      "questions": ["What do Argonne and Fermilab do for quantum?", "What is Q-NEXT?", "What is SQMS?"],
+      "keywords": ["argonne", "fermilab", "national lab", "national laboratory", "national labs", "q-next", "qnext", "sqms", "department of energy", "lemont", "batavia", "research centers"],
+      "answer": "Two U.S. Department of Energy quantum research centers are in the Chicago area. Fermilab hosts one called SQMS, which works on keeping a qubit steady for longer. Argonne National Laboratory leads the other, called Q-NEXT. Both were renewed for five years.",
+      "links": [{ "label": "UChicago news: centers renewed", "href": "https://news.uchicago.edu/story/quantum-research-centers-led-argonne-and-fermilab-renewed-five-years" }]
+    },
+    {
+      "id": "quantum-network",
+      "questions": ["Is there a quantum network in Chicago?", "What is the Chicago quantum network?", "What is a quantum internet?"],
+      "keywords": ["quantum network", "quantum internet", "network", "nodes", "fiber", "fiber optic", "testbed", "secure communication", "hyde park"],
+      "answer": "In 2022, the Chicago Quantum Exchange announced a quantum network with six nodes and 124 miles of fiber. It links Argonne in Lemont with two South Side buildings, one on the UChicago campus and one in Hyde Park. It was described as one of the nation's first public testbeds for quantum security.",
+      "links": [{ "label": "CQE announcement", "href": "https://chicagoquantum.org/news/chicago-expands-and-activates-quantum-network-taking-steps-toward-secure-quantum-internet" }]
+    },
+    {
+      "id": "quickstart",
+      "questions": ["What is Quantum Quickstart?", "Are there quantum summer programs for high school students?", "Is there a free quantum camp in Chicago?"],
+      "keywords": ["quantum quickstart", "quickstart", "summer", "summer program", "camp", "high school program", "program", "programs", "students", "grades 9 to 11", "enrichment", "apply for a program", "internship"],
+      "answer": "Quantum Quickstart is a one-week summer program run by the University of Chicago. It is for Illinois students in grades 9 to 11 who are at least 14. Selected students pay nothing, and Chicago students get preference. Dates and how to apply can change, so check the official page.",
+      "links": [{ "label": "Quantum Quickstart page", "href": "https://chicagoquantum.org/education-and-training/quantum-quickstart" }]
+    },
+    {
+      "id": "community",
+      "questions": ["Will the quantum park help my neighborhood?", "Will South Side residents get jobs at the park?", "How will the community benefit?"],
+      "keywords": ["community", "neighborhood", "neighbors", "residents", "benefit", "benefits", "south chicago", "local", "jobs for locals", "left out", "fair", "equity", "help my neighborhood", "quality of life"],
+      "answer": "That is the goal, but it is not automatic. Park planners say they are talking with City Colleges of Chicago about training for all skill levels. Developer Related Midwest is helping fund a Quality of Life Plan for South Chicago. Neighbors deserve a real voice in the plan.",
+      "links": [
+        { "label": "See the story on the Home page", "href": "index.html" },
+        { "label": "Official IQMP FAQs", "href": "https://iqmp.org/faqs/" }
+      ]
+    },
+    {
+      "id": "why-site",
+      "questions": ["Why does this website exist?", "What is Quantum South Side about?", "What is this site for?"],
+      "keywords": ["why", "purpose", "mission", "about this site", "about this website", "about the site", "quantum south side", "goal", "story", "past revolutions", "future power", "steel to quantum"],
+      "answer": "The land that powered the steel revolution is now home to the Illinois Quantum and Microelectronics Park. This site helps students on Chicago's South and West Sides understand quantum technology and see the careers around it, so this time the benefits reach neighbors.",
+      "links": [{ "label": "Visit the Home page", "href": "index.html" }]
+    },
+    {
+      "id": "site-overview",
+      "questions": ["How does this site work?", "What can I do on this website?", "Where should I start?"],
+      "keywords": ["this site", "this website", "website", "site", "pages", "menu", "navigate", "navigation", "start here", "what can i do", "explore", "find"],
+      "answer": "Learn has seven short lessons with quizzes. Careers shows quantum jobs, and many don't need a PhD. News and Research help you read about what's new. The Daily Puzzle gives you a new quantum puzzle every day. If you're not sure, start with Learn.",
+      "links": [
+        { "label": "Learn", "href": "pages/learn.html" },
+        { "label": "Careers", "href": "pages/careers.html" },
+        { "label": "Daily Puzzle", "href": "pages/game.html" }
+      ]
+    },
+    {
+      "id": "site-lessons",
+      "questions": ["How do the lessons work?", "How many lessons are there?", "Is there a quiz?"],
+      "keywords": ["lesson", "lessons", "quiz", "quizzes", "topics", "topic", "learn page", "mark complete", "playground", "check yourself", "how many lessons"],
+      "answer": "There are seven short lessons, from the basics to error correction and algorithms. Each has plain-language explanations, key terms and a quick quiz called Check yourself. The Gates lesson has a hands-on qubit playground. Mark a lesson complete to see your progress on the Home page.",
+      "links": [{ "label": "Open the Learn page", "href": "pages/learn.html" }]
+    },
+    {
+      "id": "site-game",
+      "questions": ["What is the Collapse Challenge?", "What is the Daily Puzzle?", "Is there a game on this site?", "How does the daily puzzle work?"],
+      "keywords": ["collapse challenge", "daily puzzle", "puzzle", "puzzles", "game", "games", "play", "streak", "daily", "every day", "challenge", "practice", "share"],
+      "answer": "The Collapse Challenge is the daily puzzle. You get a Start state and a Target state, and you build gates to turn one into the other. A new puzzle comes every day, and your streak is saved on your device, or in your account if you are signed in. Practice mode lets you play any puzzle and never changes your streak.",
+      "links": [{ "label": "Play the Collapse Challenge", "href": "pages/game.html" }]
+    },
+    {
+      "id": "site-game-stars",
+      "questions": ["How do I get stars?", "What does Peek do?", "What is par?"],
+      "keywords": ["star", "stars", "par", "peek", "3 stars", "score", "scoring", "fewest gates", "collapse challenge stars"],
+      "answer": "In the Collapse Challenge, fewer gates earn more stars. Par is the fewest gates that can do the job, and matching it earns 3 stars. Peek measures the qubit once, so it collapses into a plain 0 or 1, and it costs one star. Practice mode never changes your streak.",
+      "links": [{ "label": "Play the Collapse Challenge", "href": "pages/game.html" }]
+    },
+    {
+      "id": "site-news-research",
+      "questions": ["Where can I read quantum news?", "Where can I find quantum research?", "How do I keep up with quantum news?"],
+      "keywords": ["news", "headlines", "articles", "research", "papers", "paper", "studies", "latest", "recent", "new discoveries", "updates", "keep up", "reading"],
+      "answer": "The News page collects quantum stories, and the Research page shares new research. Both link to the original sources, so you can read the real thing. Always double-check important facts with the original article or paper.",
+      "links": [
+        { "label": "News", "href": "pages/news.html" },
+        { "label": "Research", "href": "pages/research.html" }
+      ]
+    },
+    {
+      "id": "privacy",
+      "questions": ["Do you collect my data?", "Is this site safe for students?", "Does this site track me?"],
+      "keywords": ["data", "privacy", "private", "personal information", "personal", "tracking", "track", "cookies", "collect", "ads", "analytics", "name", "safe", "secret"],
+      "answer": "As a guest, nothing leaves your device. There are no ads, no analytics and no tracking cookies. If this site offers accounts, an optional account stores only your email, a nickname and your progress. Please don't share personal information in this helper.",
+      "links": [{ "label": "Read the Privacy page", "href": "pages/privacy.html" }]
+    },
+    {
+      "id": "account-needed",
+      "questions": ["Do I need an account?", "Do I have to sign up or log in?", "Can I use this site without an account?"],
+      "keywords": ["account", "accounts", "need an account", "sign up", "signup", "log in", "login", "sign in", "register", "guest", "without an account", "13 or older", "make an account", "create an account", "create account", "my account"],
+      "answer": "No. Every feature works as a guest, and your progress stays on your device. If this site offers accounts, they are optional and let your progress follow you to other devices. You need to be 13 or older to make one. The Privacy page has the details.",
+      "links": [{ "label": "Read the Privacy page", "href": "pages/privacy.html" }]
+    },
+    {
+      "id": "account-saves",
+      "questions": ["What does an account save?", "What information does an account store?", "Do you store my email or password?"],
+      "keywords": ["account save", "account store", "account stores", "email", "password", "passwords", "nickname", "stored", "what is saved", "real name", "my password", "password safe", "account keep", "save about me", "about me"],
+      "answer": "If this site offers accounts, an account stores your email for logging in, a nickname you choose, and your progress and settings. It never collects your real name, birthdate, school, address, phone, race or location. Passwords are handled only by the sign-in service, never by us.",
+      "links": [{ "label": "Read the Privacy page", "href": "pages/privacy.html" }]
+    },
+    {
+      "id": "progress-reset",
+      "questions": ["Where is my progress saved?", "How do I reset my progress?", "Will I lose my progress?"],
+      "keywords": ["progress", "saved", "save", "reset", "erase", "delete", "clear", "lose", "different device", "another device", "another computer", "other devices", "follow me", "browser", "history", "remember"],
+      "answer": "As a guest, your progress is saved in your browser on this device, so it won't follow you to another phone or computer. If this site offers accounts, signing in saves it to your account instead. To erase it, open the Home page, find Your progress, and press Reset my progress.",
+      "links": [{ "label": "Open the Home page", "href": "index.html" }]
+    },
+    {
+      "id": "free-teachers",
+      "questions": ["Is this site free?", "Can teachers use this in class?", "Can I use this site at school?"],
+      "keywords": ["free", "cost", "price", "teacher", "teachers", "class", "classroom", "school", "student", "students", "homework", "lesson plan", "open source", "license", "mit"],
+      "answer": "Yes, it is free. There is nothing to buy and no account is needed, so a whole class can use it without signing up. The lessons are short and have quizzes. The code is open source under the MIT License.",
+      "links": [{ "label": "Open the Learn page", "href": "pages/learn.html" }]
+    },
+    {
+      "id": "who-made",
+      "questions": ["Who made this website?", "Who built this site?", "What is the Black CS Success Summit Hackathon?"],
+      "keywords": ["who made", "who built", "who created", "creator", "creators", "team", "built by", "made by", "hackathon", "black cs success summit", "developers", "authors", "made this"],
+      "answer": "A team built this site for the Black CS Success Summit Hackathon 2026. The hackathon's theme was Past Revolutions, Future Power: Shaping Chicago's Quantum Future. It is a student-friendly project, so please double-check important facts with the sources we link.",
+      "links": [{ "label": "Visit the Home page", "href": "index.html" }]
+    },
+    {
+      "id": "helper-limits",
+      "questions": ["What can you help me with?", "Are you a person or a robot?", "Can you search the internet?"],
+      "keywords": ["helper", "bot", "chatbot", "robot", "human", "person", "what can you do", "limits", "mistakes", "search the internet", "how do you work", "remember", "help"],
+      "answer": "I'm a learning helper, not a person. In FAQ mode I match your question to a set of ready-made answers. I can't look things up online, I don't remember past chats, and I can make mistakes. When I'm not sure, I'll say so and point you to a page.",
+      "links": [{ "label": "Explore the Learn page", "href": "pages/learn.html" }]
+    },
+    {
+      "id": "hello",
+      "questions": ["Hello", "Hi there", "Hey, good morning"],
+      "keywords": ["hello", "hi", "hey", "howdy", "greetings", "good morning", "good afternoon", "good evening", "yo", "sup", "hola"],
+      "answer": "Hello! I'm happy you're here. Ask me about qubits, quantum careers, what is happening in Chicago, or how to use this site. You can also pick one of the starter questions.",
+      "links": []
+    },
+    {
+      "id": "thanks",
+      "questions": ["Thank you", "Thanks a lot", "That was helpful"],
+      "keywords": ["thanks", "thank", "thank you", "thx", "appreciate", "helpful", "awesome"],
+      "answer": "You're welcome! Keep asking questions, because curiosity is how people get started in quantum. If you want to keep going, try a lesson on the Learn page.",
+      "links": [{ "label": "Open the Learn page", "href": "pages/learn.html" }]
+    }
+  ]
+}
