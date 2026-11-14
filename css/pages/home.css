@@ -985,3 +985,30 @@
 .home-sources__body li {
   overflow-wrap: anywhere;
 }
+
+/* Community entry points: native links and disclosures work with keyboard input. */
+.home-impact__choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+.home-impact__choices .btn { white-space: normal; text-align: center; }
+.home-impact__context { margin-bottom: var(--space-6); }
+.home-impact__grid { display: grid; gap: var(--space-5); }
+.home-impact { min-width: 0; border-top: 3px solid var(--color-quantum); }
+.home-impact__details { scroll-margin-top: 7rem; }
+.home-impact__details summary {
+  cursor: pointer;
+  color: var(--color-link);
+  font-weight: 600;
+  padding-block: var(--space-3);
+}
+.home-impact__steps { display: grid; gap: var(--space-3); padding-top: var(--space-3); }
+.home-impact__links { display: grid; gap: var(--space-3); padding-block: var(--space-2); }
+.home-impact__closing { margin-top: var(--space-6); font-weight: 700; font-size: var(--text-lg); }
+#community { scroll-margin-top: 5rem; }
+@media (min-width: 48rem) {
+  .home-impact__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+  .home-impact:last-child { grid-column: 1 / -1; }
+}

@@ -47,6 +47,41 @@ function renderHero(root, hero) {
   );
 }
 
+/* Community topics reuse shared cards and native disclosures. */
+function renderCommunity(root, community) {
+  const disclosures = new Map();
+  const cards = community.topics.map((topic) => {
+    const details = h('details', { class: 'home-impact__details', id: `impact-${topic.id}` },
+      h('summary', null, `Why it matters & what you can do: ${topic.title}`),
+      h('div', { class: 'home-impact__steps' },
+        h('p', { class: 'card__section-label' }, 'Why it matters'), h('p', null, topic.why),
+        h('p', { class: 'card__section-label' }, 'What you can do today'), h('p', null, topic.today),
+        h('div', { class: 'home-impact__links' }, topic.links.map((link) =>
+          link.href.startsWith('https:') ? externalLink(link.href, link.label) :
+            h('a', { href: siteUrl(link.href) }, `${link.label} →`))),
+        h('p', { class: 'card__section-label' }, 'What would need action from others'), h('p', null, topic.proposal),
+      ));
+    disclosures.set(topic.id, details);
+    return createCard({ title: topic.title, icon: topic.icon, eyebrow: topic.status,
+      body: topic.issue, className: 'home-impact',
+      sections: [{ label: 'Explore your next step', content: details }],
+      actions: [externalLink(topic.source.href, `Source: ${topic.source.label}`)],
+    });
+  });
+  const choices = h('nav', { class: 'home-impact__choices', 'aria-label': 'What matters most to you?' },
+    community.topics.map((topic) => h('a', { class: 'btn btn--secondary btn--sm', href: `#impact-${topic.id}`,
+      onClick: () => {
+        const details = disclosures.get(topic.id);
+        details.open = true;
+        details.querySelector('summary').focus({ preventScroll: true });
+      },
+    }, topic.choice)));
+  root.replaceChildren(sectionHeading(community, 'community-title'), choices,
+    h('p', { class: 'callout home-impact__context' }, community.context),
+    h('div', { class: 'home-impact__grid' }, cards),
+    h('p', { class: 'home-impact__closing' }, community.closing));
+}
+
 /* ---------- 2. Timeline of revolutions ---------- */
 /** One "who gained / who was left out" line. The symbol AND the label say it, never color alone. */
 function timelineNote(kind, symbol, label, text) {
@@ -386,6 +421,7 @@ function render(data) {
     section.hidden = false;
   });
   renderHero(slot('hero'), data.hero);
+  renderCommunity(slot('community'), data.community);
   renderTimeline(slot('timeline'), data.timeline);
   renderExplainer(slot('explainer'), data.explainer);
   renderWhy(slot('why'), data.whyNow);

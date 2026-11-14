@@ -1,19 +1,19 @@
 {
   "meta": {
-    "description": "A free, friendly guide to quantum technology for Chicago students: how steel powered the South Side, and how the new quantum park at the old South Works site can open new careers."
+    "description": "What could Chicago’s quantum campus mean for South Side residents? Explore jobs, housing, environmental questions and practical ways to participate."
   },
   "hero": {
-    "eyebrow": "Black CS Success Summit Hackathon 2026",
-    "headlinePast": "Steel powered the South Side.",
-    "headlineFuture": "Quantum can power its next chapter.",
-    "subhead": "The old South Works steel site is becoming a quantum technology park. Learn what that means, see the jobs it could bring, and find your place in it.",
+    "eyebrow": "South Chicago · South Shore · East Side",
+    "headlinePast": "Chicago’s quantum future is coming.",
+    "headlineFuture": "What does it mean for your neighborhood?",
+    "subhead": "The Illinois Quantum and Microelectronics Park (IQMP) is being developed at the former U.S. Steel South Works site in South Chicago. It could bring jobs, businesses and learning opportunities — alongside questions about housing costs, the environment and who benefits.",
     "primaryCta": {
-      "label": "Start learning",
-      "href": "pages/learn.html"
+      "label": "Explore community impacts",
+      "href": "#community"
     },
     "secondaryCta": {
-      "label": "Explore careers",
-      "href": "pages/careers.html"
+      "label": "Find a career pathway",
+      "href": "pages/careers.html#quiz"
     },
     "trustNote": "Free to use. No account needed, and we never ask for your real name."
   },
@@ -195,9 +195,39 @@
   },
   "sources": {
     "summary": "Where this comes from",
-    "intro": "Every history and Chicago fact on this page comes from the sources below. Facts last checked on",
+    "intro": "New community impact information and resource links checked on the date below. Earlier history sources are retained for further reading. Community proposals are labeled separately from project plans. Community links last checked on",
     "lastVerified": "2026-11-14",
     "groups": [
+      {
+        "topic": "Community impacts & actions",
+        "items": [
+          {
+            "title": "South Works community benefits campaign",
+            "publisher": "Friends of the Parks",
+            "url": "https://www.fotp.org/south-works"
+          },
+          {
+            "title": "IQMP community updates & feedback",
+            "publisher": "IQMP",
+            "url": "https://iqmp.org/get-involved/community/"
+          },
+          {
+            "title": "Tenant rights & legal resources",
+            "publisher": "City of Chicago",
+            "url": "https://chicago.gov/eviction"
+          },
+          {
+            "title": "Rental assistance: check availability & eligibility",
+            "publisher": "City of Chicago",
+            "url": "https://chicago.gov/fss/RAP"
+          },
+          {
+            "title": "South Chicago small-business advising",
+            "publisher": "Center for Changing Lives",
+            "url": "https://www.cclconnect.org/nbdc"
+          }
+        ]
+      },
       {
         "topic": "Railroads",
         "items": [
@@ -279,5 +309,131 @@
         ]
       }
     ]
+  },
+  "community": {
+    "eyebrow": "Your neighborhood. Your next step.",
+    "title": "How could the quantum campus affect your community?",
+    "intro": "What matters most to you? Choose a topic to open practical next steps. You do not need to understand the science to have a voice.",
+    "context": "Confirmed: IQMP is being developed at South Works. Jobs and neighborhood benefits are expected, not guaranteed. The concerns below describe possible impacts, not proof that the campus has caused them.",
+    "topics": [
+      {
+        "id": "housing",
+        "icon": "🏠",
+        "title": "Housing costs & staying in your neighborhood",
+        "choice": "Keeping housing affordable",
+        "status": "Possible impact",
+        "issue": "New investment could raise nearby rents, home prices or property taxes. The size of any campus-related change is uncertain.",
+        "why": "Longtime neighbors should be able to stay and share in new investment.",
+        "today": "Check your tenant rights and available rental assistance. Ask local representatives how housing protections will be tracked.",
+        "proposal": "Community advocates are seeking affordable housing and protections against displacement. New policies require action by government or developers.",
+        "links": [
+          {
+            "label": "Tenant rights & legal help",
+            "href": "https://chicago.gov/eviction"
+          },
+          {
+            "label": "Check rental assistance",
+            "href": "https://chicago.gov/fss/RAP"
+          }
+        ],
+        "source": {
+          "label": "Community housing proposals",
+          "href": "https://www.fotp.org/south-works"
+        }
+      },
+      {
+        "id": "jobs",
+        "icon": "💼",
+        "title": "Jobs & career opportunities",
+        "choice": "Finding a job",
+        "status": "Expected opportunity",
+        "issue": "The campus is expected to need construction and permanent workers, including technicians, logistics, security and office staff. These are potential roles, not current job listings.",
+        "why": "You may have useful skills already. Different roles require different training; a physics PhD is not the only route.",
+        "today": "Try our career matching quiz, then compare the skills, education and training resources on each career card. Check program costs, eligibility and application dates with the provider.",
+        "proposal": "Ask employers and training providers for accessible training and clear local hiring goals. Hiring and training commitments must come from those organizations.",
+        "links": [
+          {
+            "label": "Find my career matches",
+            "href": "pages/careers.html#quiz"
+          },
+          {
+            "label": "Compare skills & training",
+            "href": "pages/careers.html#explore"
+          }
+        ],
+        "source": {
+          "label": "IQMP workforce plans",
+          "href": "https://iqmp.org/faqs/"
+        }
+      },
+      {
+        "id": "environment",
+        "icon": "🌿",
+        "title": "Environmental safety",
+        "choice": "Protecting the environment",
+        "status": "Current site + open questions",
+        "issue": "South Works is a former industrial site. Illinois EPA publishes site investigations and cleanup documents; residents are asking about soil, construction dust, and future water and electricity use.",
+        "why": "Neighbors need clear information about how construction and operations could affect health and everyday life.",
+        "today": "Read the EPA site updates and contact information. Use them to ask about dust controls, cleanup progress and how to report a concern.",
+        "proposal": "Community groups are calling for transparent environmental monitoring. Published plans do not establish that every risk has been eliminated.",
+        "links": [
+          {
+            "label": "Read EPA reports & contacts",
+            "href": "https://epa.illinois.gov/topics/community-relations/sites/iqmp.html"
+          }
+        ],
+        "source": {
+          "label": "Community environmental requests",
+          "href": "https://www.fotp.org/south-works"
+        }
+      },
+      {
+        "id": "business",
+        "icon": "🛍️",
+        "title": "Local businesses & everyday services",
+        "choice": "Supporting local businesses",
+        "status": "Possible opportunity",
+        "issue": "New workers and investment could bring customers. Existing shops may still face barriers to contracts, higher costs or unmet neighborhood needs.",
+        "why": "Growth should help local shops and improve access to groceries, pharmacies and transportation.",
+        "today": "Support neighborhood shops. Business owners can ask Center for Changing Lives about its South Chicago business advising and licensing support.",
+        "proposal": "Ask project leaders how existing businesses can access purchasing opportunities and how plans will address essential services. These improvements are not guaranteed.",
+        "links": [
+          {
+            "label": "Find small-business support",
+            "href": "https://www.cclconnect.org/nbdc"
+          }
+        ],
+        "source": {
+          "label": "Project plans & community questions",
+          "href": "https://iqmp.org/faqs/"
+        }
+      },
+      {
+        "id": "voice",
+        "icon": "📣",
+        "title": "Community voice & transparency",
+        "choice": "Having a voice in decisions",
+        "status": "Community proposals",
+        "issue": "Residents and community groups are seeking a binding community benefits agreement: a contract spelling out what a developer must deliver to neighbors.",
+        "why": "People in South Chicago, South Shore and East Side deserve a say in changes around them.",
+        "today": "Use IQMP’s community page for updates and ways to share questions. Ask who is responsible for commitments, when they are due and where progress will be published.",
+        "proposal": "Community groups are advocating for local hiring, housing and environmental protections. Their campaign is a request for commitments, not proof those protections are in place.",
+        "links": [
+          {
+            "label": "Find updates & share questions",
+            "href": "https://iqmp.org/get-involved/community/"
+          },
+          {
+            "label": "Explore the community campaign",
+            "href": "https://www.fotp.org/south-works"
+          }
+        ],
+        "source": {
+          "label": "Community benefits campaign",
+          "href": "https://www.fotp.org/south-works"
+        }
+      }
+    ],
+    "closing": "Chicago’s quantum future should create opportunities for the communities that call the South Side home."
   }
 }
