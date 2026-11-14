@@ -20,9 +20,6 @@ Hackathon theme: *Past Revolutions, Future Power: Shaping Chicago's Quantum Futu
 | **Daily Puzzle** | Play the Collapse Challenge: build a short gate sequence to turn a starting qubit state into the target. |
 | **Chatbot** | A floating learning helper on every page. It answers from the site's own FAQ (you need neither an account nor a key). |
 | **Privacy** | Read, in plain words, what stays on your device as a guest, what an optional account stores, and who handles your data. |
-| **Log in / Sign up** | Only shown when accounts are switched on (see below). An account is optional: every feature works without one. |
-
-**Accounts are optional.** Everything above works as a guest, without an account. If the people running the site set up the sign-in service, a **Log in** and **Sign up** button appear, and an account lets your progress follow you to other devices. If they do not set it up, the account buttons stay hidden and the site works exactly as a guest-only site. See [Your progress and privacy](#your-progress-and-privacy) and [docs/supabase-setup.md](docs/supabase-setup.md).
 
 Under the hood there is a small, tested quantum engine in `js/quantum/` (pure JavaScript, no web page code) that the playground and the puzzle both use.
 
